@@ -6,7 +6,7 @@ export default function Projects() {
       <div className="flex flex-col items-center gap-y-4">
         <h3 className="text-secondary font-bold text-2xl">Portfolio</h3>
         <h2 className="font-clash-display text-7xl">Our projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-20">
           <ProjectCard
             project={{
               name: "Split3",
@@ -25,15 +25,15 @@ export default function Projects() {
               color: "#1D91E3",
             }}
           />
-          {/* <ProjectCard
+          <ProjectCard
             project={{
               name: "Ghost",
               image: "/projects/ghost.png",
               description:
-                "The easiest and safest way to split group expenses with crypto",
-              color: "#1D91E3",
+                "GHOst is a native wallet for managing your GHO tokens.",
+              color: "#C9B3F9",
             }}
-          /> */}
+          />
         </div>
       </div>
     </section>

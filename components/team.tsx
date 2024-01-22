@@ -1,29 +1,23 @@
 import TeamCard from "./team-card";
 
 const members = [
-  // {
-  //   name: "Mattia Pomelli",
-  //   description: "Blockchain Developer",
-  //   twitter: "",
-  //   image: "/team/limone.png",
-  // },
   {
-    name: "Francesco Cirulli",
+    name: "frank",
     description: "Blockchain Developer",
     twitter: "https://twitter.com/Frankc_eth",
     image: "/team/frank.jpg",
   },
   {
-    name: "Paolo Rollo",
-    description: "Full Stack Developer",
-    twitter: "https://twitter.com/orbuloeth",
-    image: "/team/orbulo.jpg",
-  },
-  {
-    name: "Simone Staffa",
+    name: "limone",
     description: "Blockchain Developer",
     twitter: "https://twitter.com/limone_eth",
     image: "/team/limone.png",
+  },
+  {
+    name: "orbulo",
+    description: "Full Stack Developer",
+    twitter: "https://twitter.com/orbuloeth",
+    image: "/team/orbulo.jpg",
   },
 ];
 

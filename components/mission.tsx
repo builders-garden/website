@@ -4,16 +4,18 @@ export default function Mission() {
   return (
     <section
       id="#mission"
-      className="max-w-5xl w-full mx-auto flex flex-col md:flex-row py-28 items-center"
+      className="max-w-5xl w-full mx-auto flex flex-col-reverse md:flex-row py-28 items-center"
     >
-      <Image
-        src={"/mission-illustration.svg"}
-        height={444}
-        width={378}
-        alt="Builders Garden mission illustration"
-      />
-      <div className="px-16 max-w-5xl gap-y-6 flex flex-col">
-        <h2 className="text-5xl font-clash-display">
+      <div className="px-8 mt-8 md:mt-12">
+        <Image
+          src={"/mission-illustration.svg"}
+          height={444}
+          width={378}
+          alt="Builders Garden mission illustration w-[342px] h-[401px] md:h-[444px] md:w-[378px]"
+        />
+      </div>
+      <div className="px-6 md:px-16 max-w-5xl gap-y-6 flex flex-col">
+        <h2 className="text-4xl md:text-5xl font-clash-display">
           Gathering like-
           <br />
           minded <span className="text-primary">builders</span> <br /> for

@@ -16,6 +16,7 @@ export default function Projects() {
               description:
                 "The easiest and safest way to split group expenses with crypto",
               color: "#2CAF49",
+              link: "https://devpost.com/software/split3",
             }}
           />
           <ProjectCard
@@ -25,6 +26,7 @@ export default function Projects() {
               description:
                 "Tinder-like experience for Lens and Farcaster posts",
               color: "#1D91E3",
+              link: "https://ethglobal.com/showcase/pulse-v4iir",
             }}
           />
           <ProjectCard
@@ -32,8 +34,9 @@ export default function Projects() {
               name: "Ghost",
               image: "/projects/ghost.png",
               description:
-                "GHOst is a native wallet for managing your GHO tokens.",
+                "A mobile-native GHO-centric smart wallet designed for p2p payments",
               color: "#C9B3F9",
+              link: "https://ethglobal.com/showcase/ghost-mae3q",
             }}
           />
         </div>

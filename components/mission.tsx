@@ -16,10 +16,8 @@ export default function Mission() {
       </div>
       <div className="px-6 md:px-16 max-w-5xl gap-y-6 flex flex-col">
         <h2 className="text-4xl md:text-5xl font-clash-display">
-          Gathering like-
-          <br />
-          minded <span className="text-primary">builders</span> <br /> for
-          mutual <span className="text-secondary">growth</span>
+          Gathering like-minded <span className="text-primary">builders</span>{" "}
+          for mutual <span className="text-secondary">growth</span>
         </h2>
         <p>
           We aim to cultivate the ultimate oasis for individuals to explore and

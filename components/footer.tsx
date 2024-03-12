@@ -25,6 +25,14 @@ export default function FooterComponent() {
           </p>
         </div>
         <div className="flex gap-4">
+          <Link href="https://github.com/builders-garden" isExternal>
+            <Image
+              src={"/github-mark-white.svg"}
+              height={28}
+              width={28}
+              alt={"Github logo"}
+            />
+          </Link>
           <Link href="https://twitter.com/buildersgarden" isExternal>
             <Image
               src={"/twitter-white.svg"}

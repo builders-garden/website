@@ -19,6 +19,7 @@ const members = [
     name: "orbulo",
     description: "Full Stack Developer",
     twitter: "https://twitter.com/orbuloeth",
+    farcaster: "https://warpcast.com/orbulo",
     image: "/team/orbulo.jpg",
   },
 ];

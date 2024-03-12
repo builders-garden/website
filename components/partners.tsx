@@ -9,7 +9,7 @@ export default function Partners() {
           We have collaborated with
         </h2>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-12 place-items-center px-8 md:px-0">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-12 place-items-center px-8 md:px-0">
         <Image
           src={"/partners/request-network.svg"}
           width={140}
@@ -24,6 +24,12 @@ export default function Partners() {
         />
         <Image src={"/partners/mask.svg"} width={140} height={56} alt="" />
         <Image src={"/partners/airstack.svg"} width={140} height={56} alt="" />
+        <Image
+          src={"/partners/icebreaker.svg"}
+          width={140}
+          height={56}
+          alt=""
+        />
         {/* <Image src={"/partner.svg"} width={140} height={56} alt="" />
         <Image src={"/partner.svg"} width={140} height={56} alt="" /> */}
       </div>

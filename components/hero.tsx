@@ -21,7 +21,7 @@ export default function Hero() {
           />{" "}
           <br />
           innovative projects <br className="hidden md:block" /> in
-          <br className="block md:hidden" /> the{" "}
+          <br className="block md:hidden" />{" "}
           <span className="text-primary">
             web3
             <br className="block md:hidden" /> land

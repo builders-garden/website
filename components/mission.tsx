@@ -24,7 +24,7 @@ export default function Mission() {
         <p>
           We aim to cultivate the ultimate oasis for individuals to explore and
           develop their web3 ideas, in a vibrant and open-minded space for
-          builders to freely express themselves and their innovative ideas.
+          builders.
         </p>
       </div>
     </section>

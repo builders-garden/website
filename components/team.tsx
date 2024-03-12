@@ -31,7 +31,7 @@ export default function Team() {
           Team
         </h3>
         <h2 className="font-clash-display text-4xl md:text-7xl text-center md:text-left">
-          We are builders our own
+          We are builders ourselves
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-20 place-items-center">
           {members.map((member) => (

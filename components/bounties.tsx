@@ -6,7 +6,7 @@ export default function Bounties() {
       <div className="flex flex-col items-center gap-y-6">
         <h3 className="text-secondary font-bold text-2xl">Bounties</h3>
         <h2 className="font-clash-display text-4xl md:text-5xl text-center md:text-left">
-          We won bounties from
+          We won prizes from
         </h2>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-12 place-items-center px-8 md:px-0">
@@ -32,8 +32,13 @@ export default function Bounties() {
           height={56}
           alt=""
         />
-        {/* <Image src={"/partner.svg"} width={140} height={56} alt="" />
-        <Image src={"/partner.svg"} width={140} height={56} alt="" /> */}
+        <Image
+          src={"/bounties/gnosis_pay.svg"}
+          width={140}
+          height={56}
+          alt=""
+        />
+        <Image src={"/bounties/dynamic.svg"} width={140} height={56} alt="" />
       </div>
     </section>
   );

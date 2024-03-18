@@ -1,4 +1,50 @@
-import HackathonCard from "./hackathon-card";
+import HackathonCard, { Hackathon } from "./hackathon-card";
+
+const hackathons: Hackathon[] = [
+  {
+    name: "fluidpay",
+    image: "/hackathons/fluidpay.svg",
+    description: "Stealth P2P payments web-app built on Base with USDC.",
+    color: "#1851FA",
+    link: "https://ethglobal.com/showcase/fluidpay-tpqvz",
+    hackathon: "ETHGlobal London 2024",
+  },
+  {
+    name: "Papabase",
+    image: "/hackathons/papabase.svg",
+    description:
+      "Making public goods donations accessible to everyone through crypto and fiat.",
+    color: "#1851FA",
+    link: "https://devfolio.co/projects/papabase-7d6b",
+    hackathon: "ETHDenver 2024",
+  },
+  {
+    name: "Ghost",
+    image: "/hackathons/ghost.svg",
+    description:
+      "A mobile-native GHO-centric smart wallet designed for p2p payments",
+    color: "#C9B3F9",
+    link: "https://ethglobal.com/showcase/ghost-mae3q",
+    hackathon: "ETHGlobal LFGHO Online 2024",
+  },
+  {
+    name: "Pulse",
+    image: "/hackathons/pulse.svg",
+    description: "Tinder-like experience for Lens and Farcaster posts",
+    color: "#1D91E3",
+    link: "https://ethglobal.com/showcase/pulse-v4iir",
+    hackathon: "ETHGlobal Istanbul 2023",
+  },
+  {
+    name: "Split3",
+    image: "/hackathons/split3.svg",
+    description:
+      "The easiest and safest way to split group expenses with crypto",
+    color: "#2CAF49",
+    link: "https://devpost.com/software/split3",
+    hackathon: "ETHWarsaw 2023",
+  },
+];
 
 export default function Hackathons() {
   return (
@@ -9,60 +55,9 @@ export default function Hackathons() {
           Everywhere we go, we hack
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 md:pt-20 px-6">
-          <HackathonCard
-            project={{
-              name: "Split3",
-              image: "/hackathons/split3.svg",
-              description:
-                "The easiest and safest way to split group expenses with crypto",
-              color: "#2CAF49",
-              link: "https://devpost.com/software/split3",
-              hackathon: "ETHWarsaw 2023",
-            }}
-          />
-          <HackathonCard
-            project={{
-              name: "threelingo",
-              image: "/hackathons/threelingo.svg",
-              description: "The free, fun, and effective way to learn web3.",
-              color: "#2F6EE7",
-              link: "https://taikai.network/ethlisbon/hackathons/ethlisbon-2023/projects/clokh2kpz06z6xk01gl0c0ggn/idea",
-              hackathon: "ETHLisbon 2023",
-            }}
-          />
-          <HackathonCard
-            project={{
-              name: "Pulse",
-              image: "/hackathons/pulse.svg",
-              description:
-                "Tinder-like experience for Lens and Farcaster posts",
-              color: "#1D91E3",
-              link: "https://ethglobal.com/showcase/pulse-v4iir",
-              hackathon: "ETHGlobal Istanbul 2023",
-            }}
-          />
-          <HackathonCard
-            project={{
-              name: "Ghost",
-              image: "/hackathons/ghost.svg",
-              description:
-                "A mobile-native GHO-centric smart wallet designed for p2p payments",
-              color: "#C9B3F9",
-              link: "https://ethglobal.com/showcase/ghost-mae3q",
-              hackathon: "ETHGlobal LFGHO Online 2024",
-            }}
-          />
-          <HackathonCard
-            project={{
-              name: "Papabase",
-              image: "/hackathons/papabase.svg",
-              description:
-                "Making public goods donations accessible to everyone through crypto and fiat.",
-              color: "#1851FA",
-              link: "https://devfolio.co/projects/papabase-7d6b",
-              hackathon: "ETHDenver 2024",
-            }}
-          />
+          {hackathons.map((project) => (
+            <HackathonCard key={project.name} project={project} />
+          ))}
         </div>
       </div>
     </section>

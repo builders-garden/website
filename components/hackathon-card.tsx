@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Chip } from "@nextui-org/chip";
 
-type Hackathon = {
+export type Hackathon = {
   name: string;
   image: string;
   description: string;

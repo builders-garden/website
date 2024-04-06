@@ -12,10 +12,7 @@ export default function Home() {
       <div className="max-w-[1440px] w-full mx-auto">
         <Hero />
         <Mission />
-        <Hackathons />
-        <Bounties />
         <Team />
-        <Partners />
         <CTA />
       </div>
     </section>

@@ -7,10 +7,10 @@ export const NavbarComponent = () => {
     <div className="fixed w-full p-5 hidden md:block z-10">
       <div className="rounded-[120px] px-5 py-3 bg-gradient-to-tr from-[#171717] to-[#0E0E0E] justify-between items-center hidden md:flex z-[100]">
         <Image
-          src={"/logo.svg"}
+          src={"/sloop-logo.svg"}
           height={50}
           width={158}
-          alt="Builders Garden logo"
+          alt="Sloop logo"
         />
         <div className="flex gap-8">
           <Link href="#mission" className="text-foreground font-medium">
@@ -32,7 +32,7 @@ export const NavbarComponent = () => {
           color="primary"
           className="w-44 font-bold"
           as={Link}
-          href="mailto:gm@builders.garden"
+          href="mailto:mattar@colgate.edu"
         >
           Contact us
         </Button>

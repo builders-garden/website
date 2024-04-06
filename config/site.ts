@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Builders Garden",
-  description: "Gathering like-minded builders for mutual growth.",
+  name: "Sloop Software",
+  description: "Building software that solves problems.",
   navItems: [
     {
       label: "Home",

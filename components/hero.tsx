@@ -10,26 +10,18 @@ export default function Hero() {
     >
       <div className="px-6 md:px-16 max-w-5xl gap-y-6 flex flex-col">
         <h1 className="font-clash-display text-light-green text-4xl md:text-7xl">
-          We <br className="block md:hidden" />{" "}
-          <span className="text-primary">cultivate</span>{" "}
-          <Image
-            src={"/flower.svg"}
-            height={60}
-            width={60}
-            alt="Builders Garden flower"
-            className="inline mb-1 h-[40px] w-[40px]"
-          />{" "}
+          Sailing <br className="block md:hidden" />{" "}
+          <span className="text-primary">small </span>{" "}
           <br />
-          innovative projects <br className="hidden md:block" /> in
+          businesses <br className="hidden md:block" />
           <br className="block md:hidden" />{" "}
           <span className="text-primary">
-            web3
-            <br className="block md:hidden" /> land
+            to sale
+            <br className="block md:hidden" /> 
           </span>
         </h1>
         <p className="pr-28 md:pr-0">
-          Creating a fertile space for people to express themselves by building
-          their ideas
+          A small business M&A Fin-Tech platform
         </p>
         <Button
           radius="full"
@@ -37,25 +29,25 @@ export default function Hero() {
           className="w-44 font-bold"
           variant="ghost"
           as={Link}
-          href="mailto:gm@builders.garden"
+          href="mailto:mattar@colgate.edu"
         >
           Contact us
         </Button>
       </div>
-      <Image
-        src={"/hero-illustration.svg"}
+      {/* <Image
+        src={"/protruding-squares.svg"}
         height={663}
         width={918}
         alt="Builders Garden hero illustration"
         className="hidden md:block absolute -bottom-72 right-0"
-      />
-      <Image
+      /> */}
+      {/* <Image
         src={"/hero-illustration-mobile.svg"}
         height={263}
         width={390}
         alt="Builders Garden hero illustration"
         className="block absolute md:hidden -bottom-6 right-0"
-      />
+      /> */}
     </section>
   );
 }

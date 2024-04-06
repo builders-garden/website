@@ -45,7 +45,7 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="relative flex flex-col h-screen">
             <NavbarComponent />
-            <main className="py-24 z-0">{children}</main>
+            <main className="py-24 z-0" style={{ backgroundColor: '#EFEBE6' }}>{children}</main>
             <FooterComponent />
           </div>
         </Providers>

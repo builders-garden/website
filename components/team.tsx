@@ -2,25 +2,28 @@ import TeamCard from "./team-card";
 
 const members = [
   {
-    name: "frank",
-    description: "Blockchain Developer",
-    twitter: "https://twitter.com/Frankc_eth",
-    farcaster: "https://warpcast.com/frankk",
-    image: "/team/frank.jpg",
+    name: "Mark Attar",
+    description: "Full-Stack Engineer",
+    linkedin: "https://www.linkedin.com/in/mark-attar/",
+    image: "/team/headshot-Mark.jpeg",
   },
   {
-    name: "limone",
-    description: "Serial Hacker",
-    twitter: "https://twitter.com/limone_eth",
-    farcaster: "https://warpcast.com/limone.eth",
-    image: "/team/limone.png",
+    name: "James Njoroge",
+    description: "Backend Engineer",
+    linkedin: "https://www.linkedin.com/in/james-ngugi-njoroge/",
+    image: "/team/headshot-James.png",
   },
   {
-    name: "orbulo",
-    description: "Full Stack Developer",
-    twitter: "https://twitter.com/orbuloeth",
-    farcaster: "https://warpcast.com/orbulo",
-    image: "/team/orbulo.jpg",
+    name: "Nick Kang",
+    description: "Project Manager",
+    linkedin: "https://www.linkedin.com/in/dongkyun-kang/",
+    image: "/team/headshot-Nick.jpeg",
+  },
+  {
+    name: "Noah Saint Surin",
+    description: "Backend Engineer",
+    linkedin: "https://www.linkedin.com/in/nsaintsurin/",
+    image: "/team/headshot-Noah.jpeg",
   },
 ];
 

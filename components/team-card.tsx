@@ -4,14 +4,14 @@ import Image from "next/image";
 type Member = {
   name: string;
   description: string;
-  twitter: string;
-  farcaster?: string;
+  linkedin: string;
+  // farcaster?: string;
   image: string;
 };
 
 export default function TeamCard({ member }: { member: Member }) {
   return (
-    <div className="rounded-full h-[442px] w-[304px] bg-gradient-to-tr from-[#171717] to-[#0E0E0E] flex flex-col items-center p-5 gap-y-6">
+    <div className="rounded-full h-[442px] w-[304px] flex flex-col items-center p-5 gap-y-6" style={{ backgroundColor: '#EE5522' }}>
       <Image
         src={member.image}
         height={264}
@@ -25,15 +25,15 @@ export default function TeamCard({ member }: { member: Member }) {
       </div>
 
       <div className="flex flex-row items-center gap-2">
-        <Link href={member.twitter} isExternal>
+        <Link href={member.linkedin} isExternal>
           <Image
-            src={"/twitter.svg"}
+            src={"/linkedin.svg"}
             height={24}
             width={24}
-            alt={"Twitter logo"}
+            alt={"Linkedin logo"}
           />
         </Link>
-        {member.farcaster && (
+        {/* {member.farcaster && (
           <Link href={member.farcaster} isExternal>
             <Image
               src={"/farcaster.svg"}
@@ -43,7 +43,7 @@ export default function TeamCard({ member }: { member: Member }) {
               alt={"Farcaster logo"}
             />
           </Link>
-        )}
+        )} */}
       </div>
     </div>
   );

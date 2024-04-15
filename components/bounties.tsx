@@ -39,6 +39,8 @@ export default function Bounties() {
           alt=""
         />
         <Image src={"/bounties/dynamic.svg"} width={140} height={56} alt="" />
+        <Image src={"/bounties/near.svg"} width={140} height={56} alt="" />
+        <Image src={"/bounties/sablier.svg"} width={140} height={56} alt="" />
       </div>
     </section>
   );

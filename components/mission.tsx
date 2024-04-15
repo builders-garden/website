@@ -16,13 +16,12 @@ export default function Mission() {
       </div>
       <div className="px-6 md:px-16 max-w-5xl gap-y-6 flex flex-col">
         <h2 className="text-4xl md:text-5xl font-clash-display">
-          Gathering like-minded <span className="text-primary">builders</span>{" "}
-          for mutual <span className="text-secondary">growth</span>
+          <span className="text-primary">Speed</span> is our guiding bloom, but{" "}
+          <span className="text-secondary">quality</span> is not negotiable.
         </h2>
         <p>
-          We aim to cultivate the ultimate oasis for individuals to explore and
-          develop their web3 ideas, in a vibrant and open-minded space for
-          builders.
+          We are a team of experienced hackers and builders, who love shipping
+          fast and iterating quickly without compromising on excellence.
         </p>
       </div>
     </section>

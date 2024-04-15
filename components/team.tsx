@@ -10,7 +10,7 @@ const members = [
   },
   {
     name: "limone",
-    description: "Serial Hacker",
+    description: "Full Stack Developer",
     twitter: "https://twitter.com/limone_eth",
     farcaster: "https://warpcast.com/limone.eth",
     image: "/team/limone.png",
@@ -21,6 +21,27 @@ const members = [
     twitter: "https://twitter.com/orbuloeth",
     farcaster: "https://warpcast.com/orbulo",
     image: "/team/orbulo.jpg",
+  },
+  {
+    name: "darph",
+    description: "UI/UX Designer",
+    twitter: "https://twitter.com/vDarph",
+    farcaster: "https://warpcast.com/darph",
+    image: "/team/darph.png",
+  },
+  {
+    name: "0xfraye",
+    description: "Backend Developer",
+    twitter: "https://twitter.com/mmidena23",
+    farcaster: "https://warpcast.com/midenaeth",
+    image: "/team/fraye.jpg",
+  },
+  {
+    name: "bianc8",
+    description: "Full Stack Developer",
+    twitter: "https://twitter.com/bianc8_eth",
+    farcaster: "https://warpcast.com/bianc8",
+    image: "/team/bianc8.jpg",
   },
 ];
 

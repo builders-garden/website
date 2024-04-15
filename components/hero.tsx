@@ -10,8 +10,9 @@ export default function Hero() {
     >
       <div className="px-6 md:px-16 max-w-5xl gap-y-6 flex flex-col">
         <h1 className="font-clash-display text-light-green text-4xl md:text-7xl">
-          We <br className="block md:hidden" />{" "}
-          <span className="text-primary">cultivate</span>{" "}
+          Web3
+          <br className="block md:hidden" />{" "}
+          <span className="text-primary">MVP</span> studio{" "}
           <Image
             src={"/flower.svg"}
             height={60}
@@ -20,16 +21,12 @@ export default function Hero() {
             className="inline mb-1 h-[40px] w-[40px]"
           />{" "}
           <br />
-          innovative projects <br className="hidden md:block" /> in
+          shipping products <br className="hidden md:block" /> in a matter of
           <br className="block md:hidden" />{" "}
-          <span className="text-primary">
-            web3
-            <br className="block md:hidden" /> land
-          </span>
+          <span className="text-primary">weeks</span>
         </h1>
         <p className="pr-28 md:pr-0">
-          Creating a fertile space for people to express themselves by building
-          their ideas
+          PoC, MVP, or full-fledged product, we can help you build it.
         </p>
         <Button
           radius="full"

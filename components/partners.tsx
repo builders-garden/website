@@ -30,6 +30,7 @@ export default function Partners() {
           height={56}
           alt=""
         />
+        <Image src={"/partners/xmtp.svg"} width={140} height={56} alt="" />
         {/* <Image src={"/partner.svg"} width={140} height={56} alt="" />
         <Image src={"/partner.svg"} width={140} height={56} alt="" /> */}
       </div>

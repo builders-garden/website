@@ -2,6 +2,15 @@ import HackathonCard, { Hackathon } from "./hackathon-card";
 
 const hackathons: Hackathon[] = [
   {
+    name: "espresso",
+    image: "/hackathons/espresso.svg",
+    description:
+      "iPad app that helps merchant setting up their shop and start accepting payments in crypto.",
+    color: "#FFFF",
+    link: "https://espresso.builders.garden",
+    hackathon: "ETHBucharest 2024",
+  },
+  {
     name: "fluidpay",
     image: "/hackathons/fluidpay.svg",
     description: "Stealth P2P payments web-app built on Base with USDC.",

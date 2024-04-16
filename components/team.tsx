@@ -24,7 +24,7 @@ const members = [
   },
   {
     name: "darph",
-    description: "UI/UX Designer",
+    description: "UX/UI Designer",
     twitter: "https://twitter.com/vDarph",
     farcaster: "https://warpcast.com/darph",
     image: "/team/darph.png",

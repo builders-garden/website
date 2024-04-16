@@ -43,6 +43,13 @@ const members = [
     farcaster: "https://warpcast.com/bianc8",
     image: "/team/bianc8.jpg",
   },
+  {
+    name: "six99",
+    description: "Mobile and Frontend Developer",
+    twitter: "https://twitter.com/AndreaFolino3",
+    farcaster: "https://warpcast.com/six99",
+    image: "/team/andrea.jpg",
+  },
 ];
 
 export default function Team() {

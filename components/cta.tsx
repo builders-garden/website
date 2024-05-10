@@ -6,7 +6,7 @@ export default function CTA() {
   return (
     <section
       id="cta"
-      className="px-16 py-20 h-[500px] rounded-3xl bg-[#4F00F6] md:bg-transparent mx-6 mt-12 md:mt-0"
+      className="px-12 md:px-16 py-20 h-[500px] rounded-3xl bg-[#4F00F6] md:bg-transparent mx-6 mt-12 md:mt-0"
     >
       <div className="relative w-full h-full">
         <Image

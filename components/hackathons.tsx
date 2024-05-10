@@ -60,7 +60,7 @@ export default function Hackathons() {
     <section id="portfolio" className="py-28 flex flex-col">
       <div className="flex flex-col items-center gap-y-4">
         <h3 className="text-secondary font-bold text-2xl">Hackathons</h3>
-        <h2 className="font-clash-display text-5xl md:text-7xl">
+        <h2 className="font-clash-display text-4xl md:text-7xl text-center px-4 md:px-0">
           Everywhere we go, we hack
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 md:pt-20 px-6">

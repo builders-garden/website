@@ -30,10 +30,10 @@ const members = [
     image: "/team/darph.png",
   },
   {
-    name: "0xfraye",
+    name: "fraye",
     description: "Backend Developer",
-    twitter: "https://twitter.com/mmidena23",
-    farcaster: "https://warpcast.com/midenaeth",
+    twitter: "https://twitter.com/itsmide_eth",
+    farcaster: "https://warpcast.com/itsmide.eth",
     image: "/team/fraye.jpg",
   },
   {
@@ -49,6 +49,27 @@ const members = [
     twitter: "https://twitter.com/AndreaFolino3",
     farcaster: "https://warpcast.com/six99",
     image: "/team/andrea.jpg",
+  },
+  {
+    name: "blackicon",
+    description: "Fullstack Developer",
+    twitter: "https://twitter.com/TBlackicon",
+    farcaster: "https://warpcast.com/blackicon.eth",
+    image: "/team/blackicon.png",
+  },
+  {
+    name: "drone",
+    description: "Solidity Developer",
+    twitter: "https://twitter.com/SolidityDrone",
+    farcaster: "https://warpcast.com/drone",
+    image: "/team/drone.jpg",
+  },
+  {
+    name: "caso",
+    description: "Frontend Developer",
+    twitter: "https://twitter.com/steven_basalari",
+    farcaster: "https://warpcast.com/0xcaso",
+    image: "/team/caso.png",
   },
 ];
 

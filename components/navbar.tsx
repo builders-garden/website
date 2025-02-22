@@ -29,12 +29,12 @@ export const NavbarComponent = () => {
         <Button
           radius="full"
           size="lg"
-          color="primary"
+          color="secondary"
           className="w-44 font-bold"
           as={Link}
           href="mailto:gm@builders.garden"
         >
-          Contact us
+          Get Started
         </Button>
       </div>
     </div>

@@ -10,9 +10,9 @@ export default function Hero() {
     >
       <div className="px-6 md:px-16 max-w-5xl gap-y-6 flex flex-col">
         <h1 className="font-clash-display text-light-green text-4xl md:text-7xl">
-          Web3
+          We
           <br className="block md:hidden" />{" "}
-          <span className="text-primary">MVP</span> studio{" "}
+          <span className="text-secondary">cultivate</span>{" "}
           <Image
             src={"/flower.svg"}
             height={60}
@@ -21,12 +21,13 @@ export default function Hero() {
             className="inline mb-1 h-[40px] w-[40px]"
           />{" "}
           <br />
-          shipping products <br className="hidden md:block" /> in a matter of
+          innovative projects <br className="hidden md:block" /> in the
           <br className="block md:hidden" />{" "}
-          <span className="text-primary">weeks</span>
+          <span className="text-secondary">web3 land</span>
         </h1>
         <p className="pr-28 md:pr-0">
-          PoC, MVP, or full-fledged product, we can help you build it.
+          Creating a fertile space for people to express themselves by building
+          their ideas
         </p>
         <Button
           radius="full"
@@ -36,7 +37,7 @@ export default function Hero() {
           as={Link}
           href="mailto:gm@builders.garden"
         >
-          Contact us
+          Get Started
         </Button>
       </div>
       <Image

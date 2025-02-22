@@ -1,10 +1,11 @@
 import CTA from "@/components/cta";
 import Hero from "@/components/hero";
 import Mission from "@/components/mission";
-import Partners from "@/components/partners";
-import Hackathons from "@/components/hackathons";
 import Team from "@/components/team";
 import Bounties from "@/components/bounties";
+import Services from "@/components/services";
+import Projects from "@/components/projects";
+import Testimonials from "@/components/testimonials";
 
 export default function Home() {
   return (
@@ -12,10 +13,11 @@ export default function Home() {
       <div className="max-w-[1440px] w-full mx-auto">
         <Hero />
         <Mission />
-        <Hackathons />
-        <Bounties />
+        <Services />
+        <Projects />
         <Team />
-        <Partners />
+        <Testimonials />
+        <Bounties />
         <CTA />
       </div>
     </section>

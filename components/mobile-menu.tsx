@@ -57,11 +57,7 @@ export function MobileMenu({
           )}
           {...other}
         >
-          <Link
-            href="/"
-            className="flex items-center gap-2"
-            onClick={handleToggleMobileMenu}
-          >
+          <Link href="/" className="flex items-center gap-2">
             <Image
               src={"/logo.svg"}
               className="hidden md:block w-[120px] h-[40px]"

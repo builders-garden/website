@@ -69,7 +69,7 @@ export const MEMBERS = [
   },
   {
     name: "stepome",
-    description: "Solidity Developer",
+    description: "UX/UI Designer",
     twitter: "https://twitter.com/stefanopomelli",
     farcaster: "https://warpcast.com/stepome",
     url: "https://stefanopomelli.com/",

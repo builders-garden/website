@@ -151,11 +151,13 @@ export default function CTA() {
                 )}
               />
 
-              <CaptchaWidget
-                callback={(validateToken) => {
-                  form.setValue("validateToken", validateToken);
-                }}
-              />
+              <div className="min-h-[71.5px] flex flex-col items-center justify-center">
+                <CaptchaWidget
+                  callback={(validateToken) => {
+                    form.setValue("validateToken", validateToken);
+                  }}
+                />
+              </div>
 
               <Button
                 type="submit"

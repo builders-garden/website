@@ -25,7 +25,7 @@ export const MEMBERS = [
   {
     name: "flurry",
     description: "Business",
-    twitter: "https://twitter.com/mctflurry",
+    twitter: "https://twitter.com/mctflurryy",
     farcaster: "https://warpcast.com/mctflurry",
     image: "/team/flurry.png",
   },

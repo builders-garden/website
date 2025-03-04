@@ -47,6 +47,7 @@
     "react-hook-form": "^7.54.2",
     "react-remove-scroll": "^2.6.3",
     "resend": "^4.1.2",
+    "sharp": "0.33.1",
     "tailwind-merge": "^3.0.1",
     "tailwind-variants": "^0.1.19",
     "tailwindcss": "3.3.5",

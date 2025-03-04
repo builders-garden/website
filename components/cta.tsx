@@ -160,7 +160,7 @@ export default function CTA() {
               <Button
                 type="submit"
                 variant="tertiary"
-                className="px-[22px] md:px-[44px] py-[24px] font-extrabold text-lg transition-all duration-300"
+                className="w-[135px] md:w-[180px] px-[22px] md:px-[44px] py-[24px] font-extrabold text-lg transition-all duration-300"
                 disabled={form.getValues("validateToken") === "" || isLoading}
               >
                 {isLoading ? (

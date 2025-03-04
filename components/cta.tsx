@@ -1,11 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { FormSchema, formSchema } from "@/types";
-
+import { toast } from "sonner";
 import Image from "next/image";
 import ky from "ky";
+import { FormSchema, formSchema } from "@/types";
+import { Loader2 } from "lucide-react";
 
 import {
   Form,
@@ -19,9 +21,9 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { CaptchaWidget } from "@/components/captcha-widget";
-import { toast } from "sonner";
 
 export default function CTA() {
+  const [isLoading, setIsLoading] = useState(false);
   const form = useForm<FormSchema>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -35,6 +37,7 @@ export default function CTA() {
   async function onSubmit(values: FormSchema) {
     try {
       console.log("sending email w this values", values);
+      setIsLoading(true);
       const response = await ky
         .post<{ status: string; error?: string }>("/api/mail", {
           json: {
@@ -57,6 +60,8 @@ export default function CTA() {
       }
     } catch (error) {
       console.error("Error sending email", error);
+    } finally {
+      setIsLoading(false);
     }
   }
 
@@ -156,9 +161,13 @@ export default function CTA() {
                 type="submit"
                 variant="tertiary"
                 className="px-[22px] md:px-[44px] py-[24px] font-extrabold text-lg transition-all duration-300"
-                disabled={form.getValues("validateToken") === ""}
+                disabled={form.getValues("validateToken") === "" || isLoading}
               >
-                Contact us
+                {isLoading ? (
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                ) : (
+                  "Contact us"
+                )}
               </Button>
             </form>
           </Form>

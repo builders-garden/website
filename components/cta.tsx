@@ -151,7 +151,7 @@ export default function CTA() {
                 )}
               />
 
-              <div className="w-full min-h-[71.5px] flex flex-col items-center justify-start">
+              <div className="w-full min-h-[71.5px] flex flex-col items-start justify-center">
                 <CaptchaWidget
                   callback={(validateToken) => {
                     form.setValue("validateToken", validateToken);

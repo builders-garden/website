@@ -18,7 +18,7 @@ importers:
         specifier: ^2.0.24
         version: 2.0.24(@nextui-org/system@2.0.15(@nextui-org/theme@2.1.17(tailwindcss@3.3.5))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tailwind-variants@0.1.19(tailwindcss@3.3.5)))(@nextui-org/theme@2.1.17(tailwindcss@3.3.5))(framer-motion@10.16.16(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@nextui-org/chip':
-        specifier: ^2.0.25
+        specifier: ^2.2.6
         version: 2.2.6(@nextui-org/system@2.0.15(@nextui-org/theme@2.1.17(tailwindcss@3.3.5))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(tailwind-variants@0.1.19(tailwindcss@3.3.5)))(@nextui-org/theme@2.1.17(tailwindcss@3.3.5))(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@nextui-org/code':
         specifier: 2.0.24
@@ -69,10 +69,10 @@ importers:
         specifier: ^1.1.8
         version: 1.1.8(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@react-aria/ssr':
-        specifier: ^3.8.0
+        specifier: ^3.9.1
         version: 3.9.1(react@18.2.0)
       '@react-aria/visually-hidden':
-        specifier: ^3.8.6
+        specifier: ^3.8.8
         version: 3.8.8(react@18.2.0)
       '@react-email/components':
         specifier: ^0.0.33
@@ -114,10 +114,10 @@ importers:
         specifier: 14.0.2
         version: 14.0.2(eslint@8.48.0)(typescript@5.0.4)
       framer-motion:
-        specifier: ^10.16.4
+        specifier: ^10.16.16
         version: 10.16.16(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       intl-messageformat:
-        specifier: ^10.5.0
+        specifier: ^10.5.8
         version: 10.5.8
       jiti:
         specifier: 1.21.7
@@ -162,7 +162,7 @@ importers:
         specifier: ^3.0.1
         version: 3.0.1
       tailwind-variants:
-        specifier: ^0.1.18
+        specifier: ^0.1.19
         version: 0.1.19(tailwindcss@3.3.5)
       tailwindcss:
         specifier: 3.3.5

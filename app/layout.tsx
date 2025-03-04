@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
+import { Toaster } from "@/components/ui/sonner";
 import clsx from "clsx";
 import FooterComponent from "@/components/footer";
 
@@ -42,6 +43,7 @@ export default function RootLayout({
           <div className="relative flex flex-col h-screen">
             <Navbar />
             <main className="pt-24 z-0">{children}</main>
+            <Toaster />
             <FooterComponent />
           </div>
         </Providers>

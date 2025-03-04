@@ -5,6 +5,12 @@ import { sendEmail } from "@/lib/resend";
 export async function POST(request: NextRequest) {
   try {
     const { from, name, message, validateToken } = await request.json();
+    if (!from || !name || !message || !validateToken) {
+      return NextResponse.json(
+        { error: "Missing required fields", status: "nok" },
+        { status: 400 }
+      );
+    }
 
     // Try to get IP from various headers
     const forwardedFor = request.headers.get("x-forwarded-for");
@@ -20,12 +26,19 @@ export async function POST(request: NextRequest) {
     });
     // if captcha is not verified, return 401
     if (!res.success) {
-      return NextResponse.json({ status: 401 });
+      return NextResponse.json(
+        { error: "Captcha verification failed", status: "nok" },
+        { status: 401 }
+      );
     }
     // send email
     const response = await sendEmail(from, name, message);
-    return NextResponse.json(response);
+    return NextResponse.json({ response, status: "ok" });
   } catch (error) {
-    return NextResponse.json({ status: 500 });
+    console.error("Error sending email", error);
+    return NextResponse.json(
+      { error: "Internal server error", status: "nok" },
+      { status: 500 }
+    );
   }
 }

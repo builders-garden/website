@@ -10,7 +10,6 @@ import ky from "ky";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -20,6 +19,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { CaptchaWidget } from "@/components/captcha-widget";
+import { toast } from "sonner";
 
 export default function CTA() {
   const form = useForm<FormSchema>({
@@ -36,7 +36,7 @@ export default function CTA() {
     try {
       console.log("sending email w this values", values);
       const response = await ky
-        .post("/api/mail", {
+        .post<{ status: string; error?: string }>("/api/mail", {
           json: {
             from: values.email,
             name: values.name,
@@ -45,7 +45,16 @@ export default function CTA() {
           },
         })
         .json();
-      console.log("response from api/mail", response);
+      if (response.status === "ok") {
+        toast.success(
+          `Thx ${values.name}, your email has been sent successfully`,
+          {
+            description: "We will reach out to you as soon as possible :)",
+          }
+        );
+      } else {
+        toast.error(response.error || "Failed to send email");
+      }
     } catch (error) {
       console.error("Error sending email", error);
     }
@@ -136,6 +145,7 @@ export default function CTA() {
                   </FormItem>
                 )}
               />
+
               <CaptchaWidget
                 callback={(validateToken) => {
                   form.setValue("validateToken", validateToken);
@@ -146,7 +156,7 @@ export default function CTA() {
                 type="submit"
                 variant="tertiary"
                 className="px-[22px] md:px-[44px] py-[24px] font-extrabold text-lg transition-all duration-300"
-                // disabled={form.getValues("validateToken") === ""}
+                disabled={form.getValues("validateToken") === ""}
               >
                 Contact us
               </Button>

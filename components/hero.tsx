@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -11,8 +11,7 @@ export default function Hero() {
       <div className="px-6 md:px-16 max-w-5xl gap-y-6 flex flex-col">
         <h1 className="font-clash-display text-light-green text-4xl md:text-7xl">
           We
-          <br className="block md:hidden" />{" "}
-          <span className="text-secondary">cultivate</span>{" "}
+          <span className="text-secondary"> cultivate</span>{" "}
           <Image
             src={"/flower.svg"}
             height={60}
@@ -22,10 +21,9 @@ export default function Hero() {
           />{" "}
           <br />
           innovative projects <br className="hidden md:block" /> in the
-          <br className="block md:hidden" />{" "}
-          <span className="text-secondary">web3 land</span>
+          <span className="text-secondary"> web3 land</span>
         </h1>
-        <p className="pr-28 md:pr-0">
+        <p className="pr-28 md:pr-0 text-lg lg:text-xl font-semibold">
           Creating a fertile space for people to express themselves by building
           their ideas
         </p>

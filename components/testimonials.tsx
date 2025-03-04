@@ -1,32 +1,23 @@
-import Image from "next/image";
+import { TESTIMONIALS } from "@/lib/constants";
 import TestimonialCard from "./testimonial-card";
-
-const testimonials = [
-  {
-    name: "Vitalik Buterin",
-    about: "CEO, Ethereum Foundation",
-    description:
-      "“Sanno fa' web3. So' dei mega scoppiati e fanno progetti massafighi. Fanno al caso vostro, daje!”",
-    image: "/testimonials/vitalik.png",
-    brandImage: "/testimonials/ethereum-foundation.svg",
-  },
-];
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="w-full bg-background py-24">
-      <div className="container mx-auto px-4">
+    <section
+      id="testimonials"
+      className="w-full bg-background py-12 md:py-24 px-4 md:px-6"
+    >
+      <div className="container mx-auto">
         <div className="mb-16 text-center">
           <p className="mb-4 text-tertiary font-heading font-bold">
             Testimonials
           </p>
           <h2 className="font-clash-display text-5xl">
-            What others say
-            <br /> about us
+            What others say about us
           </h2>
         </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          {testimonials.map((testimonial) => (
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {TESTIMONIALS.map((testimonial) => (
             <TestimonialCard key={testimonial.name} testimonial={testimonial} />
           ))}
         </div>

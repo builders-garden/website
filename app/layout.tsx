@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Providers } from "./providers";
-import { NavbarComponent } from "@/components/navbar";
+import { Navbar } from "@/components/landing/navbar";
 import clsx from "clsx";
 import FooterComponent from "@/components/footer";
 
@@ -13,10 +13,6 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
   icons: {
     icon: "/tree.svg",
     shortcut: "/tree.svg",
@@ -44,8 +40,8 @@ export default function RootLayout({
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
-            <NavbarComponent />
-            <main className="py-24 z-0">{children}</main>
+            <Navbar />
+            <main className="pt-24 z-0">{children}</main>
             <FooterComponent />
           </div>
         </Providers>

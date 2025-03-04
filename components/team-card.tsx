@@ -6,18 +6,19 @@ type Member = {
   description: string;
   twitter: string;
   farcaster?: string;
+  url?: string;
   image: string;
 };
 
 export default function TeamCard({ member }: { member: Member }) {
   return (
-    <div className="rounded-full h-[442px] w-[304px] bg-gradient-to-tr from-[#171717] to-[#0E0E0E] flex flex-col items-center p-5 gap-y-6">
+    <div className="w-full rounded-full h-[442px] w-[304px] bg-gradient-to-tr from-[#171717] to-[#0E0E0E] flex flex-col items-center p-5 gap-y-6">
       <Image
         src={member.image}
         height={264}
         width={264}
         alt={member.name}
-        className="rounded-full"
+        className="w-[264px] h-[264px] rounded-full object-cover"
       />
       <div className="flex flex-col items-center">
         <h3 className="text-2xl font-bold">{member.name}</h3>
@@ -41,6 +42,17 @@ export default function TeamCard({ member }: { member: Member }) {
               width={18}
               color="#222222"
               alt={"Farcaster logo"}
+            />
+          </Link>
+        )}
+        {member.url && (
+          <Link href={member.url} isExternal>
+            <Image
+              src={"/icons/dribble.svg"}
+              height={18}
+              width={18}
+              color="#222222"
+              alt={"Personal website logo"}
             />
           </Link>
         )}

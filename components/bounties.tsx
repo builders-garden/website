@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+
 import {
   Carousel,
-  CarouselApi,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
@@ -14,94 +15,15 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import Link from "next/link";
 
-const bounties = [
-  {
-    name: "Safe",
-    image: "/bounties/safe.svg",
-    link: "https://safe.global/",
-  },
-  {
-    name: "Base",
-    image: "/bounties/base.svg",
-    link: "https://base.org/",
-  },
-  {
-    name: "Airstack",
-    image: "/bounties/airstack.svg",
-    link: "https://airstack.xyz/",
-  },
-  {
-    name: "Request Network",
-    image: "/bounties/request-network.svg",
-    link: "https://request.network/",
-  },
-  {
-    name: "The Graph",
-    image: "/bounties/the-graph.svg",
-    link: "https://thegraph.com/",
-  },
-  {
-    name: "Xmtp",
-    image: "/bounties/xmtp.svg",
-    link: "https://xmtp.org/",
-  },
-  {
-    name: "Fluidkey",
-    image: "/bounties/fluidkey.svg",
-    link: "https://fluidkey.xyz/",
-  },
-  {
-    name: "Chainlink",
-    image: "/bounties/chainlink.svg",
-    link: "https://chain.link/",
-  },
-  {
-    name: "Zkbob",
-    image: "/bounties/zkbob.svg",
-    link: "https://zkbob.xyz/",
-  },
-  {
-    name: "Lens",
-    image: "/bounties/lens.svg",
-    link: "https://lens.xyz/",
-  },
-  {
-    name: "Ens",
-    image: "/bounties/ens.svg",
-    link: "https://ens.domains/",
-  },
-  {
-    name: "Push Protocol",
-    image: "/bounties/push-protocol.svg",
-    link: "https://push.xyz/",
-  },
-  {
-    name: "Gnosis Pay",
-    image: "/bounties/gnosis_pay.svg",
-    link: "https://gnosispay.xyz/",
-  },
-  {
-    name: "Dynamic",
-    image: "/bounties/dynamic.svg",
-    link: "https://dynamic.xyz/",
-  },
-  {
-    name: "Near",
-    image: "/bounties/near.svg",
-    link: "https://near.org/",
-  },
-  {
-    name: "Sablier",
-    image: "/bounties/sablier.svg",
-    link: "https://sablier.org/",
-  },
-];
+import { BOUNTIES } from "@/lib/constants";
 
 export default function Bounties() {
   return (
-    <section id="partners" className="py-12 md:py-28 flex flex-col gap-y-8">
+    <section
+      id="bounties"
+      className="px-4 md:px-6 py-12 md:py-28 flex flex-col gap-y-8"
+    >
       <div className="flex flex-col items-center gap-y-6">
         <h3 className="text-tertiary font-bold text-2xl">Bounties</h3>
         <h2 className="font-clash-display text-4xl md:text-5xl text-center md:text-left">
@@ -124,10 +46,10 @@ export default function Bounties() {
           ]}
         >
           <CarouselContent className="-ml-1">
-            {bounties.map((bounty, index) => (
+            {BOUNTIES.map((bounty, index) => (
               <CarouselItem
                 key={`bounty-${index}`}
-                className="pl-1 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
+                className="pl-1 basis-1/2 sm:basis-1/3 md:basis-1/4"
               >
                 <div className="w-full flex items-center justify-center">
                   <TooltipProvider>

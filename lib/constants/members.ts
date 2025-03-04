@@ -55,7 +55,7 @@ export const MEMBERS = [
   {
     name: "caso",
     description: "Frontend Developer",
-    twitter: "https://twitter.com/steven_basalari",
+    twitter: "https://twitter.com/casoxbt",
     farcaster: "https://warpcast.com/0xcaso",
     url: "https://matteocasonato.com/",
     image: "/team/caso.png",

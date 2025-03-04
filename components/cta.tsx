@@ -34,37 +34,21 @@ export default function CTA() {
   });
 
   async function onSubmit(values: FormSchema) {
-    // verify captcha
     try {
-      const { ip } = await ky.get<{ ip: string }>("/api/ip").json();
-      const res = await captchaTurnstileVerify({
-        validateToken: values.validateToken,
-        ip: ip,
-      });
-      if (res.success) {
-        alert("Success");
-        // send email if valid
-        console.log("sending email w this values", values);
-        const response = await ky
-          .post("/api/mail", {
-            json: {
-              from: values.email,
-              name: values.name,
-              message: values.message,
-            },
-          })
-          .json();
-
-        console.log("response", response);
-      } else {
-        form.setError("validateToken", {
-          message: res["error-codes"].join(", "),
-        });
-      }
-    } catch (e) {
-      if (Array.isArray(e)) {
-        form.setError("validateToken", { message: e.join(", ") });
-      }
+      console.log("sending email w this values", values);
+      const response = await ky
+        .post("/api/mail", {
+          json: {
+            from: values.email,
+            name: values.name,
+            message: values.message,
+            validateToken: values.validateToken,
+          },
+        })
+        .json();
+      console.log("response from api/mail", response);
+    } catch (error) {
+      console.error("Error sending email", error);
     }
   }
 
@@ -165,6 +149,7 @@ export default function CTA() {
                 size="lg"
                 className="px-12 font-bold text-xl"
                 color="secondary"
+                disabled={form.getValues("validateToken") === ""}
               >
                 Contact us
               </Button>

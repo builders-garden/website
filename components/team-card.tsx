@@ -1,4 +1,4 @@
-import { Link } from "@nextui-org/link";
+import Link from "next/link";
 import Image from "next/image";
 
 type Member = {
@@ -12,7 +12,7 @@ type Member = {
 
 export default function TeamCard({ member }: { member: Member }) {
   return (
-    <div className="w-full rounded-full h-[442px] w-[304px] bg-gradient-to-tr from-[#171717] to-[#0E0E0E] flex flex-col items-center p-5 gap-y-6">
+    <div className="rounded-full h-[442px] w-[304px] bg-gradient-to-tr from-[#171717] to-[#0E0E0E] flex flex-col items-center p-5 gap-y-6">
       <Image
         src={member.image}
         height={264}
@@ -26,7 +26,7 @@ export default function TeamCard({ member }: { member: Member }) {
       </div>
 
       <div className="flex flex-row items-center gap-2">
-        <Link href={member.twitter} isExternal>
+        <Link href={member.twitter} target="_blank">
           <Image
             src={"/icons/twitter.svg"}
             height={24}
@@ -35,7 +35,7 @@ export default function TeamCard({ member }: { member: Member }) {
           />
         </Link>
         {member.farcaster && (
-          <Link href={member.farcaster} isExternal>
+          <Link href={member.farcaster} target="_blank">
             <Image
               src={"/icons/farcaster.svg"}
               height={18}
@@ -46,11 +46,11 @@ export default function TeamCard({ member }: { member: Member }) {
           </Link>
         )}
         {member.url && (
-          <Link href={member.url} isExternal>
+          <Link href={member.url} target="_blank">
             <Image
-              src={"/icons/dribble.svg"}
-              height={18}
-              width={18}
+              src={"/icons/dribble-green.svg"}
+              height={22}
+              width={22}
               color="#222222"
               alt={"Personal website logo"}
             />

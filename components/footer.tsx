@@ -1,4 +1,4 @@
-import { Link } from "@nextui-org/link";
+import Link from "next/link";
 import Image from "next/image";
 
 export default function FooterComponent() {
@@ -21,7 +21,7 @@ export default function FooterComponent() {
             Designed by{" "}
             <Link
               href="https://stefanopomelli.com"
-              isExternal
+              target="_blank"
               className="text-[#92DDDB] font-semibold text-xs md:text-md"
             >
               Stefano Pomelli
@@ -29,7 +29,7 @@ export default function FooterComponent() {
           </p>
         </div>
         <div className="flex gap-4">
-          <Link href="https://linkedin.com/builders-garden" isExternal>
+          <Link href="https://linkedin.com/builders-garden" target="_blank">
             <Image
               src={"/icons/linkedin.svg"}
               width={24}
@@ -38,7 +38,7 @@ export default function FooterComponent() {
               className="w-[24px] h-[24px] md:w-[32px] md:h-[32px]"
             />
           </Link>
-          <Link href="https://github.com/builders-garden" isExternal>
+          <Link href="https://github.com/builders-garden" target="_blank">
             <Image
               src={"/icons/github-white.svg"}
               width={24}
@@ -47,7 +47,7 @@ export default function FooterComponent() {
               className="w-[24px] h-[24px] md:w-[32px] md:h-[32px]"
             />
           </Link>
-          <Link href="https://twitter.com/buildersgarden" isExternal>
+          <Link href="https://twitter.com/buildersgarden" target="_blank">
             <Image
               src={"/icons/twitter-white.svg"}
               width={24}

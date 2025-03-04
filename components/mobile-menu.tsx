@@ -2,8 +2,6 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Button as NextUIButton } from "@nextui-org/button";
-import { Link as NextUILink } from "@nextui-org/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Portal } from "@radix-ui/react-portal";
@@ -128,22 +126,19 @@ type MainMobileMenuProps = {
 function MainMobileMenu({
   onLinkClicked,
 }: MainMobileMenuProps): React.JSX.Element {
-  const [expanded, setExpanded] = React.useState<Record<string, boolean>>({});
   return (
     <div className="fixed inset-0 z-50 mt-[69px] overflow-y-auto bg-background animate-in fade-in-0">
       <div className="flex size-full flex-col items-start space-y-3 p-4">
         <div className="flex w-full flex-col gap-2">
-          <NextUIButton
-            radius="full"
+          <Button
             size="lg"
             color="secondary"
-            className="px-[22px] md:px-[44px] font-bold"
-            as={NextUILink}
-            href="/#cta"
+            className="px-[22px] md:px-[44px] font-bold rounded-full"
             onClick={onLinkClicked}
+            asChild
           >
-            Get Started
-          </NextUIButton>
+            <Link href="/#cta">Get Started</Link>
+          </Button>
         </div>
         <ul className="w-full">
           {MENU_LINKS.map((item) => (

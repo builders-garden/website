@@ -1,8 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { Card, CardBody } from "@nextui-org/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { motion } from "framer-motion";
 
 export type Service = {
@@ -40,8 +46,8 @@ const Ellipsis = ({ color }: { color: string }) => (
 
 export default function ServiceCard({ service }: { service: Service }) {
   return (
-    <Card radius="lg">
-      <CardBody className="group pt-10 pb-16 px-12 flex flex-col items-center justify-center gap-4 bg-gradient-to-bl from-[#171717] to-[#0E0E0E] max-w-[590px] relative overflow-hidden">
+    <Card className="rounded-[50px]  bg-gradient-to-bl from-[#171717] to-[#0E0E0E] overflow-hidden">
+      <CardContent className="group pt-10 pb-16 px-12 flex flex-col items-center justify-center gap-4 max-w-[590px] relative">
         <div className="w-full flex flex-col gap-4 items-start justify-start">
           <Image
             height={40}
@@ -56,7 +62,7 @@ export default function ServiceCard({ service }: { service: Service }) {
           {service.description}
         </p>
         <Ellipsis color={service.color} />
-      </CardBody>
+      </CardContent>
     </Card>
   );
 }

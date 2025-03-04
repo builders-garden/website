@@ -1,8 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Button } from "@nextui-org/button";
-import { Link } from "@nextui-org/link";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
 import ProjectCard from "./project-card";
@@ -30,16 +30,18 @@ const Projects = () => {
             Our projects
           </h2>
         </div>
-        <ScrollArea className="flex gap-2 w-[370px] sm:w-full sm:items-center sm:justify-center sm:mx-auto whitespace-nowrap mt-8 justify-center">
+        <ScrollArea className="flex gap-2 w-[370px] sm:w-full items-center justify-center sm:mx-auto whitespace-nowrap mt-8">
           {Object.values(FILTER).map((filter) => (
             <Button
               key={filter}
+              variant="outline"
               className={cn(
-                "rounded-full mb-3 mr-2",
+                "border-2 rounded-full mb-3 mr-2",
                 filter === selectedFilter &&
                   "bg-verdino text-verdino-foreground"
               )}
               onClick={() => setSelectedFilter(filter)}
+              disabled={filter === selectedFilter}
             >
               {filter}
             </Button>
@@ -53,14 +55,12 @@ const Projects = () => {
         </div>
         <div className="mt-12 flex justify-center">
           <Button
-            radius="full"
             size="lg"
             color="default"
-            className="px-[22px] md:px-[44px] font-bold"
-            as={Link}
-            href="/projects"
+            className="px-[22px] md:px-[44px] font-bold rounded-full"
+            asChild
           >
-            View all projects
+            <Link href="/projects">View all projects</Link>
           </Button>
         </div>
       </div>

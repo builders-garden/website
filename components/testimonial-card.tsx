@@ -1,4 +1,11 @@
-import { Card, CardBody } from "@nextui-org/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import Image from "next/image";
 
 export type Testimonial = {
@@ -15,8 +22,8 @@ export default function TestimonialCard({
   testimonial: Testimonial;
 }) {
   return (
-    <Card radius="lg">
-      <CardBody className="py-14 px-12 flex flex-col items-center justify-center gap-4 bg-gradient-to-bl from-[#171717] to-[#0E0E0E] max-w-[590px] relative overflow-hidden">
+    <Card className="rounded-[50px] bg-gradient-to-bl from-[#171717] to-[#0E0E0E]">
+      <CardContent className="py-14 px-12 flex flex-col items-center justify-center gap-4 max-w-[590px] relative overflow-hidden">
         <div className="w-full flex flex-col gap-4 items-start justify-start mb-4">
           <Image
             src={testimonial.brandImage}
@@ -43,7 +50,7 @@ export default function TestimonialCard({
         <p className="text-md opacity-70 text-left font-medium text-muted-foreground">
           {testimonial.description}
         </p>
-      </CardBody>
+      </CardContent>
     </Card>
   );
 }

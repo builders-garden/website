@@ -1,6 +1,13 @@
-import { Card, CardBody } from "@nextui-org/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import Image from "next/image";
-import { Link } from "@nextui-org/link";
+import Link from "next/link";
 
 export type Link = {
   icon: string;
@@ -19,18 +26,18 @@ export type Project = {
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <Card radius="lg" className="w-full h-full p-0 m-0">
-      <CardBody className="w-full h-full m-0 px-0 pt-0 pb-14 flex flex-col items-center justify-center gap-7 bg-gradient-to-bl from-[#171717] to-[#0E0E0E] relative overflow-hidden">
+    <Card className="max-w-[416px] h-fit p-0 m-0 rounded-[50px] bg-gradient-to-bl from-[#171717] to-[#0E0E0E] overflow-hidden">
+      <CardContent className="w-full h-fit m-0 px-0 pt-0 pb-14 flex flex-col items-center justify-between gap-7 relative">
         <Link href={`/projects/${project.slug}`}>
           <Image
             src={project.image}
             alt={`${project.name} logo`}
-            height={200}
+            className="w-full h-full object-cover"
             width={416}
-            className="w-full"
+            height={493}
           />
         </Link>
-        <div className="flex flex-col items-start justify-start gap-2 w-full h-[100px] px-[24px]">
+        <div className="flex flex-col items-start justify-start gap-2 w-full h-[120px] px-6 pb-2">
           <Link href={`/projects/${project.slug}`}>
             <h2 className="text-2xl font-bold text-left">{project.name}</h2>
           </Link>
@@ -42,14 +49,14 @@ export default function ProjectCard({ project }: { project: Project }) {
               <Link
                 key={link.name}
                 href={link.url}
-                isExternal={link.url.includes("http")}
+                target={link.url.includes("http") ? "_blank" : undefined}
               >
                 <Image height={24} width={24} src={link.icon} alt={link.name} />
               </Link>
             ))}
           </div>
         </div>
-      </CardBody>
+      </CardContent>
     </Card>
   );
 }

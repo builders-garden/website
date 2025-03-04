@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Button } from "@nextui-org/button";
-import { Link } from "@nextui-org/link";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
@@ -28,14 +28,11 @@ export default function Hero() {
           their ideas
         </p>
         <Button
-          radius="full"
-          size="lg"
-          className="w-44 font-bold"
-          variant="ghost"
-          as={Link}
-          href="mailto:gm@builders.garden"
+          variant="outline"
+          className="border-2 w-44 px-[22px] md:px-[44px] py-[24px] font-extrabold text-lg transition-all duration-300"
+          asChild
         >
-          Get Started
+          <Link href="/#cta">Contact us</Link>
         </Button>
       </div>
       <Image

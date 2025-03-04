@@ -14,7 +14,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   }, [projectSlug]);
 
   return (
-    <section className="pb-8 md:pb-10">
+    <section className="pt-8 pb-8 md:pb-10">
       <div className="max-w-[1440px] w-full mx-auto px-4 md:px-6">
         {selectedProject ? (
           <ProjectCard project={selectedProject[0]} />

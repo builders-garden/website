@@ -17,10 +17,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Button } from "@nextui-org/button";
+import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { CaptchaWidget } from "@/components/captcha-widget";
-import { captchaTurnstileVerify } from "@/lib/turnstile";
 
 export default function CTA() {
   const form = useForm<FormSchema>({
@@ -145,11 +144,9 @@ export default function CTA() {
 
               <Button
                 type="submit"
-                radius="full"
-                size="lg"
-                className="px-12 font-bold text-xl"
-                color="secondary"
-                disabled={form.getValues("validateToken") === ""}
+                variant="tertiary"
+                className="px-[22px] md:px-[44px] py-[24px] font-extrabold text-lg transition-all duration-300"
+                // disabled={form.getValues("validateToken") === ""}
               >
                 Contact us
               </Button>

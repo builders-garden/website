@@ -12,6 +12,13 @@ try {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  redirects: async () => [
+    {
+      source: "/offering",
+      destination: "https://builders-garden.notion.site/what-we-do?pvs=4",
+      permanent: true,
+    },
+  ],
   // Disable unnecessary features if needed
   // reactStrictMode: true,
 };

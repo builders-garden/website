@@ -1,14 +1,14 @@
 export const MEMBERS = [
   {
     name: "frank",
-    description: "Blockchain Developer",
+    description: "Co-founder, Tech Lead",
     twitter: "https://twitter.com/Frankc_eth",
     farcaster: "https://warpcast.com/frankk",
     image: "/team/frank.jpg",
   },
   {
     name: "limone",
-    description: "Full Stack Developer",
+    description: "Co-founder, Product Lead",
     twitter: "https://twitter.com/limone_eth",
     farcaster: "https://warpcast.com/limone.eth",
     url: "https://limone.lol",
@@ -16,7 +16,7 @@ export const MEMBERS = [
   },
   {
     name: "orbulo",
-    description: "Full Stack Developer",
+    description: "Co-founder, Full Stack Developer",
     twitter: "https://twitter.com/orbuloeth",
     farcaster: "https://warpcast.com/orbulo",
     url: "https://paolorollo.dev",
@@ -24,14 +24,14 @@ export const MEMBERS = [
   },
   {
     name: "flurry",
-    description: "Business",
+    description: "PM & Accounting",
     twitter: "https://twitter.com/mctflurryy",
     farcaster: "https://warpcast.com/mctflurry",
     image: "/team/flurry.png",
   },
   {
     name: "fraye",
-    description: "Backend Developer",
+    description: "Full Stack Developer",
     twitter: "https://twitter.com/itsmide_eth",
     farcaster: "https://warpcast.com/itsmide.eth",
     url: "https://midena.dev",

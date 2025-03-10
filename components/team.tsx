@@ -48,7 +48,7 @@ export default function Team() {
         </h3>
         <div className="flex items-center justify-between gap-y-2">
           <h2 className="font-clash-display text-4xl md:text-7xl text-center md:text-left px-4 md:px-0">
-            We are builders too
+            Who we are
           </h2>
           <div className="flex items-center gap-2">
             <Button

@@ -1,26 +1,26 @@
 export const TESTIMONIALS = [
   {
-    name: "Vitalik Buterin",
-    about: "CEO, Ethereum Foundation",
+    name: "cojo.eth",
+    about: "Co-founder, Ponder",
     description:
-      "“Sanno fa' web3. So' dei mega scoppiati e fanno progetti massafighi. Fanno al caso vostro, daje!”",
-    image: "/testimonials/vitalik.png",
-    brandImage: "/testimonials/ethereum-foundation.svg",
+      "“Builders Garden helped us bring a brand new V2 frame to life in just a few weeks. All I did was provide an outline and they worked with me to finalize the vision. Super responsive team as well. A+”",
+    image: "/testimonials/cojo-pfp.png",
+    brandImage: "/testimonials/ponder-logo.gif",
   },
   {
-    name: "Vitalik Buterin",
-    about: "CEO, Ethereum Foundation",
+    name: "macedo.eth",
+    about: "Co-founder, Talent Protocol",
     description:
-      "“Sanno fa' web3. So' dei mega scoppiati e fanno progetti massafighi. Fanno al caso vostro, daje!”",
-    image: "/testimonials/vitalik.png",
-    brandImage: "/testimonials/ethereum-foundation.svg",
+      "“I've been working with Builders Garden for a few months now and they've been a great partner. They've helped us bring a brand new V2 frame to life in just a few weeks. All I did was provide an outline and they worked with me to finalize the vision. Super responsive team as well. A+”",
+    image: "/testimonials/macedo-pfp.png",
+    brandImage: "/testimonials/talent-protocol.png",
   },
   {
-    name: "Vitalik Buterin",
-    about: "CEO, Ethereum Foundation",
+    name: "humanagent.eth",
+    about: "Staff, Ephemera Labs",
     description:
-      "“Sanno fa' web3. So' dei mega scoppiati e fanno progetti massafighi. Fanno al caso vostro, daje!”",
-    image: "/testimonials/vitalik.png",
-    brandImage: "/testimonials/ethereum-foundation.svg",
+      "“I've been working with Builders Garden for a few months now and they've been a great partner. They've helped us bring a brand new V2 frame to life in just a few weeks. All I did was provide an outline and they worked with me to finalize the vision. Super responsive team as well. A+”",
+    image: "/testimonials/humanagent-pfp.png",
+    brandImage: "/testimonials/ephemera-logo.png",
   },
 ];

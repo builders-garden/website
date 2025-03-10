@@ -27,7 +27,7 @@ export const MEMBERS = [
     description: "PM & Accounting",
     twitter: "https://twitter.com/mctflurryy",
     farcaster: "https://warpcast.com/mctflurry",
-    image: "/team/flurry.png",
+    image: "/team/flurry.jpg",
   },
   {
     name: "fraye",

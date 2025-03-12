@@ -29,7 +29,10 @@ export default function FooterComponent() {
           </p>
         </div>
         <div className="flex gap-4">
-          <Link href="https://linkedin.com/builders-garden" target="_blank">
+          <Link
+            href="https://www.linkedin.com/company/builders-garden"
+            target="_blank"
+          >
             <Image
               src={"/icons/linkedin.svg"}
               width={24}
@@ -47,7 +50,7 @@ export default function FooterComponent() {
               className="w-[24px] h-[24px] md:w-[32px] md:h-[32px]"
             />
           </Link>
-          <Link href="https://twitter.com/buildersgarden" target="_blank">
+          <Link href="https://x.com/builders_garden" target="_blank">
             <Image
               src={"/icons/twitter-white.svg"}
               width={24}

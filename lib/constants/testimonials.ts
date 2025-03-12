@@ -11,7 +11,7 @@ export const TESTIMONIALS = [
     name: "macedo.eth",
     about: "Co-founder, Talent Protocol",
     description:
-      "“I've been working with Builders Garden for a few months now and they've been a great partner. They've helped us bring a brand new V2 frame to life in just a few weeks. All I did was provide an outline and they worked with me to finalize the vision. Super responsive team as well. A+”",
+      "“Working with Builders Garden felt like having an extension of our core team handling parallel projects. They were key in keeping our BUILD nomination system running smoothly—whenever issues popped up, they jumped in quickly to debug and resolve them. If you need a team that’s both hands-on and fast, these are your people.”",
     image: "/testimonials/macedo-pfp.jpg",
     brandImage: "/testimonials/talent-protocol-logo.png",
   },

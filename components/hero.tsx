@@ -8,7 +8,7 @@ export default function Hero() {
       id="#hero"
       className="relative overflow-hidden pt-0 md:pt-16 pb-44 md:pb-44"
     >
-      <div className="px-6 md:px-16 max-w-5xl gap-y-6 flex flex-col">
+      <div className="z-20 px-6 md:px-16 max-w-5xl gap-y-6 flex flex-col">
         <h1 className="font-clash-display text-light-green text-4xl md:text-7xl">
           We
           <span className="text-secondary"> cultivate</span>{" "}
@@ -40,14 +40,14 @@ export default function Hero() {
         height={663}
         width={918}
         alt="Builders Garden hero illustration"
-        className="hidden md:block absolute -bottom-72 right-0"
+        className="z-0 hidden md:block absolute -bottom-72 right-0"
       />
       <Image
         src={"/hero-illustration-mobile.svg"}
         height={263}
         width={390}
         alt="Builders Garden hero illustration"
-        className="block absolute md:hidden -bottom-6 right-0"
+        className="z-0 block absolute md:hidden -bottom-6 right-0"
       />
     </section>
   );

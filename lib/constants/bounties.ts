@@ -5,6 +5,11 @@ export const BOUNTIES = [
     link: "https://airstack.xyz/",
   },
   {
+    name: "Talent Protocol",
+    image: "/partners/talent-protocol.svg",
+    link: "https://talentprotocol.com/",
+  },
+  {
     name: "Request Network",
     image: "/bounties/request-network.svg",
     link: "https://request.network/",
@@ -21,27 +26,32 @@ export const BOUNTIES = [
   },
   {
     name: "Zuzalu",
-    image: "/bounties/dynamic.svg",
-    link: "https://dynamic.xyz/",
+    image: "/partners/zucity-logo.svg",
+    link: "https://www.zuzalu.city/",
   },
   {
     name: "Akasha",
-    image: "/bounties/akasha.svg",
+    image: "/partners/akasha-logo.svg",
     link: "https://akasha.org/",
   },
   {
     name: "Onchain Dreamers",
-    image: "/bounties/onchain-dreamers.svg",
-    link: "https://onchaindreamers.xyz/",
+    image: "/partners/onchain-dreamers-logo.svg",
+    link: "https://www.onchaindreamers.com/",
   },
   {
     name: "Ponder",
-    image: "/bounties/ponder.svg",
-    link: "https://ponder.xyz/",
+    image: "/partners/ponder-logo.svg",
+    link: "https://www.weponder.io/",
   },
   {
     name: "Icebreaker",
-    image: "/bounties/icebreaker.svg",
+    image: "/partners/icebreaker.svg",
     link: "https://icebreaker.xyz/",
+  },
+  {
+    name: "Mask Network",
+    image: "/partners/mask.svg",
+    link: "https://mask.io/",
   },
 ];

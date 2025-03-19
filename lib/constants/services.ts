@@ -1,5 +1,12 @@
 export const SERVICES = [
   {
+    name: "Onchain Consumer Apps",
+    description: "End-to-end development of consumer-first decentralized applications and smart contracts.",
+    icon: "/services/mini-apps.svg",
+    color: "primary",
+    link: "#dapp-development"
+  },
+  {
     icon: "/services/farcaster.svg",
     name: "Farcaster Development",
     description:
@@ -8,27 +15,17 @@ export const SERVICES = [
     link: "https://devpost.com/software/split3",
   },
   {
-    icon: "/services/mini-apps.svg",
-    name: "Mini Apps Development",
-    description:
-      "We develop lightweight, high-impact applications optimized for seamless user engagement.",
-    color: "primary",
-    link: "https://ethglobal.com/showcase/pulse-v4iir",
-  },
-  {
     icon: "/services/mvp.svg",
-    name: "MVP Development",
-    description:
-      "We build and launch your MVP fast with high-quality code, enabling real-world testing and validation.",
-    color: "primary",
+    name: "R&D and Prototyping",
+    description: "Rapid prototyping and research services to validate your ideas and quickly bring solutions to life.",
+    color: "secondary",
     link: "https://ethglobal.com/showcase/ghost-mae3q",
   },
   {
     icon: "/services/ai-agents.svg",
-    name: "Full StackDevelopment",
-    description:
-      "We cover all aspects of your project, from design to frontend, backend, and smart contracts development.",
-    color: "secondary",
+    name: "Developer Experience Consulting",
+    description: "Comprehensive review and feedback on your SDK, protocol implementation, and documentation to improve developer experience.",
+    color: "primary",
     link: "https://devfolio.co/projects/papabase-7d6b",
   },
 ];

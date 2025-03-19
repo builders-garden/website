@@ -17,15 +17,14 @@ export default function Mission() {
       </div>
       <div className="px-6 md:px-16 max-w-5xl gap-y-6 flex flex-col">
         <h2 className="text-5xl md:text-6xl font-clash-display">
-          Gathering like-minded <br className="block md:hidden" />
-          <span className="text-secondary">builders</span>
-          <br className="block md:hidden" /> for mutual{" "}
-          <span className="text-primary">growth</span>
+          Full-Stack web3 <br className="block md:hidden" />
+          <span className="text-secondary">development</span>
+          <br className="block md:hidden" /> at{" "}
+          <span className="text-primary">speed</span>
         </h2>
         <p className="text-lg lg:text-xl font-semibold">
-          We aim to cultivate the ultimate oasis for individuals to explore and
-          develop their web3 ideas, in a vibrant and open-minded space for
-          builders to freely express themselves and their innovative ideas.
+          We cover every stage of the product lifecycle—from prototyping to
+          development, delivering high-quality solutions at speed.
         </p>
       </div>
     </section>

@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+/*
 
+*/
 export default function Hero() {
   return (
     <section
@@ -10,8 +12,7 @@ export default function Hero() {
     >
       <div className="z-20 px-6 md:px-16 max-w-5xl gap-y-6 flex flex-col">
         <h1 className="font-clash-display text-light-green text-4xl md:text-7xl">
-          We
-          <span className="text-secondary"> cultivate</span>{" "}
+          <span className="text-secondary"> Cultivating</span>{" "}
           <Image
             src={"/flower.svg"}
             height={60}
@@ -20,12 +21,12 @@ export default function Hero() {
             className="inline mb-1 h-[40px] w-[40px]"
           />{" "}
           <br />
-          innovative projects <br className="hidden md:block" /> in the
-          <span className="text-secondary"> web3 land</span>
+          real products <br className="hidden md:block" /> in the{" "}
+          <span className="text-primary">web3 land</span>
         </h1>
         <p className="pr-28 md:pr-0 text-lg lg:text-xl font-semibold">
-          Creating a fertile space for people to express themselves by building
-          their ideas
+          We are a studio building our own products and serving as a
+          tech partner for companies.
         </p>
         <Button
           variant="outline"

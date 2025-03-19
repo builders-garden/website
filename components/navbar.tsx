@@ -80,7 +80,7 @@ export function Navbar(): React.JSX.Element {
               className="px-[22px] md:px-[44px] py-[24px] font-extrabold text-lg transition-all duration-300"
               asChild
             >
-              <Link href="/#cta">Get Started</Link>
+              <Link href="/#cta">Contact Us</Link>
             </Button>
           </div>
         </nav>

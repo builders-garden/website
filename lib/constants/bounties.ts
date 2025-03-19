@@ -32,7 +32,7 @@ export const BOUNTIES = [
   {
     name: "Fluidkey",
     image: "/bounties/fluidkey.svg",
-    link: "https://fluidkey.xyz/",
+    link: "https://fluidkey.com/",
   },
   {
     name: "Chainlink",
@@ -42,7 +42,7 @@ export const BOUNTIES = [
   {
     name: "Zkbob",
     image: "/bounties/zkbob.svg",
-    link: "https://zkbob.xyz/",
+    link: "https://zkbob.com/",
   },
   {
     name: "Lens",
@@ -57,12 +57,12 @@ export const BOUNTIES = [
   {
     name: "Push Protocol",
     image: "/bounties/push-protocol.svg",
-    link: "https://push.xyz/",
+    link: "https://push.org/",
   },
   {
     name: "Gnosis Pay",
     image: "/bounties/gnosis_pay.svg",
-    link: "https://gnosispay.xyz/",
+    link: "https://gnosispay.com/",
   },
   {
     name: "Dynamic",

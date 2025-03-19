@@ -28,7 +28,7 @@ export default function FooterComponent() {
             </Link>
           </p>
         </div>
-        <div className="flex gap-4">
+        <div className="flex flex-col items-center justify-center lg:flex-row gap-4">
           <Link
             href="https://www.linkedin.com/company/builders-garden"
             target="_blank"
@@ -47,7 +47,7 @@ export default function FooterComponent() {
               width={24}
               height={24}
               alt={"Github logo"}
-              className="w-[24px] h-[24px] md:w-[32px] md:h-[32px]"
+              className="w-[18px] h-[18px] md:w-[26px] md:h-[26px]"
             />
           </Link>
           <Link href="https://x.com/builders_garden" target="_blank">

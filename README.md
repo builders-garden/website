@@ -1,4 +1,4 @@
-# 🌳 Builders Garden 
+# 🌳 Builders Garden  
 
 This is the repository containing the NextJS code for the [Builders Garden](https://builders.garden) website.
 

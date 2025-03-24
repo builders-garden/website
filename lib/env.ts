@@ -8,7 +8,7 @@ export const env = createEnv({
   },
   client: {
     NEXT_PUBLIC_TURNSLITE_SITE_KEY: z.string().min(1),
-    NEXT_PUBLIC_URL: z.string().min(1),
+    NEXT_PUBLIC_URL: z.string().min(1).optional(),
   },
   // For Next.js >= 13.4.4, you only need to destructure client variables:
   experimental__runtimeEnv: {

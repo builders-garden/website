@@ -1,25 +1,47 @@
-import "@/styles/globals.css";
-import { Metadata } from "next";
-import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
-import { Providers } from "./providers";
+import FooterComponent from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 import { Toaster } from "@/components/ui/sonner";
+import { fontSans } from "@/config/fonts";
+import { siteConfig } from "@/config/site";
+import "@/styles/globals.css";
 import clsx from "clsx";
-import FooterComponent from "@/components/footer";
+import { Metadata } from "next";
+import { Providers } from "./providers";
 
-export const metadata: Metadata = {
-  title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
-  },
-  description: siteConfig.description,
-  icons: {
-    icon: "/tree.svg",
-    shortcut: "/tree.svg",
-    apple: "/tree.svg",
+const appUrl = process.env.NEXT_PUBLIC_URL || "https://builders.garden";
+
+const frame = {
+  version: "next",
+  imageUrl: `${appUrl}/feed.png`,
+  button: {
+    title: "Hire us for your next project",
+    action: {
+      type: "launch_frame",
+      name: "Hire us for your next project",
+      url: appUrl,
+      splashImageUrl: `${appUrl}/builders-garden-logo.png`,
+      splashBackgroundColor: "#000000",
+    },
   },
 };
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: {
+      default: siteConfig.name,
+      template: `%s - ${siteConfig.name}`,
+    },
+    description: siteConfig.description,
+    icons: {
+      icon: "/tree.svg",
+      shortcut: "/tree.svg",
+      apple: "/tree.svg",
+    },
+    other: {
+      "fc:frame": JSON.stringify(frame),
+    },
+  };
+}
 
 export default function RootLayout({
   children,

@@ -1,0 +1,18 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOjU5MjY3NywidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweEYzOWJDMDViODhmRDdEMjUzZWVhNmUyQ0Q2ZUVFOEExNDk1RjgwRDgifQ",
+    "payload": "eyJkb21haW4iOiJidWlsZGVycy5nYXJkZW4ifQ",
+    "signature": "MHhmZmY0MWE2MTllNGFkMTFiNzA0NGQ5MzJkZjQ0OGE4YWRlMTBlNmE1YTk3YjFjNjVhY2U4YzJlYmZlNmM2Nzk2MjkwZGZmNzA5MTZlNjFhMjliYzVlYzA3NGMxOGUzMWFjZjRmOTQ4NDlkMTU4MGU4YWE3NWQwNzE2MTdkYzk4NDFi"
+  },
+  "frame": {
+    "version": "1",
+    "name": "Builders Garden",
+    "iconUrl": "https://builders.garden/builders-garden-logo.png",
+    "homeUrl": "https://builders.garden",
+    "imageUrl": "https://builders.garden/feed.png",
+    "buttonTitle": "Hire us for your next project",
+    "splashImageUrl": "https://builders.garden/builders-garden-logo.png",
+    "splashBackgroundColor": "#000000",
+    "webhookUrl": "https://builders.garden/api/webhook"
+  }
+}

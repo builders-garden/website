@@ -1,11 +1,11 @@
 "use client";
 
-import * as React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { Portal } from "@radix-ui/react-portal";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import * as React from "react";
 import { RemoveScroll } from "react-remove-scroll";
 
 import { MENU_LINKS } from "@/components/menu-links";
@@ -133,7 +133,7 @@ function MainMobileMenu({
             onClick={onLinkClicked}
             asChild
           >
-            <Link href="/#cta">Get Started</Link>
+            <Link href="/#cta">Contact Us</Link>
           </Button>
         </div>
         <ul className="w-full">

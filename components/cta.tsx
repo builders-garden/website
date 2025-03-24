@@ -1,14 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { FormSchema, formSchema } from "@/types";
 import { zodResolver } from "@hookform/resolvers/zod";
+import ky from "ky";
+import { Loader2 } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
-import Image from "next/image";
-import ky from "ky";
-import { FormSchema, formSchema } from "@/types";
-import { Loader2 } from "lucide-react";
 
+import { CaptchaWidget } from "@/components/captcha-widget";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -18,11 +20,12 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { CaptchaWidget } from "@/components/captcha-widget";
+import sdk from "@farcaster/frame-sdk";
+import { useFrame } from "./farcaster-provider";
 
 export default function CTA() {
+  const { context } = useFrame();
   const [isLoading, setIsLoading] = useState(false);
   const form = useForm<FormSchema>({
     resolver: zodResolver(formSchema),
@@ -88,91 +91,103 @@ export default function CTA() {
           <p className="w-full text-left">
             Drop us a message and get in touch with us!
           </p>
-          <Form {...form}>
-            <form
-              onSubmit={form.handleSubmit(onSubmit)}
-              className="space-y-4 w-full"
-            >
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Name</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="Michael Saylor"
-                        required
-                        id="name"
-                        className="w-full rounded-full px-4 py-2 bg-gradient-to-bl from-[#171717] to-[#0E0E0E]"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Email</FormLabel>
-                    <FormControl>
-                      <Input
-                        placeholder="michael@saylor.com"
-                        required
-                        id="email"
-                        className="w-full rounded-full px-4 py-2 bg-gradient-to-bl from-[#171717] to-[#0E0E0E]"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="message"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel>Message</FormLabel>
-                    <FormControl>
-                      <Textarea
-                        required
-                        id="message"
-                        placeholder="Type your message..."
-                        className="min-h-[150px] w-full rounded-3xl px-4 py-2 bg-gradient-to-bl from-[#171717] to-[#0E0E0E]"
-                        {...field}
-                      />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-
-              <div className="w-full min-h-[71.5px] flex flex-col items-start justify-center">
-                <CaptchaWidget
-                  callback={(validateToken) => {
-                    form.setValue("validateToken", validateToken);
-                  }}
-                />
-              </div>
-
-              <Button
-                type="submit"
-                variant="tertiary"
-                className="w-[135px] md:w-[180px] px-[22px] md:px-[44px] py-[24px] font-extrabold text-lg transition-all duration-300"
-                disabled={form.getValues("validateToken") === "" || isLoading}
+          {!context ? (
+            <Form {...form}>
+              <form
+                onSubmit={form.handleSubmit(onSubmit)}
+                className="space-y-4 w-full"
               >
-                {isLoading ? (
-                  <Loader2 className="w-4 h-4 animate-spin" />
-                ) : (
-                  "Contact us"
-                )}
-              </Button>
-            </form>
-          </Form>
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Name</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="Michael Saylor"
+                          required
+                          id="name"
+                          className="w-full rounded-full px-4 py-2 bg-gradient-to-bl from-[#171717] to-[#0E0E0E]"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Email</FormLabel>
+                      <FormControl>
+                        <Input
+                          placeholder="michael@saylor.com"
+                          required
+                          id="email"
+                          className="w-full rounded-full px-4 py-2 bg-gradient-to-bl from-[#171717] to-[#0E0E0E]"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel>Message</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          required
+                          id="message"
+                          placeholder="Type your message..."
+                          className="min-h-[150px] w-full rounded-3xl px-4 py-2 bg-gradient-to-bl from-[#171717] to-[#0E0E0E]"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <div className="w-full min-h-[71.5px] flex flex-col items-start justify-center">
+                  <CaptchaWidget
+                    callback={(validateToken) => {
+                      form.setValue("validateToken", validateToken);
+                    }}
+                  />
+                </div>
+
+                <Button
+                  type="submit"
+                  variant="tertiary"
+                  className="w-[135px] md:w-[180px] px-[22px] md:px-[44px] py-[24px] font-extrabold text-lg transition-all duration-300"
+                  disabled={form.getValues("validateToken") === "" || isLoading}
+                >
+                  {isLoading ? (
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                  ) : (
+                    "Contact us"
+                  )}
+                </Button>
+              </form>
+            </Form>
+          ) : (
+            <Button
+              variant="outline"
+              className="w-full border-2 px-[22px] md:px-[44px] py-[24px] text-lg transition-all duration-300"
+              onClick={() => {
+                sdk?.actions.openUrl("https://warpcast.com/limone.eth");
+              }}
+            >
+              Contact us
+            </Button>
+          )}
         </div>
       </div>
     </section>

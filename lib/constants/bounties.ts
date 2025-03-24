@@ -1,15 +1,5 @@
 export const BOUNTIES = [
-  {
-    name: "Safe",
-    image: "/bounties/safe.svg",
-    link: "https://safe.global/",
-  },
-  {
-    name: "Base",
-    image: "/bounties/base.svg",
-    link: "https://base.org/",
-  },
-  {
+   {
     name: "Airstack",
     image: "/bounties/airstack.svg",
     link: "https://airstack.xyz/",
@@ -20,49 +10,9 @@ export const BOUNTIES = [
     link: "https://request.network/",
   },
   {
-    name: "The Graph",
-    image: "/bounties/the-graph.svg",
-    link: "https://thegraph.com/",
-  },
-  {
     name: "Xmtp",
     image: "/bounties/xmtp.svg",
     link: "https://xmtp.org/",
-  },
-  {
-    name: "Fluidkey",
-    image: "/bounties/fluidkey.svg",
-    link: "https://fluidkey.com/",
-  },
-  {
-    name: "Chainlink",
-    image: "/bounties/chainlink.svg",
-    link: "https://chain.link/",
-  },
-  {
-    name: "Zkbob",
-    image: "/bounties/zkbob.svg",
-    link: "https://zkbob.com/",
-  },
-  {
-    name: "Lens",
-    image: "/bounties/lens.svg",
-    link: "https://lens.xyz/",
-  },
-  {
-    name: "Ens",
-    image: "/bounties/ens.svg",
-    link: "https://ens.domains/",
-  },
-  {
-    name: "Push Protocol",
-    image: "/bounties/push-protocol.svg",
-    link: "https://push.org/",
-  },
-  {
-    name: "Gnosis Pay",
-    image: "/bounties/gnosis_pay.svg",
-    link: "https://gnosispay.com/",
   },
   {
     name: "Dynamic",
@@ -70,13 +20,28 @@ export const BOUNTIES = [
     link: "https://dynamic.xyz/",
   },
   {
-    name: "Near",
-    image: "/bounties/near.svg",
-    link: "https://near.org/",
+    name: "Zuzalu",
+    image: "/bounties/dynamic.svg",
+    link: "https://dynamic.xyz/",
   },
   {
-    name: "Sablier",
-    image: "/bounties/sablier.svg",
-    link: "https://sablier.org/",
+    name: "Akasha",
+    image: "/bounties/akasha.svg",
+    link: "https://akasha.org/",
+  },
+  {
+    name: "Onchain Dreamers",
+    image: "/bounties/onchain-dreamers.svg",
+    link: "https://onchaindreamers.xyz/",
+  },
+  {
+    name: "Ponder",
+    image: "/bounties/ponder.svg",
+    link: "https://ponder.xyz/",
+  },
+  {
+    name: "Icebreaker",
+    image: "/bounties/icebreaker.svg",
+    link: "https://icebreaker.xyz/",
   },
 ];

@@ -22,12 +22,11 @@ export default function Bounties() {
   return (
     <section
       id="bounties"
-      className="px-4 md:px-6 py-12 md:py-28 flex flex-col gap-y-8"
+      className="px-4 md:px-6 py-12 md:py-28 flex flex-col gap-y-16"
     >
-      <div className="flex flex-col items-center gap-y-6">
-        <h3 className="text-tertiary font-bold text-2xl">Bounties</h3>
-        <h2 className="font-clash-display text-4xl md:text-5xl text-center md:text-left">
-          We won prizes from
+      <div className="flex flex-col items-center">
+        <h2 className="font-clash-display text-5xl md:text-6xl text-center md:text-left mb-8">
+          We worked with
         </h2>
       </div>
       <div className="w-full">

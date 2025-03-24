@@ -1,11 +1,74 @@
 export enum FILTER {
   ALL = "All",
   INTERNAL = "Internal products",
-  PARTNERSHIPS = "Partnerships",
+  EXTERNAL = "External products",
   HACKATHONS = "Hackathons",
 }
 
 export const PROJECTS = [
+  {
+    name: "Farville",
+    slug: "farville",
+    description: "Plant, grow and harvest crop with your internet frens. A Farcaster frame game.",
+    color: "#CCCCCC",
+    image: "/projects/farville.jpg",
+    type: FILTER.HACKATHONS,
+    links: [],
+  },
+  {
+    name: "Betttr",
+    slug: "betttr",
+    description: "A social sports betting and prediction market Farcaster frame. Bet, prove your skills, and earn.",
+    color: "#CCCCCC",
+    image: "/projects/betttr.png",
+    type: FILTER.HACKATHONS,
+    links: [],
+  },
+  {
+    name: "Farshot",
+    slug: "farshot",
+    description: "A chance-based Farcaster frame game where players can wager ETH withh different risk-reward multipliers",
+    color: "#CCCCCC",
+    image: "/projects/farshot.png",
+    type: FILTER.HACKATHONS,
+    links: [],
+  },
+  {
+    name: "ACID TEST",
+    slug: "acid-test",
+    description: "A Farcaster frame used by ACID TEST artist for releasing their new songs.",
+    color: "#CCCCCC",
+    image: "/projects/acid-test.png",
+    type: FILTER.HACKATHONS,
+    links: [],
+  },
+  {
+    name: "Coin Toss",
+    slug: "coin-toss",
+    description: "Placeholder description for Coin Toss.",
+    color: "#CCCCCC",
+    image: "/projects/placeholder.svg",
+    type: FILTER.HACKATHONS,
+    links: [],
+  },
+  {
+    name: "Zuland",
+    slug: "zuland",
+    description: "Token-gated and encrypted social spaces for ZuVillages built on top of Akasha.",
+    color: "#CCCCCC",
+    image: "/projects/placeholder.svg",
+    type: FILTER.HACKATHONS,
+    links: [],
+  },
+  {
+    name: "Onchain Dreamers",
+    slug: "onchain-dreamers",
+    description: "A digital passport for community attestations.",
+    color: "#CCCCCC",
+    image: "/projects/placeholder.svg",
+    type: FILTER.HACKATHONS,
+    links: [],
+  },
   {
     name: "Stringz",
     slug: "stringz",
@@ -33,86 +96,29 @@ export const PROJECTS = [
     ],
   },
   {
-    name: "Ghost",
-    slug: "ghost",
-    description:
-      "A mobile-native GHO-centric smart wallet designed for p2p payments",
-    color: "#C9B3F9",
-    image: "/projects/ghost.svg",
-    type: FILTER.HACKATHONS,
+    name: "Drift",
+    slug: "drift",
+    description: "Stablecoin-native POS and payment gateway with automatic offramps.",
+    color: "#6C3BF5",
+    image: "/projects/stringz.png",
+    type: FILTER.INTERNAL,
     links: [
       {
         icon: "/icons/dribble.svg",
         name: "Website",
-        url: "https://ethglobal.com/showcase/ghost-mae3q",
+        url: "https://stringz.xyz",
+      },
+      {
+        icon: "/icons/twitter-white.svg",
+        name: "Stringz Twitter",
+        url: "https://x.com/stringz_xyz",
       },
       {
         icon: "/icons/github-white.svg",
         name: "Github",
-        url: "https://github.com/builders-garden/ghost-app",
+        url: "https://github.com/stringz-xyz",
       },
     ],
   },
-  {
-    name: "Papabase",
-    slug: "papabase",
-    description:
-      "Making public goods donations accessible to everyone through crypto and fiat.",
-    color: "#1851FA",
-    image: "/projects/papabase.svg",
-    type: FILTER.HACKATHONS,
-    links: [
-      {
-        icon: "/icons/dribble.svg",
-        name: "Website",
-        url: "https://devfolio.co/projects/papabase-7d6b",
-      },
-      {
-        icon: "/icons/github-white.svg",
-        name: "Github",
-        url: "https://github.com/builders-garden/papabase",
-      },
-    ],
-  },
-  {
-    name: "Pulse",
-    slug: "pulse",
-    description: "Tinder-like experience for Lens and Farcaster posts",
-    color: "#1D91E3",
-    image: "/projects/pulse.svg",
-    type: FILTER.HACKATHONS,
-    links: [
-      {
-        icon: "/icons/dribble.svg",
-        name: "Website",
-        url: "https://ethglobal.com/showcase/pulse-v4iir",
-      },
-      {
-        icon: "/icons/github-white.svg",
-        name: "Github",
-        url: "https://github.com/PaoloRollo/pulse",
-      },
-    ],
-  },
-  {
-    name: "Split3",
-    slug: "split3",
-    description:
-      "The easiest and safest way to split group expenses with crypto",
-    color: "#2CAF49",
-    image: "/projects/split3.svg",
-    type: FILTER.HACKATHONS,
-    links: [
-      {
-        icon: "/icons/dribble.svg",
-        name: "Website",
-        url: "https://devpost.com/software/split3",
-      },
-      {
-        icon: "/icons/github-white.svg",
-        name: "Github",
-        url: "https://github.com/mattiapomelli/split3-frontend",
-      },
-    ],
-  },
+  
 ];

@@ -37,25 +37,7 @@ const Projects = ({ limit = 6, showViewAll = true }: ProjectsProps) => {
             Some of our projects
           </h2>
         </div>
-        <ScrollArea className="flex gap-2 w-[370px] sm:w-full items-center justify-center sm:mx-auto whitespace-nowrap mt-8">
-          {Object.values(FILTER).map((filter) => (
-            <Button
-              key={filter}
-              variant="outline"
-              className={cn(
-                "border-2 rounded-full mb-3 mr-2",
-                filter === selectedFilter &&
-                  "bg-verdino text-verdino-foreground"
-              )}
-              onClick={() => setSelectedFilter(filter)}
-              disabled={filter === selectedFilter}
-            >
-              {filter}
-            </Button>
-          ))}
-          <ScrollBar orientation="horizontal" />
-        </ScrollArea>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mt-8">
           {filteredProjects.map((project) => (
             <ProjectCard key={project.name} project={project} />
           ))}
@@ -68,7 +50,7 @@ const Projects = ({ limit = 6, showViewAll = true }: ProjectsProps) => {
               className="px-[22px] md:px-[44px] font-bold rounded-full"
               asChild
             >
-7            </Button>
+            </Button>
           </div>
         )}
       </div>

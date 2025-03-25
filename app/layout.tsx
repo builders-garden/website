@@ -37,6 +37,27 @@ export async function generateMetadata(): Promise<Metadata> {
       shortcut: "/tree.svg",
       apple: "/tree.svg",
     },
+    openGraph: {
+      title: siteConfig.name,
+      description: siteConfig.description,
+      type: "website",
+      images: [
+        {
+          url: `${appUrl}/feed-2x1.png`,
+          width: 1500,
+          height: 750,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: siteConfig.name,
+      description: siteConfig.description,
+      siteId: "1727435024931094528",
+      creator: "@builders_garden",
+      creatorId: "1727435024931094528",
+      images: [`${appUrl}/feed-2x1.png`],
+    },
     other: {
       "fc:frame": JSON.stringify(frame),
     },

@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import { createDMCastIntent } from "@/lib/utils";
 import sdk from "@farcaster/frame-sdk";
 import Image from "next/image";
 import Link from "next/link";
@@ -35,7 +36,7 @@ export default function Hero() {
             variant="outline"
             className="z-[10] w-fit border-2 px-[22px] md:px-[44px] py-[24px] text-lg transition-all duration-300"
             onClick={() => {
-              sdk.actions.openUrl("https://warpcast.com/limone.eth");
+              sdk.actions.openUrl(createDMCastIntent(4461));
             }}
           >
             Contact us

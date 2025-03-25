@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { createDMCastIntent } from "@/lib/utils";
 import sdk from "@farcaster/frame-sdk";
 import { useFrame } from "./farcaster-provider";
 
@@ -182,7 +183,7 @@ export default function CTA() {
               variant="outline"
               className="w-full border-2 px-[22px] md:px-[44px] py-[24px] text-lg transition-all duration-300"
               onClick={() => {
-                sdk?.actions.openUrl("https://warpcast.com/limone.eth");
+                sdk.actions.openUrl(createDMCastIntent(4461));
               }}
             >
               Contact us

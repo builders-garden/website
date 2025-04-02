@@ -28,8 +28,8 @@ export default function Hero() {
           <span className="text-primary">web3 land</span>
         </h1>
         <p className="pr-28 md:pr-0 text-lg lg:text-xl font-semibold">
-          We are a studio building our own products and serving as a tech
-          partner for companies.
+          We are a consumer crypto product studio, building sleek apps and
+          serving as a tech partner for companies.
         </p>
         {context ? (
           <Button

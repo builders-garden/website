@@ -23,4 +23,12 @@ export const TESTIMONIALS = [
     image: "/testimonials/humanagent-pfp.jpg",
     brandImage: "/testimonials/ephemera-logo.png",
   },
+  {
+    name: "chaim.eth",
+    about: "Founder, ACID Test & Songcamp",
+    description:
+      "“I can’t speak highly enough of Builders Garden. They are a team of cracked engineers with super strong communication and organizational skills, but beyond that they are also great people who I have really enjoyed becoming friends with! Working with them has been an absolute treat. If you’re looking to build a mini app, these are your guys.”",
+    image: "/testimonials/chaim.png",
+    brandImage: "/testimonials/acid-logo.png",
+  },
 ];

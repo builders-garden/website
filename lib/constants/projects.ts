@@ -98,11 +98,17 @@ export const PROJECTS = [
   {
     name: "ACID TEST",
     slug: "acid-test",
-    description: "A Farcaster frame used by ACID TEST artist for releasing its new songs as NFTs.",
+    description: "A Farcaster frame radio show bringing music, conversation and creative energy to Farcaster.",
     color: "#CCCCCC",
     image: "/projects/stringz.png",
     type: FILTER.EXTERNAL,
-    links: [],
+    links: [
+      {
+        icon: "/icons/dribble.svg",
+        name: "Website",
+        url: "https://farville.farm",
+      },
+    ],
   },
   {
     name: "Farshot",

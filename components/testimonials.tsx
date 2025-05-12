@@ -1,5 +1,13 @@
+"use client";
+
 import { TESTIMONIALS } from "@/lib/constants";
 import TestimonialCard from "./testimonial-card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const Testimonials = () => {
   return (
@@ -16,11 +24,33 @@ const Testimonials = () => {
             What others say about us
           </h2>
         </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {TESTIMONIALS.map((testimonial) => (
-            <TestimonialCard key={testimonial.name} testimonial={testimonial} />
-          ))}
-        </div>
+        <Carousel
+          className="w-full"
+          opts={{
+            loop: true,
+            align: "start",
+            dragFree: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 2000,
+              playOnInit: true,
+              stopOnInteraction: false,
+              stopOnMouseEnter: true,
+            }),
+          ]}
+        >
+          <CarouselContent className="-ml-6">
+            {TESTIMONIALS.map((testimonial, index) => (
+              <CarouselItem
+                key={`testimonial-${index}`}
+                className="pl-6 basis-1/1 sm:basis-1/2 lg:basis-1/3"
+              >
+                <TestimonialCard testimonial={testimonial} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </div>
     </section>
   );

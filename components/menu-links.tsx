@@ -42,7 +42,7 @@ export const MENU_LINKS = [
     external: false,
   },
   {
-    title: "Bounties",
+    title: "Partners",
     href: "/#bounties",
     external: false,
   },
@@ -56,7 +56,7 @@ export const FOOTER_LINKS = [
       { name: "Portfolio", href: "#portfolio", external: false },
       { name: "Team", href: "#team", external: false },
       { name: "Partners", href: "#partners", external: false },
-      { name: "Bounties", href: "#bounties", external: false },
+      { name: "Partners", href: "#bounties", external: false },
     ],
   },
 ];

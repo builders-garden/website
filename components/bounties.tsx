@@ -37,10 +37,10 @@ export default function Bounties() {
           }}
           plugins={[
             Autoplay({
-              delay: 1000,
+              delay: 2000,
               playOnInit: true,
-              stopOnInteraction: false,
-              stopOnMouseEnter: true,
+              stopOnInteraction: true,
+              stopOnMouseEnter: false,
             }),
           ]}
         >

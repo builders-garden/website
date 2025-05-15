@@ -10,6 +10,11 @@ export const BOUNTIES = [
     link: "https://talentprotocol.com/",
   },
   {
+    name: "Eco",
+    image: "/partners/eco-logo.png",
+    link: "https://eco.com/",
+  },
+  {
     name: "Request Network",
     image: "/bounties/request-network.svg",
     link: "https://request.network/",

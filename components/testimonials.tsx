@@ -33,10 +33,10 @@ const Testimonials = () => {
           }}
           plugins={[
             Autoplay({
-              delay: 2000,
+              delay: 2500,
               playOnInit: true,
               stopOnInteraction: false,
-              stopOnMouseEnter: true,
+              stopOnMouseEnter: false,
             }),
           ]}
         >

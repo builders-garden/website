@@ -1,5 +1,13 @@
 export const TESTIMONIALS = [
   {
+    name: "Annika Lewis",
+    about: "Eco Foundation",
+    description:
+      "“Builders Garden has been nothing short of incredible to work with. They bring sharp technical insight, fast turnaround times, and a true builder’s mindset to every challenge. Whether it’s jamming on new ideas or jumping in to troubleshoot, they consistently show up as a trusted partner.”",
+    image: "/testimonials/annika.jpg",
+    brandImage: "/testimonials/ponder-logo.gif",
+  },
+  {
     name: "cojo.eth",
     about: "Co-founder, Ponder",
     description:

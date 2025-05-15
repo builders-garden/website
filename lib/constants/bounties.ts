@@ -11,7 +11,7 @@ export const BOUNTIES = [
   },
   {
     name: "Eco",
-    image: "/partners/eco-logo.png",
+    image: "/partners/eco-logo.svg",
     link: "https://eco.com/",
   },
   {

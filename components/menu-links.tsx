@@ -19,7 +19,7 @@ export const MENU_LINKS = [
   },
   {
     title: "Partners",
-    href: "/#bounties",
+    href: "/#partners",
     external: false,
   },
   {
@@ -36,19 +36,6 @@ export const MENU_LINKS = [
     title: "Team",
     href: "/#team",
     external: false,
-  },
-];
-
-export const FOOTER_LINKS = [
-  {
-    title: "Product",
-    links: [
-      { name: "Mission", href: "#mission", external: false },
-      { name: "Portfolio", href: "#portfolio", external: false },
-      { name: "Team", href: "#team", external: false },
-      { name: "Partners", href: "#partners", external: false },
-      { name: "Partners", href: "#bounties", external: false },
-    ],
   },
 ];
 

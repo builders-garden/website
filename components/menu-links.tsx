@@ -18,13 +18,13 @@ export const MENU_LINKS = [
     external: false,
   },
   {
-    title: "Portfolio",
-    href: "/#portfolio",
+    title: "Partners",
+    href: "/#bounties",
     external: false,
   },
   {
-    title: "Partners",
-    href: "/#bounties",
+    title: "Portfolio",
+    href: "/#portfolio",
     external: false,
   },
   {

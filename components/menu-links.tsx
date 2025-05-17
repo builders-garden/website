@@ -1,13 +1,4 @@
 import * as React from "react";
-import {
-  BookOpenIcon,
-  BoxIcon,
-  CircuitBoardIcon,
-  FileBarChartIcon,
-  LayoutIcon,
-  PlayIcon,
-  SendIcon,
-} from "lucide-react";
 
 import {
   FarcasterIcon,
@@ -32,8 +23,8 @@ export const MENU_LINKS = [
     external: false,
   },
   {
-    title: "Team",
-    href: "/#team",
+    title: "Partners",
+    href: "/#bounties",
     external: false,
   },
   {
@@ -42,8 +33,8 @@ export const MENU_LINKS = [
     external: false,
   },
   {
-    title: "Partners",
-    href: "/#bounties",
+    title: "Team",
+    href: "/#team",
     external: false,
   },
 ];

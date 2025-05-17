@@ -15,7 +15,7 @@ export default function TestimonialCard({
   testimonial: Testimonial;
 }) {
   return (
-    <Card className="rounded-[50px] bg-gradient-to-bl from-[#171717] to-[#0E0E0E]">
+    <Card className="max-w-[90vw] rounded-[50px] bg-gradient-to-bl from-[#171717] to-[#0E0E0E]">
       <CardContent className="py-14 px-12 flex flex-col items-center justify-center gap-4 max-w-[590px] relative overflow-hidden">
         <div className="w-full flex gap-2 items-center justify-center">
           <Image
@@ -32,7 +32,7 @@ export default function TestimonialCard({
             <p className="text-muted-foreground">{testimonial.about}</p>
           </div>
         </div>
-        <p className="text-md opacity-70 text-left font-medium text-muted-foreground">
+        <p className="text-md opacity-70 text-left font-medium text-muted-foreground whitespace-pre-line">
           {testimonial.description}
         </p>
       </CardContent>

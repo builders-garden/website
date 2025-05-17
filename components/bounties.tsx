@@ -48,16 +48,16 @@ export default function Bounties() {
             {BOUNTIES.map((bounty, index) => (
               <CarouselItem
                 key={`bounty-${index}`}
-                className="pl-1 basis-1/2 sm:basis-1/3 md:basis-1/4"
+                className="pl-1 basis-1/2 sm:basis-1/3 md:basis-1/4 flex items-center justify-center"
               >
-                <div className="w-full flex items-center justify-center">
+                <div className="h-fit w-full flex items-center justify-center">
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger asChild>
                         <Link
                           href={bounty.link}
                           target="_blank"
-                          className="h-[56px]"
+                          className="h-fit"
                         >
                           <Image
                             src={bounty.image}

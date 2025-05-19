@@ -16,7 +16,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
   return (
     <main className="min-h-screen">
-      <div className="max-w-[1440px] w-full mx-auto container">
+      <div className="max-w-[1440px] w-full mx-auto px-5">
         <BackButton link="/projects" />
       </div>
       {selectedProject.length > 0 ? (

@@ -5,7 +5,7 @@ export default function ProjectsHome() {
   return (
     <section className="">
       <div className="max-w-[1440px] w-full mx-auto">
-        <div className="container">
+        <div className="container w-full">
           <BackButton link="/" />
         </div>
         <Projects showViewAll={false} />

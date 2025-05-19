@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function FooterComponent() {
+export function Footer() {
   return (
     <div className="w-full z-10 px-6 md:px-16 pb-4 md:pb-6">
       <div className="w-full border-t-1 border-white" />
@@ -15,7 +15,7 @@ export default function FooterComponent() {
         />
         <div className="flex gap-8">
           <p className="text-xs md:text-md text-center md:text-left">
-            ©2025 Builders Garden.
+            ©{new Date().getFullYear()} Builders Garden.
             <br className="block md:hidden" />
             All rights reserved. <br className="block md:hidden" />
             Designed by{" "}

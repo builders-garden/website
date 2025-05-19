@@ -1,10 +1,14 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import { createDMCastIntent } from "@/lib/utils";
-import sdk from "@farcaster/frame-sdk";
+
 import Image from "next/image";
 import Link from "next/link";
-import { useFrame } from "./farcaster-provider";
+
+import { useFrame } from "@/components/farcaster-provider";
+
+import { Button } from "@/components/ui/button";
+
+import { createDMCastIntent } from "@/lib/utils";
+import sdk from "@farcaster/frame-sdk";
 
 export default function Hero() {
   const { context } = useFrame();
@@ -55,7 +59,7 @@ export default function Hero() {
           src={"/hero-illustration.svg"}
           height={663}
           width={918}
-          className="z-0 hidden md:block absolute -bottom-72 right-0"
+          className="z-0 hidden md:block absolute -bottom-72 right-0 min-h-[263px] sm:min-h-[350px]"
           alt="Builders Garden hero illustration"
         />
         <Image

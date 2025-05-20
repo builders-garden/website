@@ -55,14 +55,14 @@ export const MEMBERS = [
   },
   {
     name: "blackicon",
-    description: "Fullstack Developer",
+    description: "Full Stack Developer",
     twitter: "https://twitter.com/TBlackicon",
     farcaster: "https://warpcast.com/blackicon.eth",
     image: "/team/blackicon.png",
   },
   {
     name: "caso",
-    description: "Frontend Developer",
+    description: "Full Stack Developer",
     twitter: "https://twitter.com/casoxbt",
     farcaster: "https://warpcast.com/0xcaso",
     url: "https://matteocasonato.com/",

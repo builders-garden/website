@@ -16,7 +16,7 @@ const Projects = ({ showViewAll = true, limit = 6 }: ProjectsProps) => {
       id="portfolio"
       className={`w-full bg-background ${showViewAll ? "py-12 sm:py-16" : ""}`}
     >
-      <div className="container px-4 md:px-6 mx-auto">
+      <div className="container px-5 md:px-0 mx-auto">
         <div className="flex flex-col items-center space-y-4 text-center">
           <p className="text-sm font-heading tracking-wider text-tertiary">
             Portfolio

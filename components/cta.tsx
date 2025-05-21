@@ -72,7 +72,7 @@ export default function CTA() {
   return (
     <section
       id="cta"
-      className="w-full flex flex-col-reverse md:flex-row items-center justify-between gap-8 px-4 md:px-6 pt-20 md:pt-28"
+      className="w-full flex flex-col-reverse md:flex-row items-center justify-between gap-8 px-4 md:px-0 pt-20 md:pt-28"
     >
       <div className="w-full md:w-1/2">
         <Image

@@ -4,8 +4,8 @@ import Projects from "@/components/projects";
 export default function ProjectsHome() {
   return (
     <section className="">
-      <div className="w-full mx-auto">
-        <div className="w-full px-5">
+      <div className="max-w-[1440px] w-full mx-auto">
+        <div className="w-full px-5 sm:px-0">
           <BackButton link="/" />
         </div>
         <Projects showViewAll={false} />

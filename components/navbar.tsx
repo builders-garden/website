@@ -23,7 +23,7 @@ export function Navbar(): React.JSX.Element {
   return (
     <section className="fixed inset-x-0 top-0 py-4 sm:py-0 px-5 z-40">
       <div className="flex w-full items-center justify-center text-center py-4">
-        <nav className="hidden rounded-[120px] w-full px-5 py-3 bg-gradient-to-tr from-[#171717] to-[#0E0E0E] justify-between lg:flex">
+        <nav className="hidden rounded-[120px] max-w-[1440px] w-full px-5 py-3 bg-gradient-to-tr from-[#171717] to-[#0E0E0E] justify-between lg:flex">
           <div className="flex items-center gap-x-9">
             <Link href="/" className="flex items-center gap-2">
               <Image

@@ -6,7 +6,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="bg-background py-24 md:py-36 px-4 md:px-6"
+      className="bg-background py-24 md:py-36 px-4 md:px-0"
     >
       <div className="container mx-auto">
         <div className="text-center space-y-8">
@@ -17,7 +17,7 @@ const Services = () => {
             Our expertise
           </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 pt-16 px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 pt-16 px-6 md:px-0">
           {SERVICES.map((service) => (
             <ServiceCard
               key={service.name}

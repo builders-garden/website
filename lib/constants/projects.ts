@@ -71,28 +71,27 @@ export const PROJECTS: Project[] = [
       },
     ],
   },
-  {
-    name: "Farshot",
-    slug: "farshot",
-    description:
-      "A Farcaster frame chance-based game where players can wager with different risk-reward multipliers",
-    color: "#CCCCCC",
-    // image: "/projects/farshot.png",
-    image: "/projects/stringz.png",
-    type: FILTER.EXTERNAL,
-    links: [],
-  },
-  {
-    name: "Coin Toss",
-    slug: "coin-toss",
-    description:
-      "A Farcaster frame game on XMTP for small bets with your frens.",
-    color: "#CCCCCC",
-    // image: "/projects/coin-toss.png",
-    image: "/projects/stringz.png",
-    type: FILTER.EXTERNAL,
-    links: [],
-  },
+  // {
+  //   name: "Farshot",
+  //   slug: "farshot",
+  //   description:
+  //     "A Farcaster frame chance-based game where players can wager with different risk-reward multipliers",
+  //   color: "#CCCCCC",
+  //   image: "/projects/farshot.png",
+  //   type: FILTER.EXTERNAL,
+  //   links: [
+  //     {
+  //       icon: "/icons/dribble.svg",
+  //       name: "Website",
+  //       url: "https://farshot.vercel.app",
+  //     },
+  //     {
+  //       icon: "/icons/farcaster-white.svg",
+  //       name: "Farcaster",
+  //       url: "https://farcaster.xyz/miniapps/3d_l4HanGz-0/farshot",
+  //     },
+  //   ],
+  // },
   {
     name: "Drift",
     slug: "drift",

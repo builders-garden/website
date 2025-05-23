@@ -5,7 +5,7 @@ import { Project, ProjectLink } from "@/types";
 
 export const ProjectExpanded = ({ project }: { project: Project }) => {
   return (
-    <div className="max-w-[1440px] w-full mx-auto min-h-screen bg-background">
+    <div className="max-w-[1450px] w-full mx-auto min-h-screen bg-background">
       {/* Hero Section */}
       <div className="w-full h-[60vh] relative">
         <Image

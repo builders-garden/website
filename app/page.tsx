@@ -10,7 +10,7 @@ import Testimonials from "@/components/testimonials";
 export default function Home() {
   return (
     <section className="pb-8 md:pb-10">
-      <div className="max-w-[1440px] w-full mx-auto">
+      <div className="max-w-[1450px] w-full mx-auto">
         <Hero />
         <Mission />
         <Services />

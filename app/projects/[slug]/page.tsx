@@ -15,7 +15,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   }, [projectSlug]);
 
   return (
-    <main className="max-w-[1440px] w-full mx-auto min-h-screen px-5 md:px-0">
+    <main className="max-w-[1450px] w-full mx-auto min-h-screen px-5 2xl:px-0">
       <div className="w-full">
         <BackButton link="/projects" />
       </div>

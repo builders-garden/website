@@ -46,7 +46,7 @@ export const PROJECTS: Project[] = [
       {
         icon: "/icons/farcaster-white.svg",
         name: "Farcaster",
-        url: "https://farcaster.xyz/miniapps/DTQlhQjE0jbw/acid-test",
+        url: "https://farcaster.xyz/miniapps/fTRKM7quo7RZ/acid-test",
       },
     ],
   },

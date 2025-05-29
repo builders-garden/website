@@ -22,7 +22,7 @@ export default function Partners() {
   return (
     <section
       id="partners"
-      className="px-4 md:px-0 py-12 md:py-28 flex flex-col gap-y-16"
+      className="px-5 md:px-0 py-12 md:py-28 flex flex-col gap-y-16"
     >
       <div className="flex flex-col items-center">
         <h2 className="font-clash-display text-5xl md:text-6xl text-center md:text-left mb-8">

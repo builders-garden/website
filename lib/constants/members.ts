@@ -23,6 +23,13 @@ export const MEMBERS = [
     image: "/team/orbulo.jpg",
   },
   {
+    name: "flurry",
+    description: "Finance",
+    twitter: "https://twitter.com/mctflurryy",
+    farcaster: "https://warpcast.com/mctflurry",
+    image: "/team/flurry.jpg",
+  },
+  {
     name: "fraye",
     description: "Full Stack Developer",
     twitter: "https://twitter.com/itsmide_eth",
@@ -48,14 +55,14 @@ export const MEMBERS = [
   },
   {
     name: "blackicon",
-    description: "Fullstack Developer",
+    description: "Full Stack Developer",
     twitter: "https://twitter.com/TBlackicon",
     farcaster: "https://warpcast.com/blackicon.eth",
     image: "/team/blackicon.png",
   },
   {
     name: "caso",
-    description: "Frontend Developer",
+    description: "Full Stack Developer",
     twitter: "https://twitter.com/casoxbt",
     farcaster: "https://warpcast.com/0xcaso",
     url: "https://matteocasonato.com/",
@@ -67,12 +74,5 @@ export const MEMBERS = [
     twitter: "https://twitter.com/SolidityDrone",
     farcaster: "https://warpcast.com/drone",
     image: "/team/drone.jpg",
-  },
-  {
-    name: "flurry",
-    description: "PM & Accounting",
-    twitter: "https://twitter.com/mctflurryy",
-    farcaster: "https://warpcast.com/mctflurry",
-    image: "/team/flurry.jpg",
   },
 ];

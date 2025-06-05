@@ -1,7 +1,7 @@
-export const BOUNTIES = [
-   {
+export const PARTNERS = [
+  {
     name: "Airstack",
-    image: "/bounties/airstack.svg",
+    image: "/partners/airstack.svg",
     link: "https://airstack.xyz/",
   },
   {
@@ -10,18 +10,23 @@ export const BOUNTIES = [
     link: "https://talentprotocol.com/",
   },
   {
+    name: "Eco",
+    image: "/partners/eco-logo.svg",
+    link: "https://eco.com/",
+  },
+  {
     name: "Request Network",
-    image: "/bounties/request-network.svg",
+    image: "/partners/request-network.svg",
     link: "https://request.network/",
   },
   {
     name: "Xmtp",
-    image: "/bounties/xmtp.svg",
+    image: "/partners/xmtp.svg",
     link: "https://xmtp.org/",
   },
   {
     name: "Dynamic",
-    image: "/bounties/dynamic.svg",
+    image: "/partners/dynamic.svg",
     link: "https://dynamic.xyz/",
   },
   {

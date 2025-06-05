@@ -1,12 +1,15 @@
-import FooterComponent from "@/components/footer";
-import { Navbar } from "@/components/navbar";
-import { Toaster } from "@/components/ui/sonner";
-import { fontSans } from "@/config/fonts";
-import { siteConfig } from "@/config/site";
 import "@/styles/globals.css";
 import clsx from "clsx";
 import { Metadata } from "next";
+
 import { Providers } from "./providers";
+
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import { Toaster } from "@/components/ui/sonner";
+
+import { fontSans } from "@/config/fonts";
+import { siteConfig } from "@/config/site";
 
 const appUrl = process.env.NEXT_PUBLIC_URL || "https://builders.garden";
 
@@ -32,6 +35,7 @@ export async function generateMetadata(): Promise<Metadata> {
       template: `%s - ${siteConfig.name}`,
     },
     description: siteConfig.description,
+    metadataBase: new URL(appUrl),
     icons: {
       icon: "/tree.svg",
       shortcut: "/tree.svg",
@@ -85,9 +89,9 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main className="pt-24 z-0">{children}</main>
+            <main className="pt-20 sm:pt-24 z-0">{children}</main>
             <Toaster />
-            <FooterComponent />
+            <Footer />
           </div>
         </Providers>
       </body>

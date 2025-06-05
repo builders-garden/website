@@ -1,8 +1,8 @@
 "use client";
 
-import { env } from "@/lib/env";
-import Script from "next/script";
 import { useEffect, useRef, useState } from "react";
+import Script from "next/script";
+import { env } from "@/lib/env";
 
 const scriptLink =
   "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";

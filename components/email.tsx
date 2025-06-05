@@ -2,7 +2,6 @@ import * as React from "react";
 import {
   Html,
   Text,
-  Button,
   Heading,
   Link,
   Section,

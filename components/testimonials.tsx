@@ -1,19 +1,49 @@
 "use client";
-
+import { useCallback, useEffect, useState } from "react";
 import { TESTIMONIALS } from "@/lib/constants";
 import TestimonialCard from "./testimonial-card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Testimonials = () => {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap() + 1);
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1);
+    });
+  }, [api]);
+
+  const handleScrollPrev = useCallback(() => {
+    if (!api) return;
+    api.scrollPrev();
+  }, [api]);
+
+  const handleScrollNext = useCallback(() => {
+    if (!api) return;
+    api.scrollNext();
+  }, [api]);
+
   return (
     <section
       id="testimonials"
-      className="w-full bg-background py-12 md:py-24 px-4 md:px-6"
+      className="w-full bg-background py-12 md:py-24 px-5 md:px-0"
     >
       <div className="container mx-auto">
         <div className="mb-16 text-center">
@@ -26,17 +56,19 @@ const Testimonials = () => {
         </div>
         <Carousel
           className="w-full"
+          setApi={setApi}
           opts={{
             loop: true,
             align: "start",
-            dragFree: true,
+            slidesToScroll: 1,
           }}
           plugins={[
             Autoplay({
-              delay: 2000,
+              delay: 2500,
               playOnInit: true,
-              stopOnInteraction: false,
+              stopOnInteraction: true,
               stopOnMouseEnter: true,
+              stopOnFocusIn: true,
             }),
           ]}
         >
@@ -51,6 +83,29 @@ const Testimonials = () => {
             ))}
           </CarouselContent>
         </Carousel>
+        <div className="flex items-center justify-between py-1">
+          <div className="flex items-center gap-2">
+            <Button
+              variant={api?.canScrollPrev() ? "default" : "outline"}
+              color="primary"
+              className="p-1 rounded-full"
+              onClick={handleScrollPrev}
+            >
+              <ChevronLeft className="size-4" />
+            </Button>
+            <Button
+              variant={api?.canScrollNext() ? "default" : "outline"}
+              color="primary"
+              className="p-1 rounded-full"
+              onClick={handleScrollNext}
+            >
+              <ChevronRight className="size-4" />
+            </Button>
+          </div>
+          <div className="py-2 text-center text-sm text-muted-foreground">
+            {current} of {count}
+          </div>
+        </div>
       </div>
     </section>
   );

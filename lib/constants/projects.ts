@@ -35,7 +35,7 @@ export const PROJECTS: Project[] = [
     description:
       "A Farcaster frame radio show bringing music, conversation and creative energy to Farcaster.",
     color: "#CCCCCC",
-    image: "/projects/stringz.png",
+    image: "/projects/acid-test.png",
     type: FILTER.EXTERNAL,
     links: [
       {

@@ -41,7 +41,7 @@ export default function Team() {
   }, [api]);
 
   return (
-    <section id="team" className="px-5 md:px-0 py-20 md:py-28 flex flex-col">
+    <section id="team" className="px-5 py-20 md:py-28 flex flex-col">
       <div className="flex flex-col gap-y-4">
         <h3 className="text-tertiary font-bold text-2xl text-center md:text-left">
           Team

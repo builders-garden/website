@@ -43,7 +43,7 @@ const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="w-full bg-background py-12 md:py-24 px-5 md:px-0"
+      className="w-full bg-background py-12 md:py-24 px-5"
     >
       <div className="container mx-auto">
         <div className="mb-16 text-center">

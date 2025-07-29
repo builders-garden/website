@@ -2,9 +2,16 @@ import { Project } from "@/types";
 
 export enum FILTER {
   ALL = "All",
-  INTERNAL = "Internal products",
-  EXTERNAL = "External products",
+  INTERNAL = "Internal product",
+  EXTERNAL = "External product",
   //HACKATHONS = "Hackathons",
+}
+
+export enum PROJECT_TYPE {
+  GAME = "game",
+  MUSIC = "music",
+  RADIO = "radio",
+  OTHER = "other",
 }
 
 export const PROJECTS: Project[] = [
@@ -12,10 +19,32 @@ export const PROJECTS: Project[] = [
     name: "Farville",
     slug: "farville",
     description:
-      "A Farcaster frame game where you can plant, grow and harvest crop with your internet frens.",
+      "A Farcaster mini-app game where you can plant, grow and harvest crop with your internet frens.",
+    longDescription:
+      "Farville is a Farcaster mini-app game where you can <b>plant</b>, <b>grow</b> and <b>harvest</b> crop with your internet frens.\n\nSIUM.",
     color: "#CCCCCC",
     image: "/projects/farville.png",
+    bannerImage: "/projects/farville/hero.jpg",
+    screenshotUrls: [
+      {
+        url: "/projects/farville/1.png",
+        alt: "Farville onboarding",
+        text: "1. Farville user onboarding flow",
+      },
+      {
+        url: "/projects/farville/2.png",
+        alt: "Farville ranking",
+        text: "2. Farville global rankings",
+      },
+      {
+        url: "/projects/farville/3.png",
+        alt: "Farville streak",
+        text: "3. Farville daily streak",
+      },
+    ],
     type: FILTER.INTERNAL,
+    projectType: PROJECT_TYPE.GAME,
+    homepage: true,
     links: [
       {
         icon: "/icons/dribble.svg",
@@ -27,16 +56,178 @@ export const PROJECTS: Project[] = [
         name: "Farcaster",
         url: "https://farcaster.xyz/miniapps/WoLihpyQDh7w/farville",
       },
+      {
+        icon: "/icons/twitter-white.svg",
+        name: "Twitter",
+        url: "https://x.com/farville",
+      },
+    ],
+  },
+  {
+    name: "RevU",
+    slug: "revu",
+    description:
+      "A Farcaster mini-app for TBA where you can create and share your own RevU.",
+    longDescription:
+      "A Farcaster mini-app for TBA where you can create and share your own RevU.",
+    color: "#6C3BF5",
+    image: "/projects/revu-dcp.png",
+    type: FILTER.EXTERNAL,
+    projectType: PROJECT_TYPE.GAME,
+    homepage: true,
+    links: [
+      {
+        icon: "/icons/dribble.svg",
+        name: "Website",
+        url: "https://revu.decentralize.pictures",
+      },
+      {
+        icon: "/icons/farcaster-white.svg",
+        name: "Farcaster",
+        url: "https://farcaster.xyz/miniapps/cdGXMlMJRvVm/revu",
+      },
+    ],
+  },
+  {
+    name: "Checkmates",
+    slug: "checkmates",
+    description:
+      "A Farcaster mini-app for TBA where you can create and share your own Checkmates.",
+    longDescription:
+      "A Farcaster mini-app for TBA where you can create and share your own Checkmates.",
+    color: "#6C3BF5",
+    image: "/projects/checkmates/icon.png",
+    type: FILTER.EXTERNAL,
+    projectType: PROJECT_TYPE.GAME,
+    homepage: true,
+    links: [
+      {
+        icon: "/icons/dribble.svg",
+        name: "Website",
+        url: "https://checkmat.es",
+      },
+      {
+        icon: "/icons/farcaster-white.svg",
+        name: "Farcaster",
+        url: "https://farcaster.xyz/miniapps/ceoeKAzVgRwc/checkmates",
+      },
+    ],
+  },
+  {
+    name: "Drift",
+    slug: "drift",
+    description:
+      "Stablecoin-native POS and payment gateway with automatic offramps.",
+    longDescription:
+      "Stablecoin-native POS and payment gateway with automatic offramps.",
+    color: "#6C3BF5",
+    image: "/projects/drift.png",
+    type: FILTER.INTERNAL,
+    projectType: PROJECT_TYPE.OTHER,
+    homepage: true,
+    links: [
+      {
+        icon: "/icons/dribble.svg",
+        name: "Website",
+        url: "https://drift.money/",
+      },
+      {
+        icon: "/icons/twitter-white.svg",
+        name: "Drift Twitter",
+        url: "https://x.com/drift_money",
+      },
+    ],
+  },
+  {
+    name: "Eco",
+    slug: "eco",
+    description:
+      "A Farcaster mini-app for TBA where you can create and share your own Eco.",
+    longDescription:
+      "A Farcaster mini-app for TBA where you can create and share your own Eco.",
+    color: "#6C3BF5",
+    image: "/projects/eco/icon.png",
+    type: FILTER.EXTERNAL,
+    projectType: PROJECT_TYPE.OTHER,
+    homepage: true,
+    links: [
+      {
+        icon: "/icons/dribble.svg",
+        name: "Website",
+        url: "https://drift.money/",
+      },
+      {
+        icon: "/icons/twitter-white.svg",
+        name: "Drift Twitter",
+        url: "https://x.com/drift_money",
+      },
+    ],
+  },
+  {
+    name: "Griv",
+    slug: "griv",
+    description:
+      "A Farcaster mini-app for TBA where you can create and share your own Griv.",
+    longDescription:
+      "A Farcaster mini-app for TBA where you can create and share your own Griv.",
+    color: "#6C3BF5",
+    image: "/projects/griv.png",
+    type: FILTER.EXTERNAL,
+    projectType: PROJECT_TYPE.OTHER,
+    homepage: true,
+    links: [
+      {
+        icon: "/icons/dribble.svg",
+        name: "Website",
+        url: "https://www.griv.gg",
+      },
+      {
+        icon: "/icons/farcaster-white.svg",
+        name: "Farcaster",
+        url: "https://farcaster.xyz/miniapps/KtCKyy4lk104/griv",
+      },
+    ],
+  },
+  {
+    name: "UFO.fm",
+    slug: "ufo",
+    description: "A Farcaster mini-app with UFO.fm open internet radio.",
+    longDescription: "A Farcaster mini-app with UFO.fm open internet radio.",
+    color: "#6C3BF5",
+    image: "/projects/ufo/icon.png",
+    type: FILTER.EXTERNAL,
+    projectType: PROJECT_TYPE.RADIO,
+    homepage: true,
+    links: [
+      {
+        icon: "/icons/dribble.svg",
+        name: "Website",
+        url: "https://ufo.fm/",
+      },
+      {
+        icon: "/icons/farcaster-white.svg",
+        name: "Farcaster",
+        url: "https://farcaster.xyz/miniapps/0r6DJZlzhP-D/ufo",
+      },
+      {
+        icon: "/icons/twitter-white.svg",
+        name: "Twitter",
+        url: "https://x.com/ufo__club",
+      },
     ],
   },
   {
     name: "ACID TEST",
     slug: "acid-test",
     description:
-      "A Farcaster frame radio show bringing music, conversation and creative energy to Farcaster.",
+      "A Farcaster mini-app radio show bringing music, conversation and creative energy to Farcaster.",
+    longDescription:
+      "A Farcaster mini-app radio show bringing music, conversation and creative energy to Farcaster.",
     color: "#CCCCCC",
     image: "/projects/acid-test.png",
     type: FILTER.EXTERNAL,
+    projectType: PROJECT_TYPE.RADIO,
+    homepage: false,
     links: [
       {
         icon: "/icons/dribble.svg",
@@ -54,10 +245,14 @@ export const PROJECTS: Project[] = [
     name: "Betttr",
     slug: "betttr",
     description:
-      "A Farcaster frame sports prediction market. Bet, prove your skills, and earn.",
+      "A Farcaster mini-app sports prediction market. Bet, prove your skills, and earn.",
+    longDescription:
+      "A Farcaster mini-app sports prediction market. Bet, prove your skills, and earn.",
     color: "#CCCCCC",
     image: "/projects/betttr.png",
     type: FILTER.INTERNAL,
+    projectType: PROJECT_TYPE.OTHER,
+    homepage: false,
     links: [
       {
         icon: "/icons/dribble.svg",
@@ -75,10 +270,14 @@ export const PROJECTS: Project[] = [
   //   name: "Farshot",
   //   slug: "farshot",
   //   description:
-  //     "A Farcaster frame chance-based game where players can wager with different risk-reward multipliers",
+  //     "A Farcaster mini-app chance-based game where players can wager with different risk-reward multipliers",
+  //   longDescription:
+  //     "A Farcaster mini-app chance-based game where players can wager with different risk-reward multipliers",
   //   color: "#CCCCCC",
   //   image: "/projects/farshot.png",
   //   type: FILTER.EXTERNAL,
+  //   projectType: PROJECT_TYPE.OTHER,
+  //   homepage: false,
   //   links: [
   //     {
   //       icon: "/icons/dribble.svg",
@@ -93,33 +292,15 @@ export const PROJECTS: Project[] = [
   //   ],
   // },
   {
-    name: "Drift",
-    slug: "drift",
-    description:
-      "Stablecoin-native POS and payment gateway with automatic offramps.",
-    color: "#6C3BF5",
-    image: "/projects/drift.png",
-    type: FILTER.INTERNAL,
-    links: [
-      {
-        icon: "/icons/dribble.svg",
-        name: "Website",
-        url: "https://drift.money/",
-      },
-      {
-        icon: "/icons/twitter-white.svg",
-        name: "Drift Twitter",
-        url: "https://x.com/drift_money",
-      },
-    ],
-  },
-  {
     name: "OD Passport",
     slug: "od-passport",
     description: "A digital passport for community attestations.",
+    longDescription: "A digital passport for community attestations.",
     color: "#CCCCCC",
     image: "/projects/od-passport.png",
     type: FILTER.EXTERNAL,
+    projectType: PROJECT_TYPE.OTHER,
+    homepage: false,
     links: [
       {
         icon: "/icons/youtube-white.svg",
@@ -138,9 +319,13 @@ export const PROJECTS: Project[] = [
     slug: "zuland",
     description:
       "Token-gated and encrypted social spaces for ZuVillages built on top of Akasha.",
+    longDescription:
+      "Token-gated and encrypted social spaces for ZuVillages built on top of Akasha.",
     color: "#CCCCCC",
     image: "/projects/zuland.png",
     type: FILTER.EXTERNAL,
+    projectType: PROJECT_TYPE.OTHER,
+    homepage: false,
     links: [
       {
         icon: "/icons/dribble.svg",
@@ -159,9 +344,13 @@ export const PROJECTS: Project[] = [
     slug: "stringz",
     description:
       "A Farcaster client focused on Reddit-style long conversations.",
+    longDescription:
+      "A Farcaster client focused on Reddit-style long conversations.",
     color: "#6C3BF5",
     image: "/projects/stringz.png",
     type: FILTER.INTERNAL,
+    projectType: PROJECT_TYPE.OTHER,
+    homepage: false,
     links: [
       {
         icon: "/icons/dribble.svg",

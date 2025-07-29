@@ -11,6 +11,7 @@ import { RemoveScroll } from "react-remove-scroll";
 import { MENU_LINKS } from "@/components/menu-links";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { LogoDesktop } from "./ui/brand-icons";
 
 export function MobileMenu({
   className,
@@ -58,13 +59,7 @@ export function MobileMenu({
           {...other}
         >
           <Link href="/" className="flex items-center gap-2">
-            <Image
-              src={"/logo.svg"}
-              className="hidden md:block w-[120px] h-[40px]"
-              width={120}
-              height={40}
-              alt="Builders Garden logo desktop"
-            />
+            <LogoDesktop className="w-[120px] h-[40px] fill-foreground text-foreground" />
             <Image
               src={"/tree.svg"}
               className="block md:hidden mx-1 w-[30px] h-[30px]"

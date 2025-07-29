@@ -16,6 +16,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { LogoDesktop } from "./ui/brand-icons";
 
 export function Navbar(): React.JSX.Element {
   const pathname = usePathname();
@@ -26,13 +27,7 @@ export function Navbar(): React.JSX.Element {
         <nav className="hidden rounded-[120px] max-w-[1450px] w-full px-5 py-3 bg-gradient-to-tr from-[#171717] to-[#0E0E0E] justify-between lg:flex">
           <div className="flex items-center gap-x-9">
             <Link href="/" className="flex items-center gap-2">
-              <Image
-                src={"/logo.svg"}
-                className="hidden md:block w-[120px] h-[40px]"
-                width={120}
-                height={40}
-                alt="Builders Garden logo desktop"
-              />
+              <LogoDesktop className="hidden md:block w-[120px] h-[40px] fill-foreground text-foreground" />
               <Image
                 src={"/tree.svg"}
                 className="block md:hidden mx-1 w-[30px] h-[30px]"

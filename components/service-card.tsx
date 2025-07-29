@@ -46,8 +46,8 @@ const Ellipsis = ({ color }: { color: string }) => (
 
 export default function ServiceCard({ service }: { service: Service }) {
   return (
-    <Card className="rounded-[50px]  bg-gradient-to-bl from-[#171717] to-[#0E0E0E] overflow-hidden">
-      <CardContent className="group pt-10 pb-16 px-12 flex flex-col items-center justify-center gap-4 max-w-[590px] relative">
+    <Card className="rounded-[50px] h-full bg-gradient-to-bl from-[#171717] to-[#0E0E0E] overflow-hidden">
+      <CardContent className="h-full group pt-10 pb-16 px-12 flex flex-col items-center justify-center gap-4 max-w-[590px] relative">
         <div className="w-full flex flex-col gap-4 items-start justify-start">
           <Image
             height={40}
@@ -58,7 +58,7 @@ export default function ServiceCard({ service }: { service: Service }) {
           />
           <h2 className="text-xl font-medium">{service.name}</h2>
         </div>
-        <p className="text-xl opacity-70 text-left font-medium">
+        <p className="text-xl opacity-70 text-left font-medium h-full">
           {service.description}
         </p>
         <Ellipsis color={service.color} />

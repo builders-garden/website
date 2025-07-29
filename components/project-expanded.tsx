@@ -9,7 +9,7 @@ export const ProjectExpanded = ({ project }: { project: Project }) => {
       {/* Hero Section */}
       <div className="w-full h-[60vh] relative">
         <Image
-          src={project.image}
+          src={project.bannerImage ?? project.image}
           alt={`${project.name} hero image`}
           className="w-full h-full object-cover rounded-t-3xl"
           width={1920}
@@ -38,7 +38,29 @@ export const ProjectExpanded = ({ project }: { project: Project }) => {
             </CardContent>
           </Card>
 
-          {/* Add more sections as needed */}
+          {project.screenshotUrls && project.screenshotUrls.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+              {project.screenshotUrls.map((screenshot) => (
+                <Card
+                  className="bg-gradient-to-bl from-[#171717] to-[#0E0E0E] overflow-hidden rounded-2xl"
+                  key={screenshot.url}
+                >
+                  <CardContent className="p-2">
+                    <Image
+                      src={screenshot.url}
+                      alt={`${project.name} screenshot`}
+                      width={1920}
+                      height={1080}
+                      className="w-full h-full rounded-xl"
+                    />
+                    <p className="text-lg font-medium my-2">
+                      {screenshot.text}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          ) : null}
         </div>
 
         {/* Sidebar */}

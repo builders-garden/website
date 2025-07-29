@@ -40,7 +40,8 @@ export default function Partners() {
               delay: 2000,
               playOnInit: true,
               stopOnInteraction: true,
-              stopOnMouseEnter: false,
+              stopOnMouseEnter: true,
+              stopOnFocusIn: true,
             }),
           ]}
         >

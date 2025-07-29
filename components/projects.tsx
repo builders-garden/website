@@ -27,9 +27,11 @@ const Projects = ({ showViewAll = true, limit = 6 }: ProjectsProps) => {
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mt-8">
           {showViewAll
-            ? PROJECTS.slice(0, limit).map((project) => (
-                <ProjectCard key={project.name} project={project} />
-              ))
+            ? PROJECTS.filter((project) => project.homepage)
+                .slice(0, limit)
+                .map((project) => (
+                  <ProjectCard key={project.name} project={project} />
+                ))
             : PROJECTS.map((project) => (
                 <ProjectCard key={project.name} project={project} />
               ))}

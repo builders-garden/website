@@ -39,4 +39,12 @@ export const TESTIMONIALS = [
     image: "/testimonials/chaim.png",
     brandImage: "/testimonials/acid-logo.png",
   },
+  {
+    name: "Leo Matchett",
+    about: "CEO, Decentralized Pictures",
+    description:
+      "“We couldn't be happier with Builders Garden and their work on the RevU mini-app for TBA.\nFrom the very beginning, their responsiveness was exceptional, and it felt like they understood our vision instinctively.\nThey translated our needs into a fantastic product with impressive speed.\nA truly top-notch team!”",
+    image: "/testimonials/dcp.jpg",
+    brandImage: "/testimonials/dcp-revu.png",
+  },
 ];

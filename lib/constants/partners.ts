@@ -15,6 +15,16 @@ export const PARTNERS = [
     link: "https://eco.com/",
   },
   {
+    name: "Decentralized Pictures",
+    image: "/partners/dcp-logo.png",
+    link: "https://decentralized.pictures/",
+  },
+  {
+    name: "Griv",
+    image: "/partners/griv.png",
+    link: "https://www.griv.gg/",
+  },
+  {
     name: "Request Network",
     image: "/partners/request-network.svg",
     link: "https://request.network/",

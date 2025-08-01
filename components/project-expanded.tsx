@@ -1,7 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Project, ProjectLink } from "@/types";
+import { ZoomableImage } from "./zoomable-image";
+import { Badge } from "@/components/ui/badge";
 
 export const ProjectExpanded = ({ project }: { project: Project }) => {
   return (
@@ -30,41 +38,60 @@ export const ProjectExpanded = ({ project }: { project: Project }) => {
       {/* Content Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Main Content */}
-        <div className="md:col-span-2 space-y-8">
+        <div className="md:col-span-2 space-y-8 order-2 md:order-1">
+          <div className="flex flex-wrap gap-2 items-center justify-start py-2">
+            {project.tags.map((tag) => (
+              <Badge
+                variant="outline"
+                className="text-sm bg-background rounded-[50px]"
+                key={tag}
+              >
+                {tag}
+              </Badge>
+            ))}
+          </div>
+
           <Card className="bg-gradient-to-bl from-[#171717] to-[#0E0E0E] rounded-[50px] overflow-hidden">
-            <CardContent className="p-8">
-              <h2 className="text-2xl font-bold mb-4">About the Project</h2>
-              <p className="text-lg opacity-80">{project.description}</p>
-            </CardContent>
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold">
+                About the Project
+              </CardTitle>
+              <CardDescription className="text-lg opacity-80">
+                {project.description}
+              </CardDescription>
+            </CardHeader>
           </Card>
 
-          {project.screenshotUrls && project.screenshotUrls.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
-              {project.screenshotUrls.map((screenshot) => (
-                <Card
-                  className="bg-gradient-to-bl from-[#171717] to-[#0E0E0E] overflow-hidden rounded-2xl"
-                  key={screenshot.url}
-                >
-                  <CardContent className="p-2">
-                    <Image
-                      src={screenshot.url}
-                      alt={`${project.name} screenshot`}
-                      width={1920}
-                      height={1080}
-                      className="w-full h-full rounded-xl"
-                    />
-                    <p className="text-lg font-medium my-2">
-                      {screenshot.text}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          ) : null}
+          <Card className="bg-gradient-to-bl from-[#171717] to-[#0E0E0E] overflow-hidden rounded-[50px]">
+            <CardHeader>
+              <CardTitle className="text-2xl font-bold">Gallery</CardTitle>
+            </CardHeader>
+            <CardContent className="p-2">
+              {project.screenshotUrls && project.screenshotUrls.length > 0 ? (
+                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
+                  {project.screenshotUrls.map((screenshot) => (
+                    <div
+                      key={screenshot.url}
+                      className="flex flex-col gap-2 px-4 py-2 h-full"
+                    >
+                      <ZoomableImage
+                        imageUrl={screenshot.url}
+                        alt={screenshot.text}
+                        width={1920}
+                        height={1080}
+                        className="w-full h-full rounded-xl object-cover"
+                      />
+                      <p className="text-sm text-center">{screenshot.text}</p>
+                    </div>
+                  ))}
+                </div>
+              ) : null}
+            </CardContent>
+          </Card>
         </div>
 
         {/* Sidebar */}
-        <div className="space-y-8">
+        <div className="space-y-8 order-1 md:order-2">
           {project.links.length > 0 ? (
             <Card className="bg-gradient-to-bl from-[#171717] to-[#0E0E0E] rounded-[50px] overflow-hidden">
               <CardContent className="p-8">
@@ -90,13 +117,6 @@ export const ProjectExpanded = ({ project }: { project: Project }) => {
               </CardContent>
             </Card>
           ) : null}
-
-          <Card className="bg-gradient-to-bl from-[#171717] to-[#0E0E0E] rounded-[50px] overflow-hidden">
-            <CardContent className="p-8">
-              <h3 className="text-xl font-bold mb-4">Project Type</h3>
-              <p className="text-lg opacity-80">{project.type}</p>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ export const SERVICES = [
     icon: "/services/farcaster.svg",
     name: "Farcaster Development",
     description:
-      "Leverage Farcaster’s decentralized social ecosystem to create powerful, onchain experiences like miniapps.",
+      "Leverage Farcaster's decentralized social ecosystem to create powerful, onchain experiences like miniapps.",
     color: "secondary",
     link: "https://devpost.com/software/split3",
   },

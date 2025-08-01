@@ -1,4 +1,4 @@
-import { FILTER, PROJECT_TYPE } from "@/lib/constants";
+import { PROJECT_TAG } from "@/lib/constants";
 import { SVGProps } from "react";
 export * from "./form.schema";
 
@@ -26,8 +26,7 @@ export type Project = {
   screenshotUrls?: ProjectScreenshot[];
   description: string;
   longDescription: string;
-  type: FILTER;
-  projectType: PROJECT_TYPE;
+  tags: PROJECT_TAG[];
   homepage: boolean;
   color: string;
   links: ProjectLink[];

@@ -1,17 +1,22 @@
 import { Project } from "@/types";
 
-export enum FILTER {
+export enum PROJECT_TAG {
   ALL = "All",
   INTERNAL = "Internal product",
   EXTERNAL = "External product",
-  //HACKATHONS = "Hackathons",
-}
-
-export enum PROJECT_TYPE {
-  GAME = "game",
-  MUSIC = "music",
-  RADIO = "radio",
-  OTHER = "other",
+  SPORTS = "Sports",
+  LEADERBOARDS = "Leaderboards",
+  GAME = "Game",
+  MUSIC = "Music",
+  PODCASTS = "Podcasts",
+  MOVIES = "Movies",
+  LIVESTREAMS = "Livestreams",
+  RADIO = "Radio",
+  PAYMENTS = "Payments",
+  SOCIAL = "Social",
+  PRIVACY = "Privacy",
+  BETS = "Bets",
+  OTHER = "Other",
 }
 
 export const PROJECTS: Project[] = [
@@ -42,8 +47,7 @@ export const PROJECTS: Project[] = [
         text: "3. Farville daily streak",
       },
     ],
-    type: FILTER.INTERNAL,
-    projectType: PROJECT_TYPE.GAME,
+    tags: [PROJECT_TAG.INTERNAL, PROJECT_TAG.GAME, PROJECT_TAG.LEADERBOARDS],
     homepage: true,
     links: [
       {
@@ -72,8 +76,7 @@ export const PROJECTS: Project[] = [
       "A Farcaster mini-app for TBA where you can create and share your own RevU.",
     color: "#6C3BF5",
     image: "/projects/revu-dcp.png",
-    type: FILTER.EXTERNAL,
-    projectType: PROJECT_TYPE.GAME,
+    tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.MOVIES],
     homepage: true,
     links: [
       {
@@ -97,8 +100,7 @@ export const PROJECTS: Project[] = [
       "A Farcaster mini-app for TBA where you can create and share your own Checkmates.",
     color: "#6C3BF5",
     image: "/projects/checkmates/icon.png",
-    type: FILTER.EXTERNAL,
-    projectType: PROJECT_TYPE.GAME,
+    tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.GAME, PROJECT_TAG.BETS],
     homepage: true,
     links: [
       {
@@ -122,8 +124,7 @@ export const PROJECTS: Project[] = [
       "Stablecoin-native POS and payment gateway with automatic offramps.",
     color: "#6C3BF5",
     image: "/projects/drift.png",
-    type: FILTER.INTERNAL,
-    projectType: PROJECT_TYPE.OTHER,
+    tags: [PROJECT_TAG.INTERNAL, PROJECT_TAG.PAYMENTS],
     homepage: true,
     links: [
       {
@@ -147,8 +148,7 @@ export const PROJECTS: Project[] = [
       "A Farcaster mini-app for TBA where you can create and share your own Eco.",
     color: "#6C3BF5",
     image: "/projects/eco/icon.png",
-    type: FILTER.EXTERNAL,
-    projectType: PROJECT_TYPE.OTHER,
+    tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.PAYMENTS],
     homepage: true,
     links: [
       {
@@ -172,8 +172,7 @@ export const PROJECTS: Project[] = [
       "A Farcaster mini-app for TBA where you can create and share your own Griv.",
     color: "#6C3BF5",
     image: "/projects/griv.png",
-    type: FILTER.EXTERNAL,
-    projectType: PROJECT_TYPE.OTHER,
+    tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.SPORTS, PROJECT_TAG.LEADERBOARDS],
     homepage: true,
     links: [
       {
@@ -195,8 +194,13 @@ export const PROJECTS: Project[] = [
     longDescription: "A Farcaster mini-app with UFO.fm open internet radio.",
     color: "#6C3BF5",
     image: "/projects/ufo/icon.png",
-    type: FILTER.EXTERNAL,
-    projectType: PROJECT_TYPE.RADIO,
+    tags: [
+      PROJECT_TAG.EXTERNAL,
+      PROJECT_TAG.RADIO,
+      PROJECT_TAG.MUSIC,
+      PROJECT_TAG.PODCASTS,
+      PROJECT_TAG.LIVESTREAMS,
+    ],
     homepage: true,
     links: [
       {
@@ -225,8 +229,12 @@ export const PROJECTS: Project[] = [
       "A Farcaster mini-app radio show bringing music, conversation and creative energy to Farcaster.",
     color: "#CCCCCC",
     image: "/projects/acid-test.png",
-    type: FILTER.EXTERNAL,
-    projectType: PROJECT_TYPE.RADIO,
+    tags: [
+      PROJECT_TAG.EXTERNAL,
+      PROJECT_TAG.RADIO,
+      PROJECT_TAG.MUSIC,
+      PROJECT_TAG.PODCASTS,
+    ],
     homepage: false,
     links: [
       {
@@ -250,8 +258,7 @@ export const PROJECTS: Project[] = [
       "A Farcaster mini-app sports prediction market. Bet, prove your skills, and earn.",
     color: "#CCCCCC",
     image: "/projects/betttr.png",
-    type: FILTER.INTERNAL,
-    projectType: PROJECT_TYPE.OTHER,
+    tags: [PROJECT_TAG.INTERNAL, PROJECT_TAG.SPORTS, PROJECT_TAG.BETS],
     homepage: false,
     links: [
       {
@@ -275,8 +282,7 @@ export const PROJECTS: Project[] = [
   //     "A Farcaster mini-app chance-based game where players can wager with different risk-reward multipliers",
   //   color: "#CCCCCC",
   //   image: "/projects/farshot.png",
-  //   type: FILTER.EXTERNAL,
-  //   projectType: PROJECT_TYPE.OTHER,
+  //   tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.GAME, PROJECT_TAG.BETS],
   //   homepage: false,
   //   links: [
   //     {
@@ -298,8 +304,7 @@ export const PROJECTS: Project[] = [
     longDescription: "A digital passport for community attestations.",
     color: "#CCCCCC",
     image: "/projects/od-passport.png",
-    type: FILTER.EXTERNAL,
-    projectType: PROJECT_TYPE.OTHER,
+    tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.OTHER],
     homepage: false,
     links: [
       {
@@ -323,8 +328,7 @@ export const PROJECTS: Project[] = [
       "Token-gated and encrypted social spaces for ZuVillages built on top of Akasha.",
     color: "#CCCCCC",
     image: "/projects/zuland.png",
-    type: FILTER.EXTERNAL,
-    projectType: PROJECT_TYPE.OTHER,
+    tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.SOCIAL, PROJECT_TAG.PRIVACY],
     homepage: false,
     links: [
       {
@@ -348,8 +352,7 @@ export const PROJECTS: Project[] = [
       "A Farcaster client focused on Reddit-style long conversations.",
     color: "#6C3BF5",
     image: "/projects/stringz.png",
-    type: FILTER.INTERNAL,
-    projectType: PROJECT_TYPE.OTHER,
+    tags: [PROJECT_TAG.INTERNAL, PROJECT_TAG.SOCIAL],
     homepage: false,
     links: [
       {

@@ -52,7 +52,7 @@ export const ZoomableImage = ({
               src={imageUrl}
               alt={alt}
               fill
-              className="rounded-lg cursor-normal"
+              className="rounded-lg cursor-normal object-contain"
             />
           </DialogContent>
         </Dialog>

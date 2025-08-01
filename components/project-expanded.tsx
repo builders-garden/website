@@ -52,7 +52,7 @@ export const ProjectExpanded = ({ project }: { project: Project }) => {
           </div>
 
           <Card className="bg-gradient-to-bl from-[#171717] to-[#0E0E0E] rounded-[50px] overflow-hidden">
-            <CardHeader>
+            <CardHeader className="p-8">
               <CardTitle className="text-2xl font-bold">
                 About the Project
               </CardTitle>
@@ -63,10 +63,10 @@ export const ProjectExpanded = ({ project }: { project: Project }) => {
           </Card>
 
           <Card className="bg-gradient-to-bl from-[#171717] to-[#0E0E0E] overflow-hidden rounded-[50px]">
-            <CardHeader>
+            <CardHeader className="pt-8 px-8 pb-0">
               <CardTitle className="text-2xl font-bold">Gallery</CardTitle>
             </CardHeader>
-            <CardContent className="p-2">
+            <CardContent className="px-2">
               {project.screenshotUrls && project.screenshotUrls.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
                   {project.screenshotUrls.map((screenshot) => (

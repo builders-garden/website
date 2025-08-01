@@ -28,7 +28,7 @@ export const PROJECTS: Project[] = [
     longDescription:
       "Farville is a Farcaster mini-app game where you can <b>plant</b>, <b>grow</b> and <b>harvest</b> crop with your internet frens.\n\nSIUM.",
     color: "#CCCCCC",
-    image: "/projects/farville.png",
+    image: "/projects/farville/preview.png",
     bannerImage: "/projects/farville/hero.jpg",
     screenshotUrls: [
       {
@@ -75,7 +75,7 @@ export const PROJECTS: Project[] = [
     longDescription:
       "A Farcaster mini-app for TBA where you can create and share your own RevU.",
     color: "#6C3BF5",
-    image: "/projects/revu-dcp.png",
+    image: "/projects/revu/preview.png",
     tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.MOVIES],
     homepage: true,
     links: [
@@ -99,7 +99,7 @@ export const PROJECTS: Project[] = [
     longDescription:
       "A Farcaster mini-app for TBA where you can create and share your own Checkmates.",
     color: "#6C3BF5",
-    image: "/projects/checkmates/icon.png",
+    image: "/projects/checkmates/preview.png",
     tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.GAME, PROJECT_TAG.BETS],
     homepage: true,
     links: [
@@ -123,7 +123,7 @@ export const PROJECTS: Project[] = [
     longDescription:
       "Stablecoin-native POS and payment gateway with automatic offramps.",
     color: "#6C3BF5",
-    image: "/projects/drift.png",
+    image: "/projects/drift/preview.png",
     tags: [PROJECT_TAG.INTERNAL, PROJECT_TAG.PAYMENTS],
     homepage: true,
     links: [
@@ -147,7 +147,7 @@ export const PROJECTS: Project[] = [
     longDescription:
       "A Farcaster mini-app for TBA where you can create and share your own Eco.",
     color: "#6C3BF5",
-    image: "/projects/eco/icon.png",
+    image: "/projects/eco/preview.png",
     tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.PAYMENTS],
     homepage: true,
     links: [
@@ -193,7 +193,7 @@ export const PROJECTS: Project[] = [
     description: "A Farcaster mini-app with UFO.fm open internet radio.",
     longDescription: "A Farcaster mini-app with UFO.fm open internet radio.",
     color: "#6C3BF5",
-    image: "/projects/ufo/icon.png",
+    image: "/projects/ufo/preview.png",
     tags: [
       PROJECT_TAG.EXTERNAL,
       PROJECT_TAG.RADIO,

@@ -62,12 +62,12 @@ export const ProjectExpanded = ({ project }: { project: Project }) => {
             </CardHeader>
           </Card>
 
-          <Card className="bg-gradient-to-bl from-[#171717] to-[#0E0E0E] overflow-hidden rounded-[50px]">
-            <CardHeader className="pt-8 px-8 pb-0">
-              <CardTitle className="text-2xl font-bold">Gallery</CardTitle>
-            </CardHeader>
-            <CardContent className="px-2">
-              {project.screenshotUrls && project.screenshotUrls.length > 0 ? (
+          {project.screenshotUrls && project.screenshotUrls.length > 0 ? (
+            <Card className="bg-gradient-to-bl from-[#171717] to-[#0E0E0E] overflow-hidden rounded-[50px]">
+              <CardHeader className="pt-8 px-8 pb-0">
+                <CardTitle className="text-2xl font-bold">Gallery</CardTitle>
+              </CardHeader>
+              <CardContent className="px-2">
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
                   {project.screenshotUrls.map((screenshot) => (
                     <div
@@ -85,9 +85,9 @@ export const ProjectExpanded = ({ project }: { project: Project }) => {
                     </div>
                   ))}
                 </div>
-              ) : null}
-            </CardContent>
-          </Card>
+              </CardContent>
+            </Card>
+          ) : null}
         </div>
 
         {/* Sidebar */}

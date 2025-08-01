@@ -26,7 +26,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           <Image
             src={project.image}
             alt={`${project.name} logo`}
-            className="min-h-[256px] sm:min-h-[221px] max-h-[300px] md:max-h-[265px] lg:max-h-[235px] xl:max-h-[300px] w-full h-full object-cover"
+            className="min-h-[256px] sm:min-h-[221px] max-h-[300px] md:max-h-[265px] lg:max-h-[235px] xl:max-h-[300px] w-full h-full object-cover rounded-[50px]"
             width={416}
             height={493}
           />

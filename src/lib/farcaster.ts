@@ -42,7 +42,7 @@ export async function getFarcasterManifest() {
   let miniappName = "Builders Garden";
   let noindex = true;
   const appUrl = env.NEXT_PUBLIC_URL;
-  if (appUrl === "https://builders.garden") {
+  if (appUrl === "https://www.builders.garden") {
     noindex = false;
   } else if (appUrl.includes("ngrok") || appUrl.includes("tunnel")) {
     miniappName += " Local";

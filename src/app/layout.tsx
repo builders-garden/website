@@ -17,12 +17,17 @@ const appUrl = env.NEXT_PUBLIC_URL;
 
 const miniapp = {
   version: "next",
-  name: "Builders Garden",
   imageUrl: `${appUrl}/feed.png`,
-  iconUrl: `${appUrl}/tree.svg`,
-  splashImageUrl: `${appUrl}/feed.png`,
-  splashBackgroundColor: "#000000",
-  buttonTitle: "Hire us for your next project",
+  button: {
+    title: "Hire us for your next project",
+    action: {
+      type: "launch_frame",
+      name: "Builders Garden",
+      url: appUrl,
+      splashImageUrl: `${appUrl}/feed.png`,
+      splashBackgroundColor: "#000000",
+    },
+  },
 };
 
 export async function generateMetadata(): Promise<Metadata> {

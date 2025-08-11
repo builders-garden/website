@@ -32,13 +32,6 @@ export const ProjectExpanded = ({ project }: { project: Project }) => {
           <p className="text-xl md:text-2xl text-white/80 max-w-3xl">
             {project.description}
           </p>
-        </div>
-      </div>
-
-      {/* Content Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Main Content */}
-        <div className="md:col-span-2 space-y-8 order-2 md:order-1">
           <div
             className="flex flex-row justify-start items-center text-center gap-2 my-2 overflow-scroll scrollbar-hide"
             style={{
@@ -57,7 +50,13 @@ export const ProjectExpanded = ({ project }: { project: Project }) => {
               </Badge>
             ))}
           </div>
+        </div>
+      </div>
 
+      {/* Content Section */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Main Content */}
+        <div className="md:col-span-2 space-y-8 order-2 md:order-1">
           <Card className="bg-gradient-to-bl from-[#171717] to-[#0E0E0E] rounded-[50px] overflow-hidden">
             <CardHeader className="p-8">
               <CardTitle className="text-2xl font-bold">

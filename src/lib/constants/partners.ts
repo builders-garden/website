@@ -15,6 +15,11 @@ export const PARTNERS = [
     link: "https://eco.com/",
   },
   {
+    name: "Base",
+    image: "/partners/base.svg",
+    link: "https://base.org/",
+  },
+  {
     name: "Decentralized Pictures",
     image: "/partners/dcp-logo.png",
     link: "https://decentralized.pictures/",
@@ -63,10 +68,5 @@ export const PARTNERS = [
     name: "Icebreaker",
     image: "/partners/icebreaker.svg",
     link: "https://icebreaker.xyz/",
-  },
-  {
-    name: "Mask Network",
-    image: "/partners/mask.svg",
-    link: "https://mask.io/",
   },
 ];

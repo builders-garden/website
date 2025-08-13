@@ -48,7 +48,7 @@ export default function TeamCard({ member }: { member: Member }) {
         {member.url && (
           <Link href={member.url} target="_blank">
             <Image
-              src={"/icons/dribble-green.svg"}
+              src={"/icons/dribble.svg"}
               height={22}
               width={22}
               color="#222222"

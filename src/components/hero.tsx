@@ -21,7 +21,7 @@ export default function Hero() {
         <h1 className="font-clash-display text-light-green text-4xl md:text-7xl">
           <span className="text-secondary"> Cultivating</span>{" "}
           <Image
-            src={"/flower.svg"}
+            src={"/landing/flower.svg"}
             height={60}
             width={60}
             alt="Builders Garden flower"
@@ -56,14 +56,14 @@ export default function Hero() {
       </div>
       <div className="z-0">
         <Image
-          src={"/hero-illustration.svg"}
+          src={"/landing/hero-illustration.svg"}
           height={663}
           width={918}
           className="z-0 hidden md:block absolute -bottom-72 right-0 min-h-[263px] sm:min-h-[350px]"
           alt="Builders Garden hero illustration"
         />
         <Image
-          src={"/hero-illustration-mobile.svg"}
+          src={"/landing/hero-illustration-mobile.svg"}
           height={263}
           width={390}
           alt="Builders Garden hero illustration"

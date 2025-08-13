@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import {
   Dialog,
@@ -25,7 +27,7 @@ export const ZoomableImage = ({
   return (
     <div
       className={cn(
-        "relative flex flex-col gap-2 px-2 py-1 items-center justify-center cursor-pointer",
+        "flex flex-col gap-2 px-2 py-1 items-center justify-center cursor-pointer",
         className
       )}
     >
@@ -33,7 +35,7 @@ export const ZoomableImage = ({
         whileHover={{
           scale: [1, 1.05, 1],
         }}
-        className={"relative rounded-2xl "}
+        className="rounded-2xl"
       >
         <Dialog>
           <DialogTrigger asChild>
@@ -45,7 +47,7 @@ export const ZoomableImage = ({
               className="rounded-lg cursor-normal"
             />
           </DialogTrigger>
-          <DialogContent className="w-full h-full">
+          <DialogContent className="w-[100vw] h-full">
             <DialogTitle className="sr-only">{alt}</DialogTitle>
             <DialogDescription className="sr-only">{alt}</DialogDescription>
             <Image

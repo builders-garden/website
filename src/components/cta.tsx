@@ -77,7 +77,7 @@ export default function CTA() {
     >
       <div className="w-full md:w-1/2">
         <Image
-          src={"/cta-illustration.svg"}
+          src={"/landing/cta-illustration.svg"}
           height={516}
           width={580}
           alt={"CTA illustration"}

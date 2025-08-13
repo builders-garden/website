@@ -9,7 +9,8 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/sonner";
 
-import { fontSans } from "@/config/fonts";
+import { Fira_Code as FontMono, Raleway as FontSans } from "next/font/google";
+
 import { siteConfig } from "@/config/site";
 import { env } from "@/lib/env";
 
@@ -39,9 +40,9 @@ export async function generateMetadata(): Promise<Metadata> {
     description: siteConfig.description,
     metadataBase: new URL(appUrl),
     icons: {
-      icon: "/tree.svg",
-      shortcut: "/tree.svg",
-      apple: "/tree.svg",
+      icon: "/builders-garden-icon.svg",
+      shortcut: "/builders-garden-icon.svg",
+      apple: "/builders-garden-icon.svg",
     },
     openGraph: {
       title: siteConfig.name,
@@ -70,6 +71,17 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+export const fontSans = FontSans({
+  subsets: ["latin"],
+  variable: "--font-sans-serif",
+  weight: ["100", "200", "300", "400", "500", "600"],
+});
+
+export const fontMono = FontMono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -91,12 +103,12 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <Navbar />
-            <main className="pt-20 sm:pt-24 z-0">{children}</main>
+            <main className="pt-20 lg:pt-24 z-0">{children}</main>
             <Toaster />
             <Footer />
           </div>
         </Providers>
-        <Analytics />
+        <Analytics mode="production" />
       </body>
     </html>
   );

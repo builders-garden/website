@@ -7,7 +7,7 @@ export function Footer() {
       <div className="w-full border-t-1 border-white" />
       <div className="rounded-[120px] px-0 md:px-5 py-3 justify-between items-center flex z-[100] pt-8">
         <Image
-          src={"/logo-tree-white.svg"}
+          src={"/builders-garden-icon-white.svg"}
           height={24}
           width={24}
           alt="Builders Garden logo white"
@@ -43,7 +43,7 @@ export function Footer() {
           </Link>
           <Link href="https://github.com/builders-garden" target="_blank">
             <Image
-              src={"/icons/github-white.svg"}
+              src={"/icons/github.svg"}
               width={24}
               height={24}
               alt={"Github logo"}
@@ -52,7 +52,7 @@ export function Footer() {
           </Link>
           <Link href="https://x.com/builders_garden" target="_blank">
             <Image
-              src={"/icons/twitter-white.svg"}
+              src={"/icons/twitter.svg"}
               width={24}
               height={24}
               alt={"Twitter logo"}

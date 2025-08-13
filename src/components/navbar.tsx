@@ -25,14 +25,14 @@ export function Navbar(): React.JSX.Element {
   const { context, user } = useMiniApp();
 
   return (
-    <section className="fixed inset-x-0 top-0 py-4 sm:py-0 px-5 z-40">
+    <section className="fixed inset-x-0 top-0 py-4 lg:py-0 px-5 z-40">
       <div className="flex w-full items-center justify-center text-center py-4">
-        <nav className="hidden rounded-[120px] max-w-[1450px] w-full px-5 py-3 bg-gradient-to-tr from-[#171717] to-[#0E0E0E] justify-between lg:flex">
+        <nav className="hidden lg:flex rounded-[120px] max-w-[1450px] w-full px-5 py-3 bg-gradient-to-tr from-[#171717] to-[#0E0E0E] justify-between">
           <div className="flex items-center gap-x-9">
             <Link href="/" className="flex items-center gap-2">
               <LogoDesktop className="hidden sm:block w-[120px] h-[40px] fill-foreground text-foreground" />
               <Image
-                src={"/tree.svg"}
+                src={"/builders-garden-icon.svg"}
                 className="block sm:hidden mx-1 w-[30px] h-[30px]"
                 height={30}
                 width={30}
@@ -98,7 +98,7 @@ export function Navbar(): React.JSX.Element {
             </Button>
           </div>
         </nav>
-        <MobileMenu className="lg:hidden" />
+        <MobileMenu />
       </div>
     </section>
   );

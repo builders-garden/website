@@ -20,7 +20,7 @@ export type Project = {
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <Card className="max-w-[416px] h-fit p-0 m-0 rounded-[50px] bg-gradient-to-bl from-[#171717] to-[#0E0E0E] overflow-hidden">
+    <Card className="max-w-[416px] h-fit p-0 m-0 rounded-[50px] bg-gradient-to-bl from-[#171717] to-[#0E0E0E] overflow-hidden mx-auto">
       <CardContent className="w-full h-fit m-0 px-0 pt-0 flex flex-col items-center justify-between gap-7 relative">
         <Link href={`/projects/${project.slug}`}>
           <Image

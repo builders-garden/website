@@ -10,6 +10,7 @@ import {
 import { Project, ProjectLink } from "@/types";
 import { ZoomableImage } from "./zoomable-image";
 import { Badge } from "@/components/ui/badge";
+import { CustomMarkdown } from "./custom-markdown";
 
 export const ProjectExpanded = ({ project }: { project: Project }) => {
   return (
@@ -58,14 +59,18 @@ export const ProjectExpanded = ({ project }: { project: Project }) => {
         {/* Main Content */}
         <div className="md:col-span-2 space-y-8 order-2 md:order-1">
           <Card className="bg-gradient-to-bl from-[#171717] to-[#0E0E0E] rounded-[50px] overflow-hidden">
-            <CardHeader className="p-8">
-              <CardTitle className="text-2xl font-bold">
-                About the Project
-              </CardTitle>
+            <CardContent className="p-8">
               <CardDescription className="text-lg opacity-80">
-                {project.description}
+                {project.markdownPath ? (
+                  <CustomMarkdown
+                    slug={project.slug}
+                    ogDescription={project.description}
+                  />
+                ) : (
+                  project.description
+                )}
               </CardDescription>
-            </CardHeader>
+            </CardContent>
           </Card>
 
           {project.screenshotUrls && project.screenshotUrls.length > 0 ? (
@@ -83,8 +88,8 @@ export const ProjectExpanded = ({ project }: { project: Project }) => {
                       <ZoomableImage
                         imageUrl={screenshot.url}
                         alt={screenshot.text}
-                        width={1920}
-                        height={1080}
+                        width={screenshot.width}
+                        height={screenshot.height}
                         className="w-full h-full rounded-xl object-cover"
                       />
                       <p className="text-sm text-center">{screenshot.text}</p>

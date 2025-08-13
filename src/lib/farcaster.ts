@@ -56,11 +56,11 @@ export async function getFarcasterManifest() {
     frame: {
       version: "1",
       name: miniappName,
-      iconUrl: `${appUrl}/testimonials/builders-garden-logo.png`,
+      iconUrl: `${appUrl}/builders-garden-logo.png`,
       homeUrl: appUrl,
       imageUrl: `${appUrl}/feed.png`,
       buttonTitle: "Hire us for your next project",
-      splashImageUrl: `${appUrl}/testimonials/builders-garden-logo.png`,
+      splashImageUrl: `${appUrl}/builders-garden-logo.png`,
       splashBackgroundColor: "#000000",
       webhookUrl: `${appUrl}/api/webhook/farcaster`,
       // Metadata https://github.com/farcasterxyz/miniapps/discussions/191

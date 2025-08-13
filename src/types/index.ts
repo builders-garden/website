@@ -16,6 +16,8 @@ export type ProjectScreenshot = {
   url: string;
   alt: string;
   text: string;
+  width: number;
+  height: number;
 };
 
 export type Project = {
@@ -25,7 +27,7 @@ export type Project = {
   bannerImage?: string;
   screenshotUrls?: ProjectScreenshot[];
   description: string;
-  longDescription: string;
+  markdownPath: string;
   tags: PROJECT_TAG[];
   homepage: boolean;
   color: string;

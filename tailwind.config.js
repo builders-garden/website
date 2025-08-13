@@ -64,6 +64,6 @@ module.exports = {
       },
     },
   },
-  darkMode: ["class", "class"],
-  plugins: [require("tailwindcss-animate")],
+  darkMode: ["class"],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 };

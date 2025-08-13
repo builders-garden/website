@@ -1,0 +1,95 @@
+---
+title: "Farville"
+---
+
+# H1 Heading
+
+<code>prose-lead:text-white</code>
+
+Normal paragraph to test <strong>strong</strong>, <em>emphasis</em>, inline `code`, and a
+<kbd>Cmd</kbd> + <kbd>K</kbd> example for <code>kbd</code>. Also a
+[plain link](https://example.com) to test `prose-a:text-white`.
+
+---
+
+## H2 Heading
+
+> This is a blockquote to test `prose-blockquote:text-white`.
+
+### H3 Heading
+
+#### H4 Heading
+
+##### H5 Heading
+
+###### H6 Heading
+
+---
+
+```javascript
+// Preformatted code block to test prose-pre and prose-code
+type User = {
+  id: string;
+  name: string;
+};
+
+function greet(user: User) {
+  console.log(`Hello, ${user.name}`);
+}
+```
+
+---
+
+1. First ordered item
+2. Second ordered item
+3. Third ordered item
+
+- Unordered item one
+- Unordered item two
+- Unordered item three
+
+---
+
+<figure>
+  <img src="/projects/farville/preview.png" alt="Preview image" />
+  <figcaption>Figure caption to test <code>prose-figcaption:text-white</code>.</figcaption>
+  
+</figure>
+
+Standalone image below to test `prose-img:text-white` (color may affect captions/alt fallback):
+
+<img src="/projects/farville/preview.png" alt="Standalone preview" />
+
+---
+
+<table>
+  <thead>
+    <tr>
+      <th>Column A</th>
+      <th>Column B</th>
+      <th>Column C</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Row 1A</td>
+      <td>Row 1B</td>
+      <td>Row 1C</td>
+    </tr>
+    <tr>
+      <td>Row 2A</td>
+      <td>Row 2B</td>
+      <td>Row 2C</td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
+<video controls muted width="480" src="https://www.w3schools.com/html/mov_bbb.mp4">
+  Your browser does not support the video tag.
+</video>
+
+---
+
+Final paragraph to ensure `prose-p:text-white` applies correctly.

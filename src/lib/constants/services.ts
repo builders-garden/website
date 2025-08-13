@@ -8,7 +8,7 @@ export const SERVICES = [
     link: "#dapp-development",
   },
   {
-    icon: "/services/farcaster.svg",
+    icon: "/icons/farcaster.svg",
     name: "Farcaster Development",
     description:
       "Leverage Farcaster's decentralized social ecosystem to create powerful, onchain experiences like miniapps.",

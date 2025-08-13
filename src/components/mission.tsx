@@ -8,7 +8,7 @@ export default function Mission() {
     >
       <div className="px-8 mt-8 md:mt-12">
         <Image
-          src={"/mission-illustration.svg"}
+          src={"/landing/mission-illustration.svg"}
           width={378}
           height={444}
           alt="Builders Garden mission illustration"

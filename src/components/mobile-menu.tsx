@@ -54,16 +54,15 @@ export function MobileMenu({
     <>
       <div className="fixed flex w-full px-5 z-10">
         <div
-          className={cn(
-            "w-full rounded-[120px] px-5 py-2 mt-3 bg-gradient-to-tr from-[#171717] to-[#0E0E0E] flex items-center justify-between",
-            className
-          )}
+          className={
+            "lg:hidden w-full rounded-[120px] px-5 py-2 mt-3 bg-gradient-to-tr from-[#171717] to-[#0E0E0E] flex items-center justify-between"
+          }
           {...other}
         >
           <Link href="/" className="flex items-center gap-2">
-            <LogoDesktop className="hidden sm:block w-[120px] h-[40px] fill-foreground text-foreground" />
+            <LogoDesktop className="hidden sm:block w-[120px] h-[30px] fill-foreground text-foreground" />
             <Image
-              src={"/tree.svg"}
+              src={"/builders-garden-icon.svg"}
               className="block sm:hidden mx-1 w-[30px] h-[30px]"
               height={30}
               width={30}
@@ -101,13 +100,13 @@ export function MobileMenu({
           </Button>
         </div>
       </div>
-      {open && (
+      {open ? (
         <Portal asChild>
           <RemoveScroll allowPinchZoom enabled>
             <MainMobileMenu onLinkClicked={handleToggleMobileMenu} />
           </RemoveScroll>
         </Portal>
-      )}
+      ) : null}
     </>
   );
 }

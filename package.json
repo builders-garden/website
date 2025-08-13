@@ -63,8 +63,8 @@
     "next-themes": "^0.2.1",
     "pnpm": "^10.5.2",
     "postcss": "8.4.31",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "react-email": "^3.0.7",
     "react-hook-form": "^7.54.2",
     "react-remove-scroll": "^2.6.3",
@@ -84,8 +84,8 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@types/react": "^18.3.16",
-    "@types/react-dom": "^18.3.5",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
     "dotenv": "^17.2.1",
     "drizzle-kit": "^0.31.4"
   }

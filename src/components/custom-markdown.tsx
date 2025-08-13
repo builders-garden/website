@@ -1,11 +1,8 @@
 import * as React from "react";
-import { getMarkdownProject } from "@/lib/markdown";
 
 import Link from "next/link";
 import Image from "next/image";
-import { compileMDX } from "next-mdx-remote/rsc";
 import { highlight } from "sugar-high";
-import { Suspense } from "react";
 
 function Table({ data }: { data: { headers: string[]; rows: string[][] } }) {
   let headers = data.headers.map((header, index) => (
@@ -90,7 +87,7 @@ function createHeading(level: number) {
   return Heading;
 }
 
-let components = {
+export const markdownComponents = {
   h1: createHeading(1),
   h2: createHeading(2),
   h3: createHeading(3),
@@ -102,28 +99,3 @@ let components = {
   code: Code,
   Table,
 };
-
-export async function CustomMarkdown({
-  slug,
-  ogDescription,
-}: {
-  slug: string;
-  ogDescription: string;
-}) {
-  const project = getMarkdownProject(slug);
-  if (!project) {
-    return <div>{ogDescription}</div>;
-  }
-  const { content } = await compileMDX({
-    source: project.content,
-    components: components as any,
-  });
-
-  return (
-    <Suspense fallback={<>Loading...</>}>
-      <div className="prose prose-headings:mt-8 prose-headings:font-semibold prose-headings:text-white !text-white prose-h1:text-5xl prose-h2:text-4xl prose-h3:text-3xl prose-h4:text-2xl prose-h5:text-xl prose-h6:text-lg prose-strong:text-white prose-a:text-white prose-lead:text-white prose-p:text-white prose-blockquote:text-white prose-figure:text-white prose-figcaption:text-white prose-em:text-white prose-kbd:text-white prose-pre:text-white prose-ol:text-white prose-ul:text-white prose-li:text-white prose-table:text-white prose-thead:text-white prose-tr:text-white prose-th:text-white prose-td:text-white prose-img:text-white prose-video:text-white prose-hr:text-white prose-code:text-white">
-        {content}
-      </div>
-    </Suspense>
-  );
-}

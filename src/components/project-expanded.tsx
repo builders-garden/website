@@ -10,9 +10,15 @@ import {
 import { Project, ProjectLink } from "@/types";
 import { ZoomableImage } from "./zoomable-image";
 import { Badge } from "@/components/ui/badge";
-import { CustomMarkdown } from "./custom-markdown";
+import React from "react";
 
-export const ProjectExpanded = ({ project }: { project: Project }) => {
+export const ProjectExpanded = ({
+  project,
+  children,
+}: {
+  project: Project;
+  children: React.ReactNode;
+}) => {
   return (
     <div className="max-w-[1450px] w-full mx-auto min-h-screen bg-background">
       {/* Hero Section */}
@@ -61,14 +67,7 @@ export const ProjectExpanded = ({ project }: { project: Project }) => {
           <Card className="bg-gradient-to-bl from-[#171717] to-[#0E0E0E] rounded-[50px] overflow-hidden">
             <CardContent className="p-8">
               <CardDescription className="text-lg opacity-80">
-                {project.markdownPath ? (
-                  <CustomMarkdown
-                    slug={project.slug}
-                    ogDescription={project.description}
-                  />
-                ) : (
-                  project.description
-                )}
+                {children}
               </CardDescription>
             </CardContent>
           </Card>

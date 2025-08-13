@@ -3,6 +3,9 @@ import { BackButton } from "@/components/back-button";
 import { env } from "@/lib/env";
 import { notFound } from "next/navigation";
 import { getProject } from "@/lib/utils";
+import { getMarkdownProject } from "@/lib/markdown";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { markdownComponents } from "@/components/custom-markdown";
 
 export function generateMetadata({ params }: { params: { slug: string } }) {
   const project = getProject(params.slug);
@@ -63,8 +66,9 @@ export default async function ProjectPage({
 }) {
   const { slug: projectSlug } = params;
   const project = getProject(projectSlug);
+  const markdownProject = getMarkdownProject(projectSlug);
 
-  if (!project) {
+  if (!project || !markdownProject) {
     return notFound();
   }
 
@@ -91,16 +95,14 @@ export default async function ProjectPage({
       <div className="w-full">
         <BackButton link="/projects" />
       </div>
-      {project ? (
-        <ProjectExpanded project={project} />
-      ) : (
-        <div className="w-full flex flex-col items-center justify-center min-h-screen">
-          <h1 className="text-3xl font-bold">Project not found</h1>
-          <p className="text-lg opacity-80 mt-4">
-            The project you&apos;re looking for doesn&apos;t exist.
-          </p>
+      <ProjectExpanded project={project}>
+        <div className="prose prose-headings:mt-8 prose-headings:font-semibold prose-headings:text-white !text-white prose-h1:text-5xl prose-h2:text-4xl prose-h3:text-3xl prose-h4:text-2xl prose-h5:text-xl prose-h6:text-lg prose-strong:text-white prose-a:text-white prose-lead:text-white prose-p:text-white prose-blockquote:text-white prose-figure:text-white prose-figcaption:text-white prose-em:text-white prose-kbd:text-white prose-pre:text-white prose-ol:text-white prose-ul:text-white prose-li:text-white prose-table:text-white prose-thead:text-white prose-tr:text-white prose-th:text-white prose-td:text-white prose-img:text-white prose-video:text-white prose-hr:text-white prose-code:text-white">
+          <MDXRemote
+            source={markdownProject.content}
+            components={markdownComponents as any}
+          />
         </div>
-      )}
+      </ProjectExpanded>
     </main>
   );
 }

@@ -5,12 +5,7 @@ import createMDX from "@next/mdx";
 const jiti = createJiti(fileURLToPath(import.meta.url));
 
 // Import env here to validate during build. Using jiti@^1 we can import .ts files :)
-try {
-  jiti("./src/lib/env");
-} catch (error) {
-  console.warn("Environment validation error:", error);
-  // Continue with build even if env validation fails
-}
+jiti("./src/lib/env.ts");
 
 const withMDX = createMDX({
   options: {

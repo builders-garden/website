@@ -2,6 +2,7 @@ import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import { env } from "@/lib/env";
 import { PROJECTS } from "@/lib/constants";
+import ky from "ky";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -43,12 +44,10 @@ export async function getFonts(): Promise<
   }[]
 > {
   const [font, fontBold] = await Promise.all([
-    fetch(`${env.NEXT_PUBLIC_URL}/fonts/ClashDisplay-Regular.woff2`).then(
-      (res) => res.arrayBuffer()
-    ),
-    fetch(`${env.NEXT_PUBLIC_URL}/fonts/ClashDisplay-Bold.woff2`).then((res) =>
-      res.arrayBuffer()
-    ),
+    ky
+      .get(`${env.NEXT_PUBLIC_URL}/fonts/ClashDisplay-Regular.ttf`)
+      .arrayBuffer(),
+    ky.get(`${env.NEXT_PUBLIC_URL}/fonts/ClashDisplay-Bold.ttf`).arrayBuffer(),
   ]);
   return [
     {
@@ -72,7 +71,7 @@ export async function getFonts(): Promise<
  * @returns The image as an ArrayBuffer
  */
 export async function loadImage(url: string): Promise<ArrayBuffer> {
-  const logoImageRes = await fetch(url);
+  const logoImageRes = await ky.get(url);
 
   if (!logoImageRes.ok) {
     throw new Error(`Failed to fetch logo image: ${logoImageRes.statusText}`);

@@ -17,10 +17,10 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
     version: "next",
     imageUrl: `${env.NEXT_PUBLIC_URL}/api/og/projects/${project.slug}`,
     button: {
-      title: `${project.name} by BG`,
+      title: `See ${project.name} by BG`,
       action: {
         type: "launch_frame",
-        name: `${project.name} by BG`,
+        name: `See ${project.name} by BG`,
         url: `${env.NEXT_PUBLIC_URL}/projects/${project.slug}`,
         splashImageUrl: `${env.NEXT_PUBLIC_URL}/feed.png`,
         splashBackgroundColor: "#000000",

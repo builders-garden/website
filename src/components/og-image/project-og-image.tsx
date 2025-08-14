@@ -53,7 +53,7 @@ export const ProjectOGImage = ({
             alt="Cover Image"
             style={{
               width: "100%",
-              height: "auto",
+              height: "100%",
               objectPosition: "top",
               marginBottom: "-33.33%",
               imageRendering: "crisp-edges",

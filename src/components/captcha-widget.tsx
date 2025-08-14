@@ -29,7 +29,7 @@ export function CaptchaWidget(
   }
 
   function onError(e?: string | Error) {
-    console.log(`Captcha error`, e);
+    console.error(`Captcha error`, e);
     setIsError(true);
     if (errorCallback) {
       errorCallback();

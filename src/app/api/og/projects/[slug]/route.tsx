@@ -2,7 +2,7 @@
 import { ImageResponse } from "next/og";
 import { DefaultOGImage } from "@/components/og-image/default-og-image";
 import { ProjectOGImage } from "@/components/og-image/project-og-image";
-import { OG_IMAGE_SIZE } from "@/lib/constants";
+import { FARCASTER_EMBED_SIZE, OG_IMAGE_SIZE } from "@/lib/constants";
 import { env } from "@/lib/env";
 import { getCoverImageType, getFonts, loadImage } from "@/lib/utils";
 import { getProject } from "@/lib/utils";
@@ -28,15 +28,26 @@ export async function GET(
   try {
     const fonts = await getFonts();
 
-    const defaultResponse = new ImageResponse(<DefaultOGImage />, {
-      width: OG_IMAGE_SIZE.width,
-      height: OG_IMAGE_SIZE.height,
-      fonts: fonts,
-      debug: false,
-      headers: [
-        ["Cache-Control", "public, s-maxage=43200, stale-while-revalidate=0"], // cache in CDN for 12 hours
-      ],
-    });
+    const aspectRatio = new URL(request.url).searchParams.get("aspectRatio");
+    let width = OG_IMAGE_SIZE.width;
+    let height = OG_IMAGE_SIZE.height;
+    if (aspectRatio === "3x2") {
+      width = FARCASTER_EMBED_SIZE.width;
+      height = FARCASTER_EMBED_SIZE.height;
+    }
+
+    const defaultResponse = new ImageResponse(
+      <DefaultOGImage width={width} height={height} />,
+      {
+        width,
+        height,
+        fonts: fonts,
+        debug: false,
+        headers: [
+          ["Cache-Control", "public, s-maxage=43200, stale-while-revalidate=0"], // cache in CDN for 12 hours
+        ],
+      }
+    );
 
     // Extract the ID from the route parameters
     const { slug: projectSlug } = await params;
@@ -63,11 +74,13 @@ export async function GET(
           projectName={project.name}
           coverImage={coverImage}
           coverImageType={coverImageType}
+          width={width}
+          height={height}
         />
       ),
       {
-        width: OG_IMAGE_SIZE.width,
-        height: OG_IMAGE_SIZE.height,
+        width,
+        height,
         fonts: fonts,
         debug: false,
         headers: [

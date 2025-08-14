@@ -1,20 +1,61 @@
+"use client";
+
+import { useMemo, useState } from "react";
 import Link from "next/link";
+import { AnimatePresence, motion } from "motion/react";
 
 import { Button } from "@/components/ui/button";
 import ProjectCard from "./project-card";
 
-import { PROJECTS } from "@/lib/constants";
+import { PROJECT_TAG, PROJECTS } from "@/lib/constants";
+import { Badge } from "./ui/badge";
 
 interface ProjectsProps {
   limit?: number;
   showViewAll?: boolean;
+  showFilters?: boolean;
 }
 
-const Projects = ({ showViewAll = true, limit = 6 }: ProjectsProps) => {
+const Projects = ({
+  showViewAll = true,
+  showFilters = false,
+  limit = 6,
+}: ProjectsProps) => {
+  const [filters, setFilters] = useState<PROJECT_TAG[]>([PROJECT_TAG.ALL]);
+
+  const filteredProjects = useMemo(() => {
+    if (filters.includes(PROJECT_TAG.ALL)) {
+      return PROJECTS;
+    }
+
+    return PROJECTS.filter((project) =>
+      filters.some((filter) => project.tags.includes(filter))
+    );
+  }, [filters]);
+
+  const handleFilterClick = (filter: PROJECT_TAG) => {
+    if (filters.includes(PROJECT_TAG.ALL)) {
+      setFilters([filter]);
+      return;
+    }
+
+    setFilters((prevFilters) => {
+      if (prevFilters.includes(filter)) {
+        if (prevFilters.length === 1 && prevFilters[0] === filter) {
+          return [PROJECT_TAG.ALL];
+        }
+        return prevFilters.filter((f) => f !== filter);
+      }
+      return [...prevFilters, filter];
+    });
+  };
+
   return (
     <section
       id="portfolio"
-      className={`w-full bg-background ${showViewAll ? "py-12 sm:py-16" : ""}`}
+      className={`w-full bg-background overflow-x-hidden ${
+        showViewAll ? "py-12 sm:py-16" : ""
+      }`}
     >
       <div className="container px-5 md:px-0 mx-auto">
         <div className="flex flex-col items-center space-y-4 text-center">
@@ -24,17 +65,48 @@ const Projects = ({ showViewAll = true, limit = 6 }: ProjectsProps) => {
           <h2 className="font-clash-display text-4xl font-bold md:text-5xl">
             Some of our projects
           </h2>
+          {showFilters ? (
+            <div
+              className="max-w-[1450px] w-full mx-auto flex flex-row justify-start items-center text-center gap-2 my-2 overflow-scroll scrollbar-hide"
+              style={{
+                scrollbarWidth: "none",
+                msOverflowStyle: "none",
+                overflow: "overlay",
+              }}
+            >
+              {Object.values(PROJECT_TAG).map((tag) => (
+                <Badge
+                  key={tag}
+                  variant="outline"
+                  onClick={() => handleFilterClick(tag)}
+                  className={`text-sm bg-background rounded-[50px] whitespace-nowrap cursor-pointer transition-all duration-300 ${
+                    filters.includes(tag)
+                      ? "bg-primary text-primary-foreground"
+                      : ""
+                  }`}
+                >
+                  {tag}
+                </Badge>
+              ))}
+            </div>
+          ) : null}
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 mt-8">
-          {showViewAll
-            ? PROJECTS.filter((project) => project.homepage)
-                .slice(0, limit)
-                .map((project) => (
-                  <ProjectCard key={project.name} project={project} />
-                ))
-            : PROJECTS.map((project) => (
-                <ProjectCard key={project.name} project={project} />
-              ))}
+          <AnimatePresence>
+            {showViewAll
+              ? PROJECTS.filter((project) => project.homepage)
+                  .slice(0, limit)
+                  .map((project) => (
+                    <motion.div key={project.name} exit={{ opacity: 0 }}>
+                      <ProjectCard project={project} />
+                    </motion.div>
+                  ))
+              : filteredProjects.map((project) => (
+                  <motion.div key={project.name} exit={{ opacity: 0.3 }}>
+                    <ProjectCard project={project} />
+                  </motion.div>
+                ))}
+          </AnimatePresence>
         </div>
         {showViewAll && (
           <div className="mt-12 flex justify-center">

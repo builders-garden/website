@@ -1,7 +1,7 @@
 "use client";
 
 import { Portal } from "@radix-ui/react-portal";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

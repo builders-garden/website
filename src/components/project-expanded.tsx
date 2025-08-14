@@ -36,7 +36,7 @@ export const ProjectExpanded = ({
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             {project.name}
           </h1>
-          <p className="text-xl md:text-2xl text-white/80 max-w-3xl">
+          <p className="text-xl md:text-2xl text-white/80">
             {project.description}
           </p>
           <div

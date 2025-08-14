@@ -15,7 +15,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 
   const miniapp = {
     version: "next",
-    imageUrl: `${env.NEXT_PUBLIC_URL}/api/og/projects/${project.slug}`,
+    imageUrl: `${env.NEXT_PUBLIC_URL}/api/og/projects/${project.slug}?aspectRatio=3x2`,
     button: {
       title: `See ${project.name} by BG`,
       action: {
@@ -29,7 +29,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 
   return {
-    title: project.name,
+    title: `${project.name} - Builders Garden`,
     description: project.description,
     metadataBase: new URL(env.NEXT_PUBLIC_URL),
     openGraph: {

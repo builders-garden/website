@@ -1,22 +1,24 @@
 /* eslint-disable @next/next/no-img-element */
-import { OG_IMAGE_SIZE } from "@/lib/constants";
-
 interface ProjectOGImageProps {
   projectName: string;
   coverImage: ArrayBuffer;
   coverImageType: string;
+  width: number;
+  height: number;
 }
 
 export const ProjectOGImage = ({
   projectName,
   coverImage,
   coverImageType,
+  width,
+  height,
 }: ProjectOGImageProps) => {
   return (
     <div
       style={{
-        width: `${OG_IMAGE_SIZE.width}px`,
-        height: `${OG_IMAGE_SIZE.height}px`,
+        width: `${width}px`,
+        height: `${height}px`,
         display: "flex",
         flexDirection: "column",
         position: "relative",

@@ -2,8 +2,8 @@ import { Project } from "@/types";
 
 export enum PROJECT_TAG {
   ALL = "All",
-  INTERNAL = "Internal product",
-  EXTERNAL = "External product",
+  INTERNAL = "Internal project",
+  EXTERNAL = "Contractor project",
   SPORTS = "Sports",
   LEADERBOARDS = "Leaderboards",
   GAME = "Game",
@@ -69,11 +69,6 @@ export const PROJECTS: Project[] = [
         name: "Farcaster",
         url: "https://farcaster.xyz/miniapps/WoLihpyQDh7w/farville",
       },
-      {
-        icon: "/icons/twitter.svg",
-        name: "Twitter",
-        url: "https://x.com/farville",
-      },
     ],
   },
   {
@@ -90,7 +85,7 @@ export const PROJECTS: Project[] = [
       {
         icon: "/icons/dribble.svg",
         name: "Website",
-        url: "https://revu.decentralize.pictures",
+        url: "https://revu.decentralized.pictures",
       },
       {
         icon: "/icons/farcaster.svg",
@@ -130,7 +125,7 @@ export const PROJECTS: Project[] = [
     markdownPath: "content/drift.mdx",
     color: "#6C3BF5",
     image: "/projects/drift/preview.png",
-    tags: [PROJECT_TAG.INTERNAL, PROJECT_TAG.PAYMENTS],
+    tags: [PROJECT_TAG.INTERNAL, PROJECT_TAG.PAYMENTS, PROJECT_TAG.STABLECOINS],
     homepage: true,
     links: [
       {
@@ -335,7 +330,7 @@ export const PROJECTS: Project[] = [
     markdownPath: "content/od-passport.mdx",
     color: "#CCCCCC",
     image: "/projects/od-passport/preview.png",
-    tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.OTHER],
+    tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.OTHER, PROJECT_TAG.PRIVACY],
     homepage: false,
     links: [
       {
@@ -369,7 +364,7 @@ export const PROJECTS: Project[] = [
       {
         icon: "/icons/github.svg",
         name: "Github",
-        url: "https://github.com/builders-garden/ZuzaluCityOS",
+        url: "https://github.com/builders-garden/Zuzalu-City",
       },
     ],
   },
@@ -384,11 +379,6 @@ export const PROJECTS: Project[] = [
     tags: [PROJECT_TAG.INTERNAL, PROJECT_TAG.SOCIAL],
     homepage: false,
     links: [
-      {
-        icon: "/icons/dribble.svg",
-        name: "Website",
-        url: "https://stringz.xyz",
-      },
       {
         icon: "/icons/github.svg",
         name: "Github",

@@ -423,56 +423,56 @@ export const PROJECTS: Project[] = [
       },
     ],
   },
-  {
-    name: "Ethereum Daily",
-    slug: "eth-daily",
-    description:
-      "A mini app where users read daily articles and take quizzes to earn rewards.",
-    markdownPath: "content/eth-daily.mdx",
-    color: "#627EEA",
-    image: "/projects/eth-daily/preview.png",
-    bannerImage: "/projects/eth-daily/hero.jpg",
-    screenshotUrls: [
-      {
-        url: "/projects/eth-daily/1.jpg",
-        alt: "Ethereum Daily Home",
-        text: "1. Check the rewards and read the article",
-        width: 1080,
-        height: 1920,
-      },
-      {
-        url: "/projects/eth-daily/2.jpg",
-        alt: "Ethereum Daily Quiz",
-        text: "2. Answer the quiz questions",
-        width: 1080,
-        height: 1920,
-      },
-      {
-        url: "/projects/eth-daily/3.jpg",
-        alt: "Ethereum Daily Quiz Results",
-        text: "3. Earn rewards based on your performance",
-        width: 1080,
-        height: 1920,
-      },
-    ],
-    tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.GAME, PROJECT_TAG.NEWS],
-    homepage: false,
-    links: [
-      {
-        icon: "/icons/dribble.svg",
-        name: "Website",
-        url: "https://paragraph.com/@ethereumdaily",
-      },
-      {
-        icon: "/icons/farcaster.svg",
-        name: "Farcaster",
-        url: "https://farcaster.xyz/ethereumdaily.eth",
-      },
-      {
-        icon: "/icons/twitter.svg",
-        name: "Twitter",
-        url: "https://x.com/EthereumDaily_",
-      },
-    ],
-  },
+  // {
+  //   name: "Ethereum Daily",
+  //   slug: "eth-daily",
+  //   description:
+  //     "A mini app where users read daily articles and take quizzes to earn rewards.",
+  //   markdownPath: "content/eth-daily.mdx",
+  //   color: "#627EEA",
+  //   image: "/projects/eth-daily/preview.png",
+  //   bannerImage: "/projects/eth-daily/hero.jpg",
+  //   screenshotUrls: [
+  //     {
+  //       url: "/projects/eth-daily/1.jpg",
+  //       alt: "Ethereum Daily Home",
+  //       text: "1. Check the rewards and read the article",
+  //       width: 1080,
+  //       height: 1920,
+  //     },
+  //     {
+  //       url: "/projects/eth-daily/2.jpg",
+  //       alt: "Ethereum Daily Quiz",
+  //       text: "2. Answer the quiz questions",
+  //       width: 1080,
+  //       height: 1920,
+  //     },
+  //     {
+  //       url: "/projects/eth-daily/3.jpg",
+  //       alt: "Ethereum Daily Quiz Results",
+  //       text: "3. Earn rewards based on your performance",
+  //       width: 1080,
+  //       height: 1920,
+  //     },
+  //   ],
+  //   tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.GAME, PROJECT_TAG.NEWS],
+  //   homepage: false,
+  //   links: [
+  //     {
+  //       icon: "/icons/dribble.svg",
+  //       name: "Website",
+  //       url: "https://paragraph.com/@ethereumdaily",
+  //     },
+  //     {
+  //       icon: "/icons/farcaster.svg",
+  //       name: "Farcaster",
+  //       url: "https://farcaster.xyz/ethereumdaily.eth",
+  //     },
+  //     {
+  //       icon: "/icons/twitter.svg",
+  //       name: "Twitter",
+  //       url: "https://x.com/EthereumDaily_",
+  //     },
+  //   ],
+  // },
 ];

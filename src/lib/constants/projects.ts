@@ -20,6 +20,7 @@ export enum PROJECT_TAG {
   STABLECOINS = "Stablecoins",
   MERCHANT = "Merchant",
   CROSS_CHAIN = "Cross-chain",
+  NEWS = "News",
 }
 
 export const PROJECTS: Project[] = [
@@ -251,10 +252,11 @@ export const PROJECTS: Project[] = [
     name: "ACID TEST",
     slug: "acid-test",
     description:
-      "A Farcaster mini-app radio show bringing music, conversation and creative energy to Farcaster.",
-    markdownPath: "content/acid.mdx",
-    color: "#CCCCCC",
-    image: "/projects/acid/preview.png",
+      "An onchain radio show bringing music, conversation and creative energy to Farcaster.",
+    markdownPath: "content/acid-test.mdx",
+    color: "#000000",
+    image: "/projects/acid-test/preview.png",
+    bannerImage: "/projects/acid-test/hero.jpg",
     tags: [
       PROJECT_TAG.EXTERNAL,
       PROJECT_TAG.RADIO,
@@ -262,6 +264,29 @@ export const PROJECTS: Project[] = [
       PROJECT_TAG.PODCASTS,
     ],
     homepage: false,
+    screenshotUrls: [
+      {
+        url: "/projects/acid-test/1.jpg",
+        alt: "Acid Test Episodes",
+        text: "1. Browse the weekly episodes",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/acid-test/2.jpg",
+        alt: "Acid Test player",
+        text: "2. Listen to episodes",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/acid-test/3.jpg",
+        alt: "Acid Test collectors",
+        text: "3. View collectors and mint statistics",
+        width: 1080,
+        height: 1920,
+      },
+    ],
     links: [
       {
         icon: "/icons/dribble.svg",
@@ -272,6 +297,11 @@ export const PROJECTS: Project[] = [
         icon: "/icons/farcaster.svg",
         name: "Farcaster",
         url: "https://farcaster.xyz/miniapps/fTRKM7quo7RZ/acid-test",
+      },
+      {
+        icon: "/icons/twitter.svg",
+        name: "Twitter",
+        url: "https://x.com/acid____test",
       },
     ],
   },
@@ -363,6 +393,58 @@ export const PROJECTS: Project[] = [
         icon: "/icons/github.svg",
         name: "Github",
         url: "https://github.com/builders-garden/stringz",
+      },
+    ],
+  },
+  {
+    name: "Ethereum Daily",
+    slug: "eth-daily",
+    description:
+      "A mini app where users read daily articles and take quizzes to earn rewards.",
+    markdownPath: "content/eth-daily.mdx",
+    color: "#627EEA",
+    image: "/projects/eth-daily/preview.png",
+    bannerImage: "/projects/eth-daily/hero.jpg",
+    screenshotUrls: [
+      {
+        url: "/projects/eth-daily/1.jpg",
+        alt: "Ethereum Daily Home",
+        text: "1. Check the rewards and read the article",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/eth-daily/2.jpg",
+        alt: "Ethereum Daily Quiz",
+        text: "2. Answer the quiz questions",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/eth-daily/3.jpg",
+        alt: "Ethereum Daily Quiz Results",
+        text: "3. Earn rewards based on your performance",
+        width: 1080,
+        height: 1920,
+      },
+    ],
+    tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.GAME, PROJECT_TAG.NEWS],
+    homepage: false,
+    links: [
+      {
+        icon: "/icons/dribble.svg",
+        name: "Website",
+        url: "https://paragraph.com/@ethereumdaily",
+      },
+      {
+        icon: "/icons/farcaster.svg",
+        name: "Farcaster",
+        url: "https://farcaster.xyz/ethereumdaily.eth",
+      },
+      {
+        icon: "/icons/twitter.svg",
+        name: "Twitter",
+        url: "https://x.com/EthereumDaily_",
       },
     ],
   },

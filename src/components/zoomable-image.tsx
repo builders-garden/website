@@ -47,14 +47,25 @@ export const ZoomableImage = ({
               className="rounded-lg cursor-normal"
             />
           </DialogTrigger>
-          <DialogContent className="w-[100vw] h-full">
-            <DialogTitle className="sr-only">{alt}</DialogTitle>
+          <DialogContent
+            className={cn(
+              "flex flex-col w-[100vw] h-full items-start justify-center",
+              width > height
+                ? "!max-w-[calc(100%-2rem)]"
+                : "!max-h-[calc(100%-2rem)]"
+            )}
+          >
+            <DialogTitle className="">{alt}</DialogTitle>
             <DialogDescription className="sr-only">{alt}</DialogDescription>
             <Image
               src={imageUrl}
               alt={alt}
-              fill
-              className="rounded-lg cursor-normal object-contain"
+              width={width}
+              height={height}
+              className={cn(
+                "overflow-hidden m-auto rounded-lg cursor-normal object-contain",
+                width > height ? "w-screen h-fit" : "h-screen w-fit"
+              )}
             />
           </DialogContent>
         </Dialog>

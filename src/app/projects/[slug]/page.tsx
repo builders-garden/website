@@ -96,7 +96,7 @@ export default async function ProjectPage({
         <BackButton link="/projects" />
       </div>
       <ProjectExpanded project={project}>
-        <div className="prose prose-headings:mt-8 prose-headings:font-semibold prose-headings:text-white !text-white prose-h1:text-5xl prose-h2:text-4xl prose-h3:text-3xl prose-h4:text-2xl prose-h5:text-xl prose-h6:text-lg prose-strong:text-white prose-a:text-white prose-lead:text-white prose-p:text-white prose-blockquote:text-white prose-figure:text-white prose-figcaption:text-white prose-em:text-white prose-kbd:text-white prose-pre:text-white prose-ol:text-white prose-ul:text-white prose-li:text-white prose-table:text-white prose-thead:text-white prose-tr:text-white prose-th:text-white prose-td:text-white prose-img:text-white prose-video:text-white prose-hr:text-white prose-code:text-white">
+        <div className="prose !max-w-none prose-headings:mt-8 prose-headings:font-semibold prose-headings:text-white !text-white prose-h1:text-5xl prose-h2:text-4xl prose-h3:text-3xl prose-h4:text-2xl prose-h5:text-xl prose-h6:text-lg prose-strong:text-white prose-a:text-white prose-lead:text-white prose-p:text-white prose-blockquote:text-white prose-figure:text-white prose-figcaption:text-white prose-em:text-white prose-kbd:text-white prose-pre:text-white prose-ol:text-white prose-ul:text-white prose-li:text-white prose-table:text-white prose-thead:text-white prose-tr:text-white prose-th:text-white prose-td:text-white prose-img:text-white prose-video:text-white prose-hr:text-white prose-code:text-white">
           <MDXRemote
             source={markdownProject.content}
             components={markdownComponents as any}

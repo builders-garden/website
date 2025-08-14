@@ -61,9 +61,9 @@ export const ProjectExpanded = ({
       </div>
 
       {/* Content Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
         {/* Main Content */}
-        <div className="md:col-span-2 space-y-8 order-2 md:order-1">
+        <div className="xl:col-span-2 space-y-8 order-2 xl:order-1">
           <Card className="bg-gradient-to-bl from-[#171717] to-[#0E0E0E] rounded-[50px] overflow-hidden">
             <CardContent className="p-8">
               <CardDescription className="text-lg opacity-80">
@@ -101,7 +101,7 @@ export const ProjectExpanded = ({
         </div>
 
         {/* Sidebar */}
-        <div className="space-y-8 order-1 md:order-2">
+        <div className="space-y-8 order-1 xl:order-2">
           {project.links.length > 0 ? (
             <Card className="bg-gradient-to-bl from-[#171717] to-[#0E0E0E] rounded-[50px] overflow-hidden">
               <CardContent className="p-8">

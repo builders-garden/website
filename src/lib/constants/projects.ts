@@ -20,6 +20,8 @@ export enum PROJECT_TAG {
   STABLECOINS = "Stablecoins",
   MERCHANT = "Merchant",
   CROSS_CHAIN = "Cross-chain",
+  HEALTH = "Health",
+  FITNESS = "Fitness",
   NEWS = "News",
 }
 
@@ -190,23 +192,58 @@ export const PROJECTS: Project[] = [
   {
     name: "Griv",
     slug: "griv",
-    description:
-      "A Farcaster mini-app for TBA where you can create and share your own Griv.",
+    description: "Griv - For the ones that show up.",
     markdownPath: "content/griv.mdx",
-    color: "#6C3BF5",
+    color: "#1E1E1E",
     image: "/projects/griv/preview.png",
-    tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.SPORTS, PROJECT_TAG.LEADERBOARDS],
+    bannerImage: "/projects/griv/hero.png",
+    tags: [
+      PROJECT_TAG.EXTERNAL,
+      PROJECT_TAG.SOCIAL,
+      PROJECT_TAG.HEALTH,
+      PROJECT_TAG.FITNESS,
+      PROJECT_TAG.SPORTS,
+      PROJECT_TAG.LEADERBOARDS,
+    ],
     homepage: true,
+    screenshotUrls: [
+      {
+        url: "/projects/griv/1.jpg",
+        alt: "Griv Camera",
+        text: "1. Shoot your commitment",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/griv/2.jpg",
+        alt: "Griv Profile",
+        text: "2. Explore your profile",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/griv/3.jpg",
+        alt: "Griv Leaderboard",
+        text: "3. Compete",
+        width: 1080,
+        height: 1920,
+      },
+    ],
     links: [
       {
         icon: "/icons/dribble.svg",
         name: "Website",
-        url: "https://www.griv.gg",
+        url: "https://griv.gg",
       },
       {
         icon: "/icons/farcaster.svg",
         name: "Farcaster",
         url: "https://farcaster.xyz/miniapps/KtCKyy4lk104/griv",
+      },
+      {
+        icon: "/icons/twitter.svg",
+        name: "Twitter",
+        url: "https://x.com/grivapp",
       },
     ],
   },

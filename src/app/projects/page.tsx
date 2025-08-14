@@ -34,6 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: `Projects - ${siteConfig.name}`,
       description: siteConfig.description,
       type: "website",
+      url: `${appUrl}/projects`,
       images: [
         {
           url: `${appUrl}/feed-2x1.png`,

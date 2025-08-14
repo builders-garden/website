@@ -28,10 +28,10 @@ export async function GET(
   try {
     const fonts = await getFonts();
 
-    const aspectRatio = new URL(request.url).searchParams.get("aspectRatio");
+    const aspectRatio = new URL(request.url).searchParams.get("ar");
     let width = OG_IMAGE_SIZE.width;
     let height = OG_IMAGE_SIZE.height;
-    if (aspectRatio === "3x2") {
+    if (aspectRatio && aspectRatio === "3x2") {
       width = FARCASTER_EMBED_SIZE.width;
       height = FARCASTER_EMBED_SIZE.height;
     }

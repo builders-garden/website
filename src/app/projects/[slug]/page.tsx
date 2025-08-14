@@ -15,7 +15,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
 
   const miniapp = {
     version: "next",
-    imageUrl: `${env.NEXT_PUBLIC_URL}/api/og/projects/${project.slug}?aspectRatio=3x2`,
+    imageUrl: `${env.NEXT_PUBLIC_URL}/api/og/projects/${project.slug}?ar=3x2`,
     button: {
       title: `See ${project.name} by BG`,
       action: {
@@ -32,6 +32,11 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
     title: `${project.name} - Builders Garden`,
     description: project.description,
     metadataBase: new URL(env.NEXT_PUBLIC_URL),
+    icons: {
+      icon: "/builders-garden-icon.svg",
+      shortcut: "/builders-garden-icon.svg",
+      apple: "/builders-garden-icon.svg",
+    },
     openGraph: {
       title: `${project.name} - Builders Garden`,
       description: project.description,
@@ -40,8 +45,8 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
       images: [
         {
           url: `${env.NEXT_PUBLIC_URL}/api/og/projects/${project.slug}`,
-          width: 1500,
-          height: 1000,
+          width: 1200,
+          height: 630,
         },
       ],
     },

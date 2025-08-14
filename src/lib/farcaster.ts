@@ -46,6 +46,8 @@ export async function getFarcasterManifest() {
     noindex = false;
   } else if (appUrl.includes("ngrok") || appUrl.includes("tunnel")) {
     miniappName += " Local";
+  } else if (appUrl === "https://dev.builders.garden") {
+    miniappName += " Dev";
   }
   return {
     accountAssociation: {
@@ -75,8 +77,8 @@ export async function getFarcasterManifest() {
       // 1284 x 2778, visual previews of the app, max 3 screenshots
       // `${appUrl}/images/screenshots/1.png`,
       // ],
-      // heroImageUrl: `${appUrl}/images/hero.png`, // 1200 x 630px (1.91:1), promotional display image on top of the mini app store
-      // ogImageUrl: `${appUrl}/images/hero.png`, // 1200 x 630px (1.91:1), promotional image, same as app hero image
+      heroImageUrl: `${appUrl}/feed.png`, // 1200 x 630px (1.91:1), promotional display image on top of the mini app store
+      ogImageUrl: `${appUrl}/feed.png`, // 1200 x 630px (1.91:1), promotional image, same as app hero image
       noindex: noindex,
       // requiredChains: ["eip155:1", "eip155:8453"],
       // requiredCapabilities: ["wallet.getEthereumProvider"],

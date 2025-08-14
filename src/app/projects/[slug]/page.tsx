@@ -38,9 +38,9 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
       url: `${env.NEXT_PUBLIC_URL}/projects/${project.slug}`,
       images: [
         {
-          url: project.image,
+          url: `${env.NEXT_PUBLIC_URL}/api/og/projects/${project.slug}`,
           width: 1500,
-          height: 750,
+          height: 1000,
         },
       ],
     },
@@ -51,7 +51,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
       siteId: "1727435024931094528",
       creator: "@builders_garden",
       creatorId: "1727435024931094528",
-      images: [project.image],
+      images: [`${env.NEXT_PUBLIC_URL}/api/og/projects/${project.slug}`],
     },
     other: {
       "fc:miniapp": JSON.stringify(miniapp),

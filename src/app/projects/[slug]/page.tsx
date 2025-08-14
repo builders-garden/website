@@ -31,6 +31,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   return {
     title: project.name,
     description: project.description,
+    metadataBase: new URL(env.NEXT_PUBLIC_URL),
     openGraph: {
       title: `${project.name} - Builders Garden`,
       description: project.description,

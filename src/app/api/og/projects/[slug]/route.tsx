@@ -43,6 +43,7 @@ export async function GET(
     if (!projectSlug) return defaultResponse;
 
     const project = getProject(projectSlug);
+    console.log("project", project);
     if (!project) {
       console.error(`Project not found: ${projectSlug}`);
       return defaultResponse;
@@ -55,6 +56,8 @@ export async function GET(
       return defaultResponse;
     }
     const coverImage = await loadImage(coverImageUrl);
+    console.log("coverImageUrl", coverImageUrl);
+    console.log("coverImageType", coverImageType);
 
     // Generate and return the image response with the composed elements
     return new ImageResponse(

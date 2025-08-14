@@ -43,22 +43,22 @@ export async function getFonts(): Promise<
   }[]
 > {
   const [font, fontBold] = await Promise.all([
-    fetch(`${env.NEXT_PUBLIC_URL}/fonts/Archivo-Bold.ttf`).then((res) =>
-      res.arrayBuffer()
+    fetch(`${env.NEXT_PUBLIC_URL}/fonts/ClashDisplay-Regular.woff2`).then(
+      (res) => res.arrayBuffer()
     ),
-    fetch(`${env.NEXT_PUBLIC_URL}/fonts/Archivo-Bold.ttf`).then((res) =>
+    fetch(`${env.NEXT_PUBLIC_URL}/fonts/ClashDisplay-Bold.woff2`).then((res) =>
       res.arrayBuffer()
     ),
   ]);
   return [
     {
-      name: "Archivo",
+      name: "ClashDisplay",
       data: font,
       weight: 400 as const,
       style: "normal" as const,
     },
     {
-      name: "Archivo",
+      name: "ClashDisplay",
       data: fontBold,
       weight: 900 as const,
       style: "normal" as const,

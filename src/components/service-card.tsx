@@ -21,7 +21,7 @@ export type Service = {
 
 const Ellipsis = ({ color }: { color: string }) => (
   <motion.div
-    className="absolute bottom-0 w-full h-[74px] group-hover:scale-120 transition-transform duration-200"
+    className="absolute bottom-0 left-0 w-full h-[74px] group-hover:scale-120 transition-transform duration-200"
     whileTap={{ scale: 0.95 }}
     whileHover={{ scale: 1.2 }}
   >
@@ -46,8 +46,12 @@ const Ellipsis = ({ color }: { color: string }) => (
 
 export default function ServiceCard({ service }: { service: Service }) {
   return (
-    <Card className="rounded-[50px] h-full bg-gradient-to-bl from-[#171717] to-[#0E0E0E] overflow-hidden">
-      <CardContent className="h-full group pt-10 pb-16 px-12 flex flex-col items-center justify-center gap-4 max-w-[590px] relative">
+    <Card className="relative rounded-[50px] h-full bg-gradient-to-bl from-[#171717] to-[#0E0E0E] overflow-hidden">
+      <CardTitle className="sr-only">{service.name}</CardTitle>
+      <CardDescription className="sr-only">
+        {service.description}
+      </CardDescription>
+      <CardContent className="h-full group pt-10 pb-16 px-12 flex flex-col items-center justify-center gap-4 max-w-[590px]">
         <div className="w-full flex flex-col gap-4 items-start justify-start">
           <Image
             height={40}

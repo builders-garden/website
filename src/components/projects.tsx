@@ -86,7 +86,6 @@ const Projects = ({
               }}
             >
               {FILTER_TAGS.map((tag) => {
-                const associatedTags = TAGS_FILTERS[tag] || [];
                 const isActive =
                   filters.includes(tag) ||
                   (filters.includes(PROJECT_TAG.ALL) &&
@@ -102,7 +101,7 @@ const Projects = ({
                       isActive ? "bg-primary text-primary-foreground" : ""
                     }`}
                   >
-                    {Icon && <Icon size={14} />}
+                    {Icon ? <Icon size={14} /> : null}
                     {tag}
                   </Badge>
                 );

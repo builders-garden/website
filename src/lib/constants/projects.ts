@@ -54,6 +54,9 @@ export enum PROJECT_TAG {
   HEALTH = "Health",
   FITNESS = "Fitness",
   NEWS = "News",
+  CHECK_IN = "Check-in",
+  IRL = "IRL",
+  EVENTS = "Events",
 }
 
 // Define which tags to show in the filter UI
@@ -111,6 +114,9 @@ export const TAGS_FILTERS: Record<PROJECT_TAG, PROJECT_TAG[]> = {
     PROJECT_TAG.SOCIAL,
     PROJECT_TAG.IDENTITY,
     PROJECT_TAG.PRIVACY,
+    PROJECT_TAG.CHECK_IN,
+    PROJECT_TAG.IRL,
+    PROJECT_TAG.EVENTS,
   ],
   [PROJECT_TAG.OTHER]: [
     PROJECT_TAG.OTHER,
@@ -133,6 +139,9 @@ export const TAGS_FILTERS: Record<PROJECT_TAG, PROJECT_TAG[]> = {
   [PROJECT_TAG.HEALTH]: [],
   [PROJECT_TAG.FITNESS]: [],
   [PROJECT_TAG.NEWS]: [],
+  [PROJECT_TAG.CHECK_IN]: [],
+  [PROJECT_TAG.IRL]: [],
+  [PROJECT_TAG.EVENTS]: [],
 };
 
 export const PROJECTS: Project[] = [
@@ -633,4 +642,64 @@ export const PROJECTS: Project[] = [
   //     },
   //   ],
   // },
+  {
+    name: "ITM ID",
+    slug: "itm",
+    description:
+      "See your echoes, moments and check-in to events easily with the ITM ID mini-app",
+    markdownPath: "content/itm.mdx",
+    color: "#000000",
+    image: "/projects/itm/preview.png",
+    // heroImage: "/projects/itm/hero.jpg",
+    screenshotUrls: [
+      {
+        url: "/projects/itm/1.png",
+        alt: "ITM ID Landing page",
+        text: "1. ITM ID Landing page",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/itm/2.png",
+        alt: "ITM ID Echoes Feed",
+        text: "2. Your ITM Echoes Feed",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/itm/3.png",
+        alt: "ITM ID Moments",
+        text: "3. The Moments you already attended",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/itm/4.png",
+        alt: "ITM ID Upcoming Moments",
+        text: "4. The Upcoming Moments",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/itm/5.png",
+        alt: "ITM ID Today Moments",
+        text: "5. The Moments happening today",
+        width: 1080,
+        height: 1920,
+      },
+    ],
+    tags: [
+      PROJECT_TAG.EXTERNAL,
+      PROJECT_TAG.CHECK_IN,
+      PROJECT_TAG.IRL,
+      PROJECT_TAG.EVENTS,
+    ],
+    homepage: true,
+    links: [
+      {
+        type: LINK_TYPE.FARCASTER,
+        url: "https://farcaster.xyz/~/developers/mini-apps/preview?url=https%3A%2F%2Fitm-id-miniapp.vercel.app%2F",
+      },
+    ],
+  },
 ];

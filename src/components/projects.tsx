@@ -7,7 +7,13 @@ import { AnimatePresence, motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import ProjectCard from "./project-card";
 
-import { PROJECT_TAG, PROJECTS } from "@/lib/constants";
+import {
+  PROJECT_TAG,
+  PROJECTS,
+  TAGS_FILTERS,
+  FILTER_TAGS,
+  FILTER_TAG_ICONS,
+} from "@/lib/constants";
 import { Badge } from "./ui/badge";
 
 interface ProjectsProps {
@@ -28,8 +34,13 @@ const Projects = ({
       return PROJECTS;
     }
 
+    // Get all expanded tags from the selected filters
+    const expandedTags = filters.flatMap(
+      (filter) => TAGS_FILTERS[filter] || [filter]
+    );
+
     return PROJECTS.filter((project) =>
-      filters.some((filter) => project.tags.includes(filter))
+      project.tags.some((tag) => expandedTags.includes(tag))
     );
   }, [filters]);
 
@@ -74,20 +85,28 @@ const Projects = ({
                 overflow: "overlay",
               }}
             >
-              {Object.values(PROJECT_TAG).map((tag) => (
-                <Badge
-                  key={tag}
-                  variant="outline"
-                  onClick={() => handleFilterClick(tag)}
-                  className={`text-sm bg-background rounded-[50px] whitespace-nowrap cursor-pointer transition-all duration-300 ${
-                    filters.includes(tag)
-                      ? "bg-primary text-primary-foreground"
-                      : ""
-                  }`}
-                >
-                  {tag}
-                </Badge>
-              ))}
+              {FILTER_TAGS.map((tag) => {
+                const associatedTags = TAGS_FILTERS[tag] || [];
+                const isActive =
+                  filters.includes(tag) ||
+                  (filters.includes(PROJECT_TAG.ALL) &&
+                    tag === PROJECT_TAG.ALL);
+                const Icon = FILTER_TAG_ICONS[tag];
+
+                return (
+                  <Badge
+                    key={tag}
+                    variant="outline"
+                    onClick={() => handleFilterClick(tag)}
+                    className={`text-sm bg-background rounded-[50px] whitespace-nowrap cursor-pointer transition-all duration-300 flex items-center gap-1.5 ${
+                      isActive ? "bg-primary text-primary-foreground" : ""
+                    }`}
+                  >
+                    {Icon && <Icon size={14} />}
+                    {tag}
+                  </Badge>
+                );
+              })}
             </div>
           ) : null}
         </div>

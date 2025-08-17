@@ -25,7 +25,7 @@ export const ProjectExpanded = ({
       {/* Hero Section */}
       <div className="w-full h-[60vh] relative">
         <Image
-          src={project.bannerImage ?? project.image}
+          src={project.heroImage ?? project.image}
           alt={`${project.name} hero image`}
           className="w-full h-full object-cover rounded-t-3xl"
           width={1920}

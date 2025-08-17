@@ -23,7 +23,7 @@ export type Project = {
   name: string;
   slug: string;
   image: string;
-  bannerImage?: string;
+  heroImage?: string;
   screenshotUrls?: ProjectScreenshot[];
   description: string;
   markdownPath: string;

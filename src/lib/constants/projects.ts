@@ -1,4 +1,18 @@
 import { Project } from "@/types";
+import {
+  Globe,
+  Building2,
+  Users,
+  Trophy,
+  Medal,
+  Gamepad2,
+  Music,
+  Film,
+  CreditCard,
+  MessageSquare,
+  MoreHorizontal,
+  type LucideIcon,
+} from "lucide-react";
 
 export enum LINK_TYPE {
   WEBSITE = "Website",
@@ -42,6 +56,85 @@ export enum PROJECT_TAG {
   NEWS = "News",
 }
 
+// Define which tags to show in the filter UI
+export const FILTER_TAGS = [
+  PROJECT_TAG.ALL,
+  PROJECT_TAG.INTERNAL,
+  PROJECT_TAG.EXTERNAL,
+  PROJECT_TAG.SPORTS,
+  PROJECT_TAG.LEADERBOARDS,
+  PROJECT_TAG.GAME,
+  PROJECT_TAG.MUSIC,
+  PROJECT_TAG.MOVIES,
+  PROJECT_TAG.PAYMENTS,
+  PROJECT_TAG.SOCIAL,
+  PROJECT_TAG.OTHER,
+] as const;
+
+// Map filter tags to their icons
+export const FILTER_TAG_ICONS: Partial<Record<PROJECT_TAG, LucideIcon>> = {
+  [PROJECT_TAG.ALL]: Globe,
+  [PROJECT_TAG.INTERNAL]: Building2,
+  [PROJECT_TAG.EXTERNAL]: Users,
+  [PROJECT_TAG.SPORTS]: Trophy,
+  [PROJECT_TAG.LEADERBOARDS]: Medal,
+  [PROJECT_TAG.GAME]: Gamepad2,
+  [PROJECT_TAG.MUSIC]: Music,
+  [PROJECT_TAG.MOVIES]: Film,
+  [PROJECT_TAG.PAYMENTS]: CreditCard,
+  [PROJECT_TAG.SOCIAL]: MessageSquare,
+  [PROJECT_TAG.OTHER]: MoreHorizontal,
+};
+
+// Map filter tags to the actual tags they represent
+export const TAGS_FILTERS: Record<PROJECT_TAG, PROJECT_TAG[]> = {
+  [PROJECT_TAG.ALL]: [PROJECT_TAG.ALL],
+  [PROJECT_TAG.INTERNAL]: [PROJECT_TAG.INTERNAL],
+  [PROJECT_TAG.EXTERNAL]: [PROJECT_TAG.EXTERNAL],
+  [PROJECT_TAG.SPORTS]: [PROJECT_TAG.SPORTS, PROJECT_TAG.BETS],
+  [PROJECT_TAG.LEADERBOARDS]: [PROJECT_TAG.LEADERBOARDS],
+  [PROJECT_TAG.GAME]: [PROJECT_TAG.GAME],
+  [PROJECT_TAG.MUSIC]: [
+    PROJECT_TAG.MUSIC,
+    PROJECT_TAG.PODCASTS,
+    PROJECT_TAG.LIVESTREAMS,
+    PROJECT_TAG.RADIO,
+  ],
+  [PROJECT_TAG.MOVIES]: [PROJECT_TAG.MOVIES],
+  [PROJECT_TAG.PAYMENTS]: [
+    PROJECT_TAG.PAYMENTS,
+    PROJECT_TAG.STABLECOINS,
+    PROJECT_TAG.MERCHANT,
+    PROJECT_TAG.CROSS_CHAIN,
+  ],
+  [PROJECT_TAG.SOCIAL]: [
+    PROJECT_TAG.SOCIAL,
+    PROJECT_TAG.IDENTITY,
+    PROJECT_TAG.PRIVACY,
+  ],
+  [PROJECT_TAG.OTHER]: [
+    PROJECT_TAG.OTHER,
+    PROJECT_TAG.MERCHANT,
+    PROJECT_TAG.CROSS_CHAIN,
+    PROJECT_TAG.HEALTH,
+    PROJECT_TAG.FITNESS,
+    PROJECT_TAG.NEWS,
+  ],
+  // Map remaining tags to empty arrays (they won't show in filter UI)
+  [PROJECT_TAG.BETS]: [],
+  [PROJECT_TAG.PODCASTS]: [],
+  [PROJECT_TAG.LIVESTREAMS]: [],
+  [PROJECT_TAG.RADIO]: [],
+  [PROJECT_TAG.IDENTITY]: [],
+  [PROJECT_TAG.PRIVACY]: [],
+  [PROJECT_TAG.STABLECOINS]: [],
+  [PROJECT_TAG.MERCHANT]: [],
+  [PROJECT_TAG.CROSS_CHAIN]: [],
+  [PROJECT_TAG.HEALTH]: [],
+  [PROJECT_TAG.FITNESS]: [],
+  [PROJECT_TAG.NEWS]: [],
+};
+
 export const PROJECTS: Project[] = [
   {
     name: "Farville",
@@ -51,7 +144,7 @@ export const PROJECTS: Project[] = [
     markdownPath: "content/farville.mdx",
     color: "#CCCCCC",
     image: "/projects/farville/preview.png",
-    bannerImage: "/projects/farville/hero.jpg",
+    heroImage: "/projects/farville/hero.jpg",
     screenshotUrls: [
       {
         url: "/projects/farville/1.png",
@@ -204,7 +297,7 @@ export const PROJECTS: Project[] = [
     markdownPath: "content/griv.mdx",
     color: "#1E1E1E",
     image: "/projects/griv/preview.png",
-    bannerImage: "/projects/griv/hero.png",
+    heroImage: "/projects/griv/hero.png",
     tags: [
       PROJECT_TAG.EXTERNAL,
       PROJECT_TAG.SOCIAL,
@@ -259,7 +352,7 @@ export const PROJECTS: Project[] = [
     markdownPath: "content/ufo.mdx",
     color: "#1E1E1E",
     image: "/projects/ufo/preview.png",
-    bannerImage: "/projects/ufo/hero.png",
+    heroImage: "/projects/ufo/hero.png",
     screenshotUrls: [
       {
         url: "/projects/ufo/1.jpg",
@@ -314,7 +407,7 @@ export const PROJECTS: Project[] = [
     markdownPath: "content/acid-test.mdx",
     color: "#000000",
     image: "/projects/acid-test/preview.png",
-    bannerImage: "/projects/acid-test/hero.jpg",
+    heroImage: "/projects/acid-test/hero.jpg",
     tags: [
       PROJECT_TAG.EXTERNAL,
       PROJECT_TAG.RADIO,
@@ -465,7 +558,7 @@ export const PROJECTS: Project[] = [
     markdownPath: "content/stringz.mdx",
     color: "#FA4200",
     image: "/projects/stringz/preview.png",
-    bannerImage: "/projects/stringz/hero.png",
+    heroImage: "/projects/stringz/hero.png",
     screenshotUrls: [
       {
         url: "/projects/stringz/1.png",
@@ -499,7 +592,7 @@ export const PROJECTS: Project[] = [
   //   markdownPath: "content/eth-daily.mdx",
   //   color: "#627EEA",
   //   image: "/projects/eth-daily/preview.png",
-  //   bannerImage: "/projects/eth-daily/hero.jpg",
+  //   heroImage: "/projects/eth-daily/hero.jpg",
   //   screenshotUrls: [
   //     {
   //       url: "/projects/eth-daily/1.jpg",

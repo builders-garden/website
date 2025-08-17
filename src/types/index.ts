@@ -1,4 +1,4 @@
-import { PROJECT_TAG } from "@/lib/constants";
+import { PROJECT_TAG, LINK_TYPE } from "@/lib/constants";
 import { SVGProps } from "react";
 export * from "./form.schema";
 
@@ -7,8 +7,7 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
 };
 
 export type ProjectLink = {
-  icon: string;
-  name: string;
+  type: LINK_TYPE;
   url: string;
 };
 

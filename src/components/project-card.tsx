@@ -2,21 +2,8 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-
-export type Link = {
-  icon: string;
-  name: string;
-  url: string;
-};
-
-export type Project = {
-  name: string;
-  slug: string;
-  image: string;
-  description: string;
-  color: string;
-  links: Link[];
-};
+import { Project } from "@/types";
+import { LINK_TYPE_ICONS } from "@/lib/constants/projects";
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
@@ -44,12 +31,17 @@ export default function ProjectCard({ project }: { project: Project }) {
         <div className="w-full flex items-center justify-start gap-2">
           {project.links.map((link) => (
             <Link
-              key={link.name}
+              key={link.type}
               href={link.url}
               target={link.url.includes("http") ? "_blank" : undefined}
               className="hover:opacity-80 transition-all duration-300"
             >
-              <Image height={24} width={24} src={link.icon} alt={link.name} />
+              <Image
+                height={24}
+                width={24}
+                src={LINK_TYPE_ICONS[link.type]}
+                alt={link.type}
+              />
             </Link>
           ))}
         </div>

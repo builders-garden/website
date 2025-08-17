@@ -7,7 +7,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Project, ProjectLink } from "@/types";
+import { Project } from "@/types";
+import { LINK_TYPE_ICONS } from "@/lib/constants/projects";
 import { ZoomableImage } from "./zoomable-image";
 import { Badge } from "@/components/ui/badge";
 import React from "react";
@@ -107,9 +108,9 @@ export const ProjectExpanded = ({
               <CardContent className="p-8">
                 <h3 className="text-xl font-bold mb-4">Project Links</h3>
                 <div className="flex flex-col gap-4">
-                  {project.links.map((link: ProjectLink) => (
+                  {project.links.map((link) => (
                     <Link
-                      key={link.name}
+                      key={link.type}
                       href={link.url}
                       target={link.url.includes("http") ? "_blank" : undefined}
                       className="flex items-center gap-3 hover:opacity-80 transition-opacity"
@@ -117,10 +118,10 @@ export const ProjectExpanded = ({
                       <Image
                         height={24}
                         width={24}
-                        src={link.icon}
-                        alt={link.name}
+                        src={LINK_TYPE_ICONS[link.type]}
+                        alt={link.type}
                       />
-                      <span className="text-lg">{link.name}</span>
+                      <span className="text-lg">{link.type}</span>
                     </Link>
                   ))}
                 </div>

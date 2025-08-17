@@ -1,5 +1,21 @@
 import { Project } from "@/types";
 
+export enum LINK_TYPE {
+  WEBSITE = "Website",
+  FARCASTER = "Farcaster",
+  TWITTER = "Twitter",
+  GITHUB = "Github",
+  YOUTUBE = "Youtube Demo",
+}
+
+export const LINK_TYPE_ICONS: Record<LINK_TYPE, string> = {
+  [LINK_TYPE.WEBSITE]: "/icons/dribble.svg",
+  [LINK_TYPE.FARCASTER]: "/icons/farcaster.svg",
+  [LINK_TYPE.TWITTER]: "/icons/twitter.svg",
+  [LINK_TYPE.GITHUB]: "/icons/github.svg",
+  [LINK_TYPE.YOUTUBE]: "/icons/youtube.svg",
+};
+
 export enum PROJECT_TAG {
   ALL = "All",
   INTERNAL = "Internal project",
@@ -63,13 +79,11 @@ export const PROJECTS: Project[] = [
     homepage: true,
     links: [
       {
-        icon: "/icons/dribble.svg",
-        name: "Website",
+        type: LINK_TYPE.WEBSITE,
         url: "https://farville.farm",
       },
       {
-        icon: "/icons/farcaster.svg",
-        name: "Farcaster",
+        type: LINK_TYPE.FARCASTER,
         url: "https://farcaster.xyz/miniapps/WoLihpyQDh7w/farville",
       },
     ],
@@ -86,13 +100,11 @@ export const PROJECTS: Project[] = [
     homepage: true,
     links: [
       {
-        icon: "/icons/dribble.svg",
-        name: "Website",
+        type: LINK_TYPE.WEBSITE,
         url: "https://revu.decentralized.pictures",
       },
       {
-        icon: "/icons/farcaster.svg",
-        name: "Farcaster",
+        type: LINK_TYPE.FARCASTER,
         url: "https://farcaster.xyz/miniapps/cdGXMlMJRvVm/revu",
       },
     ],
@@ -109,13 +121,11 @@ export const PROJECTS: Project[] = [
     homepage: true,
     links: [
       {
-        icon: "/icons/dribble.svg",
-        name: "Website",
+        type: LINK_TYPE.WEBSITE,
         url: "https://checkmat.es",
       },
       {
-        icon: "/icons/farcaster.svg",
-        name: "Farcaster",
+        type: LINK_TYPE.FARCASTER,
         url: "https://farcaster.xyz/miniapps/ceoeKAzVgRwc/checkmates",
       },
     ],
@@ -132,13 +142,11 @@ export const PROJECTS: Project[] = [
     homepage: true,
     links: [
       {
-        icon: "/icons/dribble.svg",
-        name: "Website",
+        type: LINK_TYPE.WEBSITE,
         url: "https://drift.money/",
       },
       {
-        icon: "/icons/twitter.svg",
-        name: "Drift Twitter",
+        type: LINK_TYPE.TWITTER,
         url: "https://x.com/drift_money",
       },
     ],
@@ -184,8 +192,7 @@ export const PROJECTS: Project[] = [
     homepage: true,
     links: [
       {
-        icon: "/icons/dribble.svg",
-        name: "Website",
+        type: LINK_TYPE.WEBSITE,
         url: "https://www.ecocheckout.xyz/",
       },
     ],
@@ -232,18 +239,15 @@ export const PROJECTS: Project[] = [
     ],
     links: [
       {
-        icon: "/icons/dribble.svg",
-        name: "Website",
+        type: LINK_TYPE.WEBSITE,
         url: "https://griv.gg",
       },
       {
-        icon: "/icons/farcaster.svg",
-        name: "Farcaster",
+        type: LINK_TYPE.FARCASTER,
         url: "https://farcaster.xyz/miniapps/KtCKyy4lk104/griv",
       },
       {
-        icon: "/icons/twitter.svg",
-        name: "Twitter",
+        type: LINK_TYPE.TWITTER,
         url: "https://x.com/grivapp",
       },
     ],
@@ -289,18 +293,15 @@ export const PROJECTS: Project[] = [
     homepage: false,
     links: [
       {
-        icon: "/icons/dribble.svg",
-        name: "Website",
+        type: LINK_TYPE.WEBSITE,
         url: "https://ufo.fm/",
       },
       {
-        icon: "/icons/farcaster.svg",
-        name: "Farcaster",
+        type: LINK_TYPE.FARCASTER,
         url: "https://farcaster.xyz/miniapps/0r6DJZlzhP-D/ufo",
       },
       {
-        icon: "/icons/twitter.svg",
-        name: "Twitter",
+        type: LINK_TYPE.TWITTER,
         url: "https://x.com/ufo__club",
       },
     ],
@@ -346,18 +347,15 @@ export const PROJECTS: Project[] = [
     ],
     links: [
       {
-        icon: "/icons/dribble.svg",
-        name: "Website",
+        type: LINK_TYPE.WEBSITE,
         url: "https://app.acidtest.xyz/",
       },
       {
-        icon: "/icons/farcaster.svg",
-        name: "Farcaster",
+        type: LINK_TYPE.FARCASTER,
         url: "https://farcaster.xyz/miniapps/fTRKM7quo7RZ/acid-test",
       },
       {
-        icon: "/icons/twitter.svg",
-        name: "Twitter",
+        type: LINK_TYPE.TWITTER,
         url: "https://x.com/acid____test",
       },
     ],
@@ -374,13 +372,11 @@ export const PROJECTS: Project[] = [
     homepage: false,
     links: [
       {
-        icon: "/icons/dribble.svg",
-        name: "Website",
+        type: LINK_TYPE.WEBSITE,
         url: "https://betttr.xyz",
       },
       {
-        icon: "/icons/farcaster.svg",
-        name: "Farcaster",
+        type: LINK_TYPE.FARCASTER,
         url: "https://farcaster.xyz/miniapps/3d_l4HanGz-0/betttr",
       },
     ],
@@ -420,13 +416,11 @@ export const PROJECTS: Project[] = [
     homepage: false,
     links: [
       {
-        icon: "/icons/github.svg",
-        name: "Github",
+        type: LINK_TYPE.GITHUB,
         url: "https://github.com/builders-garden/od-passport-app",
       },
       {
-        icon: "/icons/youtube.svg",
-        name: "Youtube Demo",
+        type: LINK_TYPE.YOUTUBE,
         url: "https://www.youtube.com/watch?v=IzBVjqCzVp8",
       },
     ],
@@ -451,18 +445,15 @@ export const PROJECTS: Project[] = [
     homepage: false,
     links: [
       {
-        icon: "/icons/dribble.svg",
-        name: "Website",
+        type: LINK_TYPE.WEBSITE,
         url: "https://www.zuzalu.city/",
       },
       {
-        icon: "/icons/github.svg",
-        name: "Github",
+        type: LINK_TYPE.GITHUB,
         url: "https://github.com/builders-garden/Zuzalu-City",
       },
       {
-        icon: "/icons/twitter.svg",
-        name: "Twitter",
+        type: LINK_TYPE.TWITTER,
         url: "https://x.com/Zuzalu_city",
       },
     ],
@@ -495,8 +486,7 @@ export const PROJECTS: Project[] = [
     homepage: false,
     links: [
       {
-        icon: "/icons/github.svg",
-        name: "Github",
+        type: LINK_TYPE.GITHUB,
         url: "https://github.com/builders-garden/stringz",
       },
     ],
@@ -537,18 +527,15 @@ export const PROJECTS: Project[] = [
   //   homepage: false,
   //   links: [
   //     {
-  //       icon: "/icons/dribble.svg",
-  //       name: "Website",
+  //       type: LINK_TYPE.WEBSITE,
   //       url: "https://paragraph.com/@ethereumdaily",
   //     },
   //     {
-  //       icon: "/icons/farcaster.svg",
-  //       name: "Farcaster",
+  //       type: LINK_TYPE.FARCASTER,
   //       url: "https://farcaster.xyz/ethereumdaily.eth",
   //     },
   //     {
-  //       icon: "/icons/twitter.svg",
-  //       name: "Twitter",
+  //       type: LINK_TYPE.TWITTER,
   //       url: "https://x.com/EthereumDaily_",
   //     },
   //   ],

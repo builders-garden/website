@@ -14,6 +14,7 @@ export enum PROJECT_TAG {
   RADIO = "Radio",
   PAYMENTS = "Payments",
   SOCIAL = "Social",
+  IDENTITY = "Identity",
   PRIVACY = "Privacy",
   BETS = "Bets",
   OTHER = "Other",
@@ -248,12 +249,36 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    name: "UFO.fm",
+    name: "UFO",
     slug: "ufo",
-    description: "A Farcaster mini-app with UFO.fm open internet radio.",
+    description: "UFO.fm - the open internet radio",
     markdownPath: "content/ufo.mdx",
-    color: "#6C3BF5",
+    color: "#1E1E1E",
     image: "/projects/ufo/preview.png",
+    bannerImage: "/projects/ufo/hero.png",
+    screenshotUrls: [
+      {
+        url: "/projects/ufo/1.jpg",
+        alt: "UFO Home",
+        text: "1. Check the current episode",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/ufo/2.jpg",
+        alt: "UFO Channels",
+        text: "2. Explore the channels",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/ufo/3.jpg",
+        alt: "UFO broadcasts",
+        text: "3. Listen to the previous broadcasts",
+        width: 1080,
+        height: 1920,
+      },
+    ],
     tags: [
       PROJECT_TAG.EXTERNAL,
       PROJECT_TAG.RADIO,
@@ -261,7 +286,7 @@ export const PROJECTS: Project[] = [
       PROJECT_TAG.PODCASTS,
       PROJECT_TAG.LIVESTREAMS,
     ],
-    homepage: true,
+    homepage: false,
     links: [
       {
         icon: "/icons/dribble.svg",
@@ -363,33 +388,65 @@ export const PROJECTS: Project[] = [
   {
     name: "OD Passport",
     slug: "od-passport",
-    description: "A digital passport for community attestations.",
+    description:
+      "A web app for issuing, managing, and collecting onchain badges as EAS attestations.",
     markdownPath: "content/od-passport.mdx",
-    color: "#CCCCCC",
+    color: "#E7F5FE",
     image: "/projects/od-passport/preview.png",
-    tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.OTHER, PROJECT_TAG.PRIVACY],
+    screenshotUrls: [
+      {
+        url: "/projects/od-passport/1.png",
+        alt: "OD view badges",
+        text: "1. View your badges",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/od-passport/2.png",
+        alt: "OD issue badge",
+        text: "2. Issue new badge (as admin)",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/od-passport/3.png",
+        alt: "OD badge details",
+        text: "3. View badge details",
+        width: 1080,
+        height: 1920,
+      },
+    ],
+    tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.IDENTITY, PROJECT_TAG.SOCIAL],
     homepage: false,
     links: [
-      {
-        icon: "/icons/youtube.svg",
-        name: "YouTube Demo",
-        url: "https://www.youtube.com/watch?v=IzBVjqCzVp8",
-      },
       {
         icon: "/icons/github.svg",
         name: "Github",
         url: "https://github.com/builders-garden/od-passport-app",
+      },
+      {
+        icon: "/icons/youtube.svg",
+        name: "Youtube Demo",
+        url: "https://www.youtube.com/watch?v=IzBVjqCzVp8",
       },
     ],
   },
   {
     name: "Zuland",
     slug: "zuland",
-    description:
-      "Token-gated and encrypted social spaces for ZuVillages built on top of Akasha.",
+    description: "Token-gated and encrypted social spaces for ZuVillages.",
     markdownPath: "content/zuland.mdx",
-    color: "#CCCCCC",
+    color: "#1E1E1E",
     image: "/projects/zuland/preview.png",
+    screenshotUrls: [
+      {
+        url: "/projects/zuland/1.png",
+        alt: "Zuland Home",
+        text: "1. Zuland Home",
+        width: 1920,
+        height: 1080,
+      },
+    ],
     tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.SOCIAL, PROJECT_TAG.PRIVACY],
     homepage: false,
     links: [
@@ -403,16 +460,37 @@ export const PROJECTS: Project[] = [
         name: "Github",
         url: "https://github.com/builders-garden/Zuzalu-City",
       },
+      {
+        icon: "/icons/twitter.svg",
+        name: "Twitter",
+        url: "https://x.com/Zuzalu_city",
+      },
     ],
   },
   {
     name: "Stringz",
     slug: "stringz",
-    description:
-      "A Farcaster client focused on Reddit-style long conversations.",
+    description: "Stringz - Finally enjoy Reddit-style threads on Farcaster.",
     markdownPath: "content/stringz.mdx",
-    color: "#6C3BF5",
+    color: "#FA4200",
     image: "/projects/stringz/preview.png",
+    bannerImage: "/projects/stringz/hero.png",
+    screenshotUrls: [
+      {
+        url: "/projects/stringz/1.png",
+        alt: "Stringz Thread",
+        text: "1. Read thread",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/stringz/2.png",
+        alt: "Stringz Profile",
+        text: "2. Explore your profile",
+        width: 1080,
+        height: 1920,
+      },
+    ],
     tags: [PROJECT_TAG.INTERNAL, PROJECT_TAG.SOCIAL],
     homepage: false,
     links: [

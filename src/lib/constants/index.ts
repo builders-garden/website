@@ -3,6 +3,7 @@ export * from "./members";
 export * from "./projects";
 export * from "./testimonials";
 export * from "./partners";
+export * from "./stats";
 
 export const OG_IMAGE_SIZE = {
   width: 1200,

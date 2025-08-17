@@ -3,6 +3,14 @@ import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { highlight } from "sugar-high";
+import dynamic from "next/dynamic";
+
+const ProjectStatsChart = dynamic(
+  () => import("@/components/stats/project-stats-chart"),
+  {
+    ssr: false,
+  }
+);
 
 function Table({ data }: { data: { headers: string[]; rows: string[][] } }) {
   let headers = data.headers.map((header, index) => (
@@ -98,4 +106,5 @@ export const markdownComponents = {
   a: CustomLink,
   code: Code,
   Table,
+  ProjectStatsChart,
 };

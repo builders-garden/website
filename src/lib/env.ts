@@ -9,6 +9,7 @@ export const env = createEnv({
     TURSO_DATABASE_URL: z.string().min(1),
     TURSO_AUTH_TOKEN: z.string().min(1),
     JWT_SECRET: z.string().min(1),
+    STATS_PROCESSOR_AUTH: z.string().min(1),
   },
   client: {
     NEXT_PUBLIC_TURNSLITE_SITE_KEY: z.string().min(1),

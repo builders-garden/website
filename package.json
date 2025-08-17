@@ -55,7 +55,7 @@
     "jiti": "1.21.7",
     "jose": "^6.0.12",
     "ky": "^1.7.5",
-    "lucide-react": "^0.475.0",
+    "lucide-react": "^0.539.0",
     "mdx-bundler": "^10.1.1",
     "motion": "^12.23.12",
     "next": "14.0.2",
@@ -68,6 +68,7 @@
     "react-email": "^3.0.7",
     "react-hook-form": "^7.54.2",
     "react-remove-scroll": "^2.6.3",
+    "recharts": "2.15.4",
     "rehype-slug": "^6.0.0",
     "resend": "^4.1.2",
     "sharp": "0.33.1",
@@ -86,6 +87,7 @@
   "devDependencies": {
     "@types/react": "18.3.1",
     "@types/react-dom": "18.3.1",
+    "date-fns": "^4.1.0",
     "dotenv": "^17.2.1",
     "drizzle-kit": "^0.31.4"
   }

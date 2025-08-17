@@ -214,12 +214,63 @@ export const PROJECTS: Project[] = [
   {
     name: "Checkmates",
     slug: "checkmates",
-    description:
-      "A Farcaster mini-app for TBA where you can create and share your own Checkmates.",
+    description: "Classic chess. Social stakes. Native to Farcaster.",
     markdownPath: "content/checkmates.mdx",
     color: "#6C3BF5",
     image: "/projects/checkmates/preview.png",
-    tags: [PROJECT_TAG.EXTERNAL, PROJECT_TAG.GAME, PROJECT_TAG.BETS],
+    heroImage: "/projects/checkmates/hero.png",
+    tags: [
+      PROJECT_TAG.EXTERNAL,
+      PROJECT_TAG.GAME,
+      PROJECT_TAG.BETS,
+      PROJECT_TAG.LEADERBOARDS,
+      PROJECT_TAG.LIVESTREAMS,
+      PROJECT_TAG.SOCIAL,
+    ],
+    screenshotUrls: [
+      {
+        url: "/projects/checkmates/1.png",
+        alt: "Checkmates Live Chess Game",
+        text: "1. Checkmates Live Chess Game",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/checkmates/2.png",
+        alt: "Checkmates Game Opponent found",
+        text: "2. Checkmates Game Opponent found",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/checkmates/3.png",
+        alt: "Checkmates New Game page",
+        text: "3. Checkmates New Game page",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/checkmates/4.png",
+        alt: "Checkmates Game Ended",
+        text: "4. Checkmates Game Ended",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/checkmates/5.png",
+        alt: "Checkmates Leaderboard",
+        text: "5. Checkmates Leaderboard",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/checkmates/6.png",
+        alt: "Checkmates Homepage",
+        text: "6. Checkmates Homepage",
+        width: 1080,
+        height: 1920,
+      },
+    ],
     homepage: true,
     links: [
       {
@@ -470,7 +521,45 @@ export const PROJECTS: Project[] = [
     markdownPath: "content/betttr.mdx",
     color: "#CCCCCC",
     image: "/projects/betttr/preview.png",
+    heroImage: "/projects/betttr/hero.png",
     tags: [PROJECT_TAG.INTERNAL, PROJECT_TAG.SPORTS, PROJECT_TAG.BETS],
+    screenshotUrls: [
+      {
+        url: "/projects/betttr/1.png",
+        alt: "Betttr Home",
+        text: "1. Betttr Homepage",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/betttr/2.png",
+        alt: "Betttr Combo Bet",
+        text: "2. Betttr Combo Bet cart",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/betttr/3.png",
+        alt: "Betttr User Profile",
+        text: "3. Betttr user profile",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/betttr/4.png",
+        alt: "Betttr Leaderboard",
+        text: "4. Betttr leaderboard",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/betttr/5.png",
+        alt: "Betttr My Bets",
+        text: "5. Betttr My Bets page",
+        width: 1080,
+        height: 1920,
+      },
+    ],
     homepage: false,
     links: [
       {

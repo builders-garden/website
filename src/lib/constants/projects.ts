@@ -698,7 +698,7 @@ export const PROJECTS: Project[] = [
     links: [
       {
         type: LINK_TYPE.FARCASTER,
-        url: "https://farcaster.xyz/?launchFrameUrl=https%3A%2F%2Fitm-id-miniapp.vercel.app%",
+        url: "https://farcaster.xyz/?launchFrameUrl=https%3A%2F%2Fitm-id-miniapp.vercel.app",
       },
     ],
   },

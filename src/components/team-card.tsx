@@ -34,7 +34,7 @@ export default function TeamCard({ member }: { member: Member }) {
             alt={"Twitter logo"}
           />
         </Link>
-        {member.farcaster && (
+        {member.farcaster ? (
           <Link href={member.farcaster} target="_blank">
             <Image
               src={"/icons/farcaster.svg"}
@@ -44,8 +44,8 @@ export default function TeamCard({ member }: { member: Member }) {
               alt={"Farcaster logo"}
             />
           </Link>
-        )}
-        {member.url && (
+        ) : null}
+        {member.url ? (
           <Link href={member.url} target="_blank">
             <Image
               src={"/icons/dribble.svg"}
@@ -55,7 +55,7 @@ export default function TeamCard({ member }: { member: Member }) {
               alt={"Personal website logo"}
             />
           </Link>
-        )}
+        ) : null}
       </div>
     </div>
   );

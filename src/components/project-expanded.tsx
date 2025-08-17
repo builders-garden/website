@@ -1,17 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription } from "@/components/ui/card";
 import { Project } from "@/types";
 import { LINK_TYPE_ICONS } from "@/lib/constants/projects";
-import { ZoomableImage } from "./zoomable-image";
 import { Badge } from "@/components/ui/badge";
 import React from "react";
+import { ProjectScreenshotGallery } from "./project-screenshot-gallery";
 
 export const ProjectExpanded = ({
   project,
@@ -74,30 +68,7 @@ export const ProjectExpanded = ({
           </Card>
 
           {project.screenshotUrls && project.screenshotUrls.length > 0 ? (
-            <Card className="bg-gradient-to-bl from-[#171717] to-[#0E0E0E] overflow-hidden rounded-[50px]">
-              <CardHeader className="pt-8 px-8 pb-0">
-                <CardTitle className="text-2xl font-bold">Gallery</CardTitle>
-              </CardHeader>
-              <CardContent className="px-2">
-                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
-                  {project.screenshotUrls.map((screenshot) => (
-                    <div
-                      key={screenshot.url}
-                      className="flex flex-col gap-2 px-4 py-2 h-full"
-                    >
-                      <ZoomableImage
-                        imageUrl={screenshot.url}
-                        alt={screenshot.text}
-                        width={screenshot.width}
-                        height={screenshot.height}
-                        className="w-full h-full rounded-xl object-cover"
-                      />
-                      <p className="text-sm text-center">{screenshot.text}</p>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <ProjectScreenshotGallery screenshots={project.screenshotUrls} />
           ) : null}
         </div>
 

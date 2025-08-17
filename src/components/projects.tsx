@@ -126,7 +126,7 @@ const Projects = ({
                 ))}
           </AnimatePresence>
         </div>
-        {showViewAll && (
+        {showViewAll ? (
           <div className="mt-12 flex justify-center">
             <Button
               size="lg"
@@ -137,7 +137,7 @@ const Projects = ({
               <Link href="/projects">View all</Link>
             </Button>
           </div>
-        )}
+        ) : null}
       </div>
     </section>
   );

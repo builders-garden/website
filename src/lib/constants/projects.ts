@@ -292,7 +292,7 @@ export const PROJECTS: Project[] = [
     color: "#6C3BF5",
     image: "/projects/drift/preview.png",
     tags: [PROJECT_TAG.INTERNAL, PROJECT_TAG.PAYMENTS, PROJECT_TAG.STABLECOINS],
-    homepage: true,
+    homepage: false,
     links: [
       {
         type: LINK_TYPE.WEBSITE,
@@ -342,7 +342,7 @@ export const PROJECTS: Project[] = [
       PROJECT_TAG.MERCHANT,
       PROJECT_TAG.CROSS_CHAIN,
     ],
-    homepage: true,
+    homepage: false,
     links: [
       {
         type: LINK_TYPE.WEBSITE,
@@ -443,7 +443,7 @@ export const PROJECTS: Project[] = [
       PROJECT_TAG.PODCASTS,
       PROJECT_TAG.LIVESTREAMS,
     ],
-    homepage: false,
+    homepage: true,
     links: [
       {
         type: LINK_TYPE.WEBSITE,
@@ -735,7 +735,7 @@ export const PROJECTS: Project[] = [
     name: "ITM ID",
     slug: "itm",
     description:
-      "See your echoes, moments and check-in to events easily with the ITM ID mini-app",
+      "See your echoes, moments and check-in to events easily with ITM ID",
     markdownPath: "content/itm.mdx",
     color: "#000000",
     image: "/projects/itm/preview.png",

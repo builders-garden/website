@@ -108,7 +108,7 @@ export function ProjectScreenshotGallery({
       <CardFooter className="pt-0 px-8 pb-8">
         <div className="flex items-center justify-between">
           <p className="text-sm text-center">
-            {currentIndex + 1} / {screenshots.length} screenshots
+            {currentIndex + 1} / {screenshots.length}
           </p>
         </div>
       </CardFooter>

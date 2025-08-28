@@ -229,7 +229,7 @@ export const PROJECTS: Project[] = [
     ],
     screenshotUrls: [
       {
-        url: "/projects/checkmates/1.png",
+        url: "/projects/checkmates/1.PNG",
         alt: "Checkmates Live Chess Game",
         text: "1. Checkmates Live Chess Game",
         width: 1080,

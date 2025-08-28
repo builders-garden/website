@@ -9,7 +9,7 @@ export const TESTIMONIALS = [
   },
   {
     name: "Jared Hecht",
-    about: "Co-Founder, USV",
+    about: "Venture Partner, USV",
     description:
       "“Builders Garden is not a web3 dev shop.\nIt's a group of builders who can push back on ideas, evolve them, and come to the table with their unique expertise and help you take your idea for a product and turn it into something better than you initially imagined.\nThey're the secret weapon cofounder you didn't know you needed, but thank god you found them.”",
     image: "/testimonials/jared-hecht.jpg",

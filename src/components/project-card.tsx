@@ -46,7 +46,12 @@ export default function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
         <Link href={`/projects/${project.slug}`}>
-          <Button variant="outline">View Project</Button>
+          <Button
+            variant="default"
+            className="bg-primary hover:bg-primary/80 text-black font-bold"
+          >
+            Learn more
+          </Button>
         </Link>
       </CardFooter>
     </Card>

@@ -131,7 +131,7 @@ const Projects = ({
             <Button
               size="lg"
               color="default"
-              className="px-[22px] md:px-[44px] font-bold rounded-full"
+              className="px-[22px] md:px-[44px] font-bold rounded-full bg-primary hover:bg-primary/80 text-black"
               asChild
             >
               <Link href="/projects">View all</Link>

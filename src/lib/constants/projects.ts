@@ -57,6 +57,10 @@ export enum PROJECT_TAG {
   CHECK_IN = "Check-in",
   IRL = "IRL",
   EVENTS = "Events",
+  AI = "AI",
+  IMAGE_GENERATION = "Image Generation",
+  VIDEO_GENERATION = "Video Generation",
+  MUSIC_GENERATION = "Music Generation",
 }
 
 // Define which tags to show in the filter UI
@@ -125,6 +129,10 @@ export const TAGS_FILTERS: Record<PROJECT_TAG, PROJECT_TAG[]> = {
     PROJECT_TAG.HEALTH,
     PROJECT_TAG.FITNESS,
     PROJECT_TAG.NEWS,
+    PROJECT_TAG.AI,
+    PROJECT_TAG.IMAGE_GENERATION,
+    PROJECT_TAG.VIDEO_GENERATION,
+    PROJECT_TAG.MUSIC_GENERATION,
   ],
   // Map remaining tags to empty arrays (they won't show in filter UI)
   [PROJECT_TAG.BETS]: [],
@@ -142,6 +150,10 @@ export const TAGS_FILTERS: Record<PROJECT_TAG, PROJECT_TAG[]> = {
   [PROJECT_TAG.CHECK_IN]: [],
   [PROJECT_TAG.IRL]: [],
   [PROJECT_TAG.EVENTS]: [],
+  [PROJECT_TAG.AI]: [],
+  [PROJECT_TAG.IMAGE_GENERATION]: [],
+  [PROJECT_TAG.VIDEO_GENERATION]: [],
+  [PROJECT_TAG.MUSIC_GENERATION]: [],
 };
 
 export const PROJECTS: Project[] = [
@@ -456,6 +468,79 @@ export const PROJECTS: Project[] = [
       {
         type: LINK_TYPE.TWITTER,
         url: "https://x.com/ufo__club",
+      },
+    ],
+  },
+  {
+    name: "Imagine With Us",
+    slug: "imagine-with-us",
+    description: "Your pocket creative studio.",
+    markdownPath: "content/imagine-with-us.mdx",
+    color: "#6C3BF5",
+    image: "/projects/imagine-with-us/preview.png",
+    heroImage: "/projects/imagine-with-us/hero.png",
+    tags: [
+      PROJECT_TAG.EXTERNAL,
+      PROJECT_TAG.AI,
+      PROJECT_TAG.IMAGE_GENERATION,
+      PROJECT_TAG.VIDEO_GENERATION,
+      PROJECT_TAG.MUSIC_GENERATION,
+      PROJECT_TAG.OTHER,
+      PROJECT_TAG.SOCIAL,
+    ],
+    screenshotUrls: [
+      {
+        url: "/projects/imagine-with-us/1.jpg",
+        alt: "Imagine With Us Home",
+        text: "1. Homepage with all the image created by the users",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/imagine-with-us/2.jpg",
+        alt: "Imagine With Us Image/Video Creation",
+        text: "2. Image/video creation page from a text prompt",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/imagine-with-us/3.jpg",
+        alt: "Imagine With Us Loading Creation",
+        text: "3. Loading image/video creation",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/imagine-with-us/4.jpg",
+        alt: "Imagine With Us Created Image/Video",
+        text: "4. Showcase the created image/video",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/imagine-with-us/5.jpg",
+        alt: "Imagine With Us Details",
+        text: "5. Image details page",
+        width: 1080,
+        height: 1920,
+      },
+      {
+        url: "/projects/imagine-with-us/6.jpg",
+        alt: "Imagine With Us Details",
+        text: "6. Video details page",
+        width: 1080,
+        height: 1920,
+      },
+    ],
+    homepage: false,
+    links: [
+      {
+        type: LINK_TYPE.WEBSITE,
+        url: "https://imaginewith.us",
+      },
+      {
+        type: LINK_TYPE.FARCASTER,
+        url: "https://farcaster.xyz/?launchFrameUrl=https://imaginewith.us",
       },
     ],
   },

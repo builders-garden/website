@@ -1,0 +1,45 @@
+---
+title: "Checkmates"
+---
+## Checkmates
+
+Checkmates is a Farcaster-integrated chess Mini-App, enabling users to challenge each other to live chess games with optional stake bets in crypto.
+
+The app combines traditional online chess gameplay with blockchain-based betting and social interactivity.
+
+Users can challenge Farcaster friends, spectate matches in real-time, send tips, and climb the leaderboard.
+The focus is on fast matchmaking, seamless wallet UX, and rich social dynamics.
+
+### Core Features
+
+- **Live Chess Games:** Users can challenge each other to live chess games with optional stake bets in crypto.
+- **Social Interaction:** Users can challenge any user on Farcaster, spectate matches in real-time, send tips and comments, and climb the leaderboard.
+- **Seamless Wallet UX:** The app provides a seamless wallet integration for users to manage the stakes through fast crypto transactions, powered by [Daimo](https://pay.daimo.com) on [Base](https://base.org).
+
+### Gameplay Overview
+
+- **Quick Matchmaking:** Start a game instantly by challenging a friend or accepting an open challenge.
+- **Time Controls:** Choose from blitz, rapid, or custom time controls.
+- **Spectator Mode:** Friends and followers can watch games live with move-by-move updates.
+- **Tipping:** Viewers can send tips during or after the match to support their favorite player.
+- **Settle:** Winner is determined automatically on checkmate, resignation, or timeout; stakes and tips are distributed to the corresponding players.
+
+### Leaderboards & Ranking
+
+- **Elo-Style Rating:** Players gain or lose rating after ranked matches.
+- **Seasonal Ladders:** Climb weekly/monthly leaderboards and earn badges.
+- **Player Profiles:** Match history, best wins, tips received, and recent activity.
+
+### Fair Play & Anti‑Cheat
+
+- **Move Validation:** Every move is validated with official chess rules; illegal moves are rejected client-side and server-side.
+- **Detection Signals:** Suspicious play patterns may be reviewed; repeated violations lead to restrictions.
+- **Transparent Rules:** Clear policies for timeouts, disconnects, and draw claims.
+
+### Tech Specs
+
+- **Blockchain & Payments:** Stakes and tips handled via [Daimo](https://pay.daimo.com) on [Base](https://base.org) for fast, low-cost transactions.
+- **Farcaster Integration:** Identity, social sharing, and discovery are Farcaster-first.
+- **Real-Time Engine:** WebSocket-based live game updates for moves, timers, and spectators.
+- **Matchmaking Service:** Queue-based matching with rating bands and friend challenges.
+- **Chess Rules Engine:** Standards-compliant move validation and PGN/FEN support.

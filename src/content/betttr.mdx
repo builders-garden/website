@@ -1,0 +1,26 @@
+---
+title: "Betttr"
+---
+## Betttr
+
+Betttr is a web-based sports betting app with a social twist, running on Farcaster and Worldcoin's World App.
+It uses the Azuro protocol to provide betting data, odds, results, and liquidity to bet.
+
+Betttr makes betting more interactive by letting users share their bets and earn referral rewards when others follow their picks.
+
+### Core Features
+
+- **Place Bets:** Users can bet on sports events just like with a bookmaker.
+- **Social Sharing & Copybetting:** Users can share bets on Farcaster as a frame, and others can place the same bet directly from the shared frame post, giving the original bettor a referral bonus.
+- **Leaderboards:** Track the best bettors and their winnings. Users can copy active bets from players on the leaderboard. The leaderboard makes it possible to demonstrate a bettor's skills and results. For example, a bettor specialized in football or NBA.
+- **Follow:** Users can follow other users and get notified on their bets in real time thus making it easier to copy bet your favorite bettors.
+
+### Betttr Referral System
+
+The referral system encourages users, especially skilled bettors, to share their bets on Farcaster. When other users copy a shared bet through the frame, the original bettor earns a fixed percentage fee (e.g., 1%) on each bet placed. This system should boost social engagement across the platform.
+
+### Tech Specs
+
+- [**Azuro SDK**](https://gem.azuro.org/hub/apps/sdk/overview) powers the mini app with real-time betting data and odds.
+- **Smart Contracts:** Betttr is built on Azuro’s smart contracts, which run on Base with liquidity in WETH. However, on Betttr we want the user to be able to bet using any token, so under the hood we have integrated [Daimo](https://pay.daimo.com) to address the multi-token problem and this also allows for cross-chain betting.
+- **Farcaster Integration:** Players using Farcaster can share their bets on the Farcaster social feed and if they have good stats, other users can copy their bets and they can earn through referral rewards.

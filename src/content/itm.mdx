@@ -1,0 +1,34 @@
+---
+title: "ITM ID - Technical Flow"
+---
+## ITM ID - Technical Flow
+
+The ITM ID mini app is essentially a way for users to check their Echoes feed, Moments (attended already or coming) and to see their profile.
+Inside the profile page the user also has a way to see and show a QR code to check-in to IRL events.
+
+The app is mostly read only and all the calls are made to the ITM ID backend with graphQL queries.
+
+The app is divided in 4 main sections:
+
+### 1. Landing and Login Pages
+
+The Landing Page shows a carousel that informs the user with all the ITM ID mini-app features.
+The Login Page is in turn divided into 3 phases: The first one is where the user is asked to insert their phone number. After the backend is called, passing the number, the user receives an OTP that will be used during the second phase.
+The third phase is a form that prompts the user to insert their personal data, like name, surname and date of birth. This is required only if the backend tells the user didn’t sign-up yet.
+
+### 2. The Echoes page
+
+It’s a social network-like feed where the user can see galleries, posts, follow links, watch proposed videos and listen to music tracks.
+Through this page the user may also discover new events called “Moments”.
+This feed is fetched paginated by calling the ITM backend. Some Echoes like the “Upload”, “Question” and “Poll” ones have functions to write into the ITM database through a graphQL mutation.
+With these, the user can interact actively.
+
+### 3. The Moments page
+
+The Moments page has 2 tabs, the “My Moments” tab will show all the Moments the user attended recently or also in the past. With it they can relive past Moments.
+This tab is fetched by calling the backend and has two states: one that shows more recent Moments and one that shows others that are farther in the past. To switch between these two states a couple of queries are required.
+
+### 4. The Access page
+
+The profile page (also called the Access page), is the one where the user can see all their information. With each login a unique QR code is generated. This code can be used to check-in to IRL events.
+In this page there is also a bottom section that shows Moments happening today. These suggested moments are, as well, fetched from the ITM backend.

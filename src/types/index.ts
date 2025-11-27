@@ -1,0 +1,34 @@
+import { PROJECT_TAG, LINK_TYPE } from "@/lib/constants";
+import { SVGProps } from "react";
+export * from "./form.schema";
+
+export type IconSvgProps = SVGProps<SVGSVGElement> & {
+  size?: number;
+};
+
+export type ProjectLink = {
+  type: LINK_TYPE;
+  url: string;
+};
+
+export type ProjectScreenshot = {
+  url: string;
+  alt: string;
+  text: string;
+  width: number;
+  height: number;
+};
+
+export type Project = {
+  name: string;
+  slug: string;
+  image: string;
+  heroImage?: string;
+  screenshotUrls?: ProjectScreenshot[];
+  description: string;
+  markdownPath: string;
+  tags: PROJECT_TAG[];
+  homepage: boolean;
+  color: string;
+  links: ProjectLink[];
+};

@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "ClashDisplay-Variable";
+  src: url("./fonts/ClashDisplay-Variable.woff2") format("woff2"),
+    url("./fonts/ClashDisplay-Variable.woff") format("woff"),
+    url("./fonts/ClashDisplay-Variable.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Extralight";
+  src: url("./fonts/ClashDisplay-Extralight.woff2") format("woff2"),
+    url("./fonts/ClashDisplay-Extralight.woff") format("woff"),
+    url("./fonts/ClashDisplay-Extralight.ttf") format("truetype");
+  font-weight: 200;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Light";
+  src: url("./fonts/ClashDisplay-Light.woff2") format("woff2"),
+    url("./fonts/ClashDisplay-Light.woff") format("woff"),
+    url("./fonts/ClashDisplay-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Regular";
+  src: url("./fonts/ClashDisplay-Regular.woff2") format("woff2"),
+    url("./fonts/ClashDisplay-Regular.woff") format("woff"),
+    url("./fonts/ClashDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Medium";
+  src: url("./fonts/ClashDisplay-Medium.woff2") format("woff2"),
+    url("./fonts/ClashDisplay-Medium.woff") format("woff"),
+    url("./fonts/ClashDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Semibold";
+  src: url("./fonts/ClashDisplay-Semibold.woff2") format("woff2"),
+    url("./fonts/ClashDisplay-Semibold.woff") format("woff"),
+    url("./fonts/ClashDisplay-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ClashDisplay-Bold";
+  src: url("./fonts/ClashDisplay-Bold.woff2") format("woff2"),
+    url("./fonts/ClashDisplay-Bold.woff") format("woff"),
+    url("./fonts/ClashDisplay-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+.font-clash-display {
+  font-family: "ClashDisplay-Bold", sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 134.24 86.09% 45.1%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 259.27 100% 48.24%;
+    --secondary-foreground: 0 0% 98%;
+    --tertiary: 28.76 96.57% 65.69%;
+    --tertiary-foreground: 0 0% 0%;
+    --verdino: 172 60% 95.1%;
+    --verdino-foreground: 0 0% 0%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 134.24 86.09% 45.1%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 259.27 100% 48.24%;
+    --secondary-foreground: 0 0% 98%;
+    --tertiary: 28.76 96.57% 65.69%;
+    --tertiary-foreground: 0 0% 0%;
+    --verdino: 172 60% 95.1%;
+    --verdino-foreground: 0 0% 0%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

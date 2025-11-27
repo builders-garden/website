@@ -1,0 +1,22 @@
+---
+title: "Eco Checkout"
+---
+## Eco Checkout SPA
+
+### A technical overview
+
+### Merchant POV
+1. The merchant connects to the Eco checkout website
+2. They select the payment details, such as: the blockchain where they want to receive the coins, the stablecoin they want to receive and the amount
+3. They click on the 'copy' button and a short link is dynamically generated and copied. In a Redis db the shortened link is associated with the long one that actually contains the all the details as query params
+4. The merchant shares the link to his customer
+
+### Customer POV
+1. The client connects to the Eco checkout website using a link provided by the merchant
+2. He connects his wallet and the wallet is scanned to fetch all the supported stablecoins on all the supported blockchains
+3. An optimized 'route', that satisfies the payment amount, is generated and proposed to the user (the optimized route is essentially a set of tokens selected from the ones that the user has in his wallet)
+4. If the user is not satisfied with the proposed amount, they can change the tokens to select the ones that they actually want to use, then an API call to Eco's backend is fired and the user’s proposed route is validated
+5. If valid, the user is prompted to approve all the tokens required for the payment. The approval goes to the Permit3 smart contract
+6. Once the route is validated, the user signs a single message and the Eco's backend sponsors all the required transactions to withdraw all the tokens associated with the route and send them to the merchant
+7. If the route involves a stablecoin that lives on the destination chain, the user is prompted to sign a single transaction required to transfer that token
+8. The payment is completed, if the merchant shared a link with the 'redirect' query param, the user can click a link to return to the original website

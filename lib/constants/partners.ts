@@ -1,8 +1,13 @@
 export const PARTNERS = [
   {
-    name: "Airstack",
-    image: "/partners/airstack.svg",
-    link: "https://airstack.xyz/",
+    name: "Base",
+    image: "/partners/base.svg",
+    link: "https://base.org/",
+  },
+  {
+    name: "Xmtp",
+    image: "/partners/xmtp.svg",
+    link: "https://xmtp.org/",
   },
   {
     name: "Talent Protocol",
@@ -10,19 +15,14 @@ export const PARTNERS = [
     link: "https://talentprotocol.com/",
   },
   {
-    name: "Eco",
-    image: "/partners/eco-logo.svg",
-    link: "https://eco.com/",
+    name: "Airstack",
+    image: "/partners/airstack.svg",
+    link: "https://airstack.xyz/",
   },
   {
     name: "Request Network",
     image: "/partners/request-network.svg",
     link: "https://request.network/",
-  },
-  {
-    name: "Xmtp",
-    image: "/partners/xmtp.svg",
-    link: "https://xmtp.org/",
   },
   {
     name: "Dynamic",
@@ -45,11 +45,6 @@ export const PARTNERS = [
     link: "https://www.onchaindreamers.com/",
   },
   {
-    name: "Ponder",
-    image: "/partners/ponder-logo.svg",
-    link: "https://www.weponder.io/",
-  },
-  {
     name: "Icebreaker",
     image: "/partners/icebreaker.svg",
     link: "https://icebreaker.xyz/",
@@ -58,5 +53,15 @@ export const PARTNERS = [
     name: "Mask Network",
     image: "/partners/mask.svg",
     link: "https://mask.io/",
+  },
+  {
+    name: "Ponder",
+    image: "/partners/ponder-logo.svg",
+    link: "https://www.weponder.io/",
+  },
+  {
+    name: "Eco",
+    image: "/partners/eco-logo.svg",
+    link: "https://eco.com/",
   },
 ];

@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
   }
 
   switch (event.event) {
-    case "frame_added":
+    case "miniapp_added":
       if (event.notificationDetails) {
         await setUserNotificationDetails(fid, event.notificationDetails);
         await sendFarcasterNotification({
@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
       // });
 
       break;
-    case "frame_removed": {
+    case "miniapp_removed": {
       console.log("[webhook/farcaster] frame_removed", event);
       await deleteUserNotificationDetails(fid);
       // trackEvent(fid, "frame_removed", {

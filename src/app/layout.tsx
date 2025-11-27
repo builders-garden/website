@@ -1,22 +1,22 @@
 import "@/styles/globals.css";
-import clsx from "clsx";
 import { Analytics } from "@vercel/analytics/next";
+import clsx from "clsx";
 
 import { Providers } from "./providers";
 
-import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
 import { Toaster } from "@/components/ui/sonner";
 
 import { Fira_Code as FontMono, Raleway as FontSans } from "next/font/google";
 
-export const fontSans = FontSans({
+const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans-serif",
   weight: ["100", "200", "300", "400", "500", "600"],
 });
 
-export const fontMono = FontMono({
+const fontMono = FontMono({
   subsets: ["latin"],
   variable: "--font-mono",
 });

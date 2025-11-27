@@ -1,11 +1,19 @@
 export const TESTIMONIALS = [
   {
-    name: "Igor Yuzovitskiy",
-    about: "Founder, Griv",
+    name: "David Tso",
+    about: "Ecosystem, Base",
     description:
-      "“Builders Garden has a deep understanding of consumer crypto, including core product loops, social hooks, and best-in-class UX.\n\nAs a founder who loves to move fast, they were the right partners for me. Through brief product docs and a few convos, the team knew the scope and what to do.\n\nThe team is incredibly responsive and adapts quickly to user feedback. Every sprint, I was shocked at the quality and quantity of what we were able to ship.”",
-    image: "/testimonials/griv-igor.jpeg",
-    brandImage: "/partners/griv.png",
+      "“Builders Garden moves at the speed of crypto. They ship with a rare blend of speed, quality, and responsiveness. From crushing hackathons → to evolving into a dev collective → to becoming a focused product studio fully locked in on mini apps – Limone and the team continue to push the frontier of what’s possible on Base. Relentless execution. High craft. Zero fluff. Love building with them.”",
+    image: "/testimonials/david-pfp.jpg",
+    brandImage: "/testimonials/david-logo.gif",
+  },
+  {
+    name: "humanagent.eth",
+    about: "Staff, Ephemera Labs",
+    description:
+      "“We teamed up with Builders Garden to build mini apps and web apps.\nSolid team and very resourceful.\nI gave them my ideas and they helped make them real.\nThe team is great at solving problems ship fast. Builders garden cooks.”",
+    image: "/testimonials/humanagent-pfp.jpg",
+    brandImage: "/testimonials/ephemera-logo.png",
   },
   {
     name: "Jared Hecht",
@@ -14,6 +22,14 @@ export const TESTIMONIALS = [
       "“Builders Garden is not a web3 dev shop.\nIt's a group of builders who can push back on ideas, evolve them, and come to the table with their unique expertise and help you take your idea for a product and turn it into something better than you initially imagined.\nThey're the secret weapon cofounder you didn't know you needed, but thank god you found them.”",
     image: "/testimonials/jared-hecht.jpg",
     brandImage: "/testimonials/jared-hecht.png",
+  },
+  {
+    name: "Igor Yuzovitskiy",
+    about: "Founder, Griv",
+    description:
+      "“Builders Garden has a deep understanding of consumer crypto, including core product loops, social hooks, and best-in-class UX.\n\nAs a founder who loves to move fast, they were the right partners for me. Through brief product docs and a few convos, the team knew the scope and what to do.\n\nThe team is incredibly responsive and adapts quickly to user feedback. Every sprint, I was shocked at the quality and quantity of what we were able to ship.”",
+    image: "/testimonials/griv-igor.jpeg",
+    brandImage: "/partners/griv.png",
   },
   {
     name: "Leo Matchett",
@@ -39,22 +55,7 @@ export const TESTIMONIALS = [
     image: "/testimonials/chaim.png",
     brandImage: "/testimonials/acid-logo.png",
   },
-  {
-    name: "humanagent.eth",
-    about: "Staff, Ephemera Labs",
-    description:
-      "“We teamed up with Builders Garden to build mini apps and web apps.\nSolid team and very resourceful.\nI gave them my ideas and they helped make them real.\nThe team is great at solving problems ship fast. Builders garden cooks.”",
-    image: "/testimonials/humanagent-pfp.jpg",
-    brandImage: "/testimonials/ephemera-logo.png",
-  },
-  {
-    name: "David Tso",
-    about: "Ecosystem, Base",
-    description:
-      "“Builders Garden moves at the speed of crypto. They ship with a rare blend of speed, quality, and responsiveness. From crushing hackathons → to evolving into a dev collective → to becoming a focused product studio fully locked in on mini apps – Limone and the team continue to push the frontier of what’s possible on Base. Relentless execution. High craft. Zero fluff. Love building with them.”",
-    image: "/testimonials/david-pfp.jpg",
-    brandImage: "/testimonials/david-logo.gif",
-  },
+  
   {
     name: "cojo.eth",
     about: "Co-founder, Ponder",

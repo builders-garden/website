@@ -38,6 +38,8 @@
     "@react-email/components": "^0.0.33",
     "@t3-oss/env-nextjs": "^0.12.0",
     "@tailwindcss/typography": "^0.5.16",
+    "@tanstack/query-core": "^5.90.11",
+    "@tanstack/react-query": "^5.90.11",
     "@types/mdx": "^2.0.13",
     "@types/node": "20.5.7",
     "@vercel/analytics": "^1.5.0",
